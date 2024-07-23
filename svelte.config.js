@@ -1,8 +1,10 @@
-import adapter from "@sveltejs/adapter-auto";
+import adapter from "@sveltejs/adapter-static";
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
 import { mdsvex } from "mdsvex";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import remarkMath from "remark-math";
+import rehypeKatexSvelte from "rehype-katex-svelte";
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -13,7 +15,18 @@ const config = {
     vitePreprocess(),
     mdsvex({
       extensions: [".md"],
-      rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings],
+      layout: {
+        book: "./src/markdown-layouts/book.svelte",
+        _: "./src/markdown-layouts/book.svelte",
+      },
+      highlight: {
+        highlighter: (code, lang) => {
+          let escaped = code.replace(/\\/g, "\\\\").replace(/`/g, "\\`");
+          return `<Components.CodeBlock language="${lang}" code={\`${escaped}\`}/>`;
+        },
+      },
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatexSvelte, rehypeSlug, rehypeAutolinkHeadings],
     }),
   ],
   kit: {

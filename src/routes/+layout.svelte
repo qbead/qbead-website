@@ -1,6 +1,6 @@
 <script>
   import "../app.postcss";
-  import "prism-themes/themes/prism-vsc-dark-plus.css";
+  import "prism-themes/themes/prism-atom-dark.css";
   import { AppShell, AppBar } from "@skeletonlabs/skeleton";
 
   // Highlight JS
@@ -12,12 +12,20 @@
   import javascript from "highlight.js/lib/languages/javascript";
   import typescript from "highlight.js/lib/languages/typescript";
   import python from "highlight.js/lib/languages/python";
+  import json from "highlight.js/lib/languages/json";
+  import yaml from "highlight.js/lib/languages/yaml";
+  import latex from "highlight.js/lib/languages/latex";
+  import arduino from "highlight.js/lib/languages/arduino";
 
-  hljs.registerLanguage("python", python);
   hljs.registerLanguage("xml", xml); // for HTML
   hljs.registerLanguage("css", css);
   hljs.registerLanguage("javascript", javascript);
   hljs.registerLanguage("typescript", typescript);
+  hljs.registerLanguage("python", python);
+  hljs.registerLanguage("json", json);
+  hljs.registerLanguage("yaml", yaml);
+  hljs.registerLanguage("latex", latex);
+  hljs.registerLanguage("arduino", arduino);
   storeHighlightJs.set(hljs);
 
   // Floating UI for Popups
