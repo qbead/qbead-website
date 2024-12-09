@@ -6,3 +6,5 @@ export const load = async ({ fetch }) => {
     pages,
   }
 }
+
+export const prerender = true

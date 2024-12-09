@@ -1,6 +1,9 @@
 {
   "editor.formatOnSave": true,
   "prettier.documentSelectors": ["**/*.js", "**/*.svelte"],
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
   "tailwindCSS.classAttributes": [
     "class",
     "accent",

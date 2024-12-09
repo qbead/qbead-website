@@ -13,3 +13,5 @@ export const GET = async (request) => {
   )
   return json(pages)
 }
+
+export const prerender = true

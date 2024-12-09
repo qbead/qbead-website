@@ -6,3 +6,15 @@ export async function load({ params }) {
     content,
   }
 }
+
+export const prerender = true
+
+// export function entries() {
+//   const allLessons = import.meta.glob('/src/routes/lessons/*.md')
+//   const entries = Object.entries(allLessons).map(([path, resolver]) => {
+//     return {
+//       slug: path.replace('/src/routes', '').replace('.md', ''),
+//     }
+//   })
+//   return entries
+// }

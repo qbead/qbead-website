@@ -26,8 +26,10 @@ print("Hello, world!")
   import { CodeBlock } from "@skeletonlabs/skeleton";
 </script>
 
-<CodeBlock language="py" lineNumbers code={`def sayHello():
-    print("Hello, world!")`}/>
+<CodeBlock language="py" lineNumbers code={`
+  def sayHello():
+    print("Hello, world!")
+`}/>
 
 ```js
 let template = `blah blah\n blah`
