@@ -1,5 +1,7 @@
 {
+	"editor.formatOnSave": true,
 	"prettier.documentSelectors": [
+		"**/*.js",
 		"**/*.svelte"
 	],
 	"tailwindCSS.classAttributes": [
