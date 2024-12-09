@@ -1,11 +1,11 @@
 <script context="module">
-  import { CodeBlock } from "@skeletonlabs/skeleton";
-  export { CodeBlock };
+  import { CodeBlock } from '@skeletonlabs/skeleton'
+  export { CodeBlock }
 </script>
 
 <script>
-  export let title;
-  export let date;
+  export let title
+  export let date
 </script>
 
 <svelte:head>

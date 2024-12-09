@@ -5,20 +5,20 @@
 
 html,
 body {
-	@apply h-full overflow-hidden;
+  @apply h-full overflow-hidden;
 }
 
 /* seafoam theme */
 @font-face {
-	font-family: 'Playfair Display';
-	src: url('/fonts/PlayfairDisplay-Italic.ttf');
-	font-display: swap;
+  font-family: 'Playfair Display';
+  src: url('/fonts/PlayfairDisplay-Italic.ttf');
+  font-display: swap;
 }
 /* rocket theme */
 @font-face {
-	font-family: 'Space Grotesk';
-	src: url('/fonts/SpaceGrotesk.ttf');
-	font-display: swap;
+  font-family: 'Space Grotesk';
+  src: url('/fonts/SpaceGrotesk.ttf');
+  font-display: swap;
 }
 
 /* LaTeX */
@@ -34,21 +34,21 @@ body {
 
 /* Header Links */
 :where(h2, h3, h4, h5, h6) {
-	.icon-link {
-		position: relative;
+  .icon-link {
+    position: relative;
 
-		&::before {
-			content: '#';
-			position: absolute;
-			left: -1ch;
-			top: 0;
-			line-height: 1;
-			opacity: 0;
-			text-decoration: underline;
-		}
-	}
+    &::before {
+      content: '#';
+      position: absolute;
+      left: -1ch;
+      top: 0;
+      line-height: 1;
+      opacity: 0;
+      text-decoration: underline;
+    }
+  }
 
-	&:hover .icon-link::before {
-		opacity: 1;
-	}
+  &:hover .icon-link::before {
+    opacity: 1;
+  }
 }

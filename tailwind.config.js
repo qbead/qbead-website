@@ -1,16 +1,16 @@
-import { join } from "path";
+import { join } from 'path'
 
-import forms from "@tailwindcss/forms";
-import typography from "@tailwindcss/typography";
-import { skeleton } from "@skeletonlabs/tw-plugin";
+import forms from '@tailwindcss/forms'
+import typography from '@tailwindcss/typography'
+import { skeleton } from '@skeletonlabs/tw-plugin'
 
 export default {
-  darkMode: "class",
+  darkMode: 'class',
   content: [
-    "./src/**/*.{html,js,svelte,ts}",
+    './src/**/*.{html,js,svelte,ts}',
     join(
-      require.resolve("@skeletonlabs/skeleton"),
-      "../**/*.{html,js,svelte,ts}",
+      require.resolve('@skeletonlabs/skeleton'),
+      '../**/*.{html,js,svelte,ts}'
     ),
   ],
   theme: {
@@ -23,23 +23,23 @@ export default {
       themes: {
         preset: [
           {
-            name: "modern",
+            name: 'modern',
             enhancements: true,
           },
           {
-            name: "hamlindigo",
+            name: 'hamlindigo',
             enhancements: true,
           },
           {
-            name: "rocket",
+            name: 'rocket',
             enhancements: true,
           },
           {
-            name: "wintry",
+            name: 'wintry',
             enhancements: true,
           },
         ],
       },
     }),
   ],
-};
+}

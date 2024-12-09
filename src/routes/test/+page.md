@@ -5,7 +5,7 @@ blah: true
 
 # Page title
 
-Lorem ipsum dolor sit amet, consectetur *adipiscing* elit. Nullam auctor, nunc nec.
+Lorem ipsum dolor sit amet, consectetur _adipiscing_ elit. Nullam auctor, nunc nec.
 
 - some list
 - items

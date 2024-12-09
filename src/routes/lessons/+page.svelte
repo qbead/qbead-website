@@ -1,5 +1,5 @@
 <script>
-  export let data;
+  export let data
 </script>
 
 <nav class="list-nav">

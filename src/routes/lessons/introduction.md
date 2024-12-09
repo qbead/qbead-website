@@ -3,7 +3,6 @@ title: Lesson 1
 date: 2020-08-01
 ---
 
-
 # Introduction
 
 This is the first lesson in the course. We will cover the following topics:
@@ -27,14 +26,11 @@ print("Hello, world!")
   import { CodeBlock } from "@skeletonlabs/skeleton";
 </script>
 
-<CodeBlock language="py" lineNumbers code={`
-def sayHello():
-    print("Hello, world!")
-`}/>
+<CodeBlock language="py" lineNumbers code={`def sayHello():
+    print("Hello, world!")`}/>
 
 ```js
-let template = `blah blah\n blah`;
-
+let template = `blah blah\n blah`
 ```
 
 Here is some math
