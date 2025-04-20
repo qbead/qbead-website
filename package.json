@@ -1,49 +1,43 @@
 {
-  "name": "qbead-website",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "dev": "vite dev",
-    "build": "vite build",
-    "format": "prettier --write .",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@skeletonlabs/skeleton": "2.10.2",
-    "@skeletonlabs/tw-plugin": "0.4.0",
-    "@sveltejs/adapter-auto": "^3.0.0",
-    "@sveltejs/adapter-static": "^3.0.2",
-    "@sveltejs/kit": "^2.0.0",
-    "@sveltejs/vite-plugin-svelte": "^3.0.0",
-    "@tailwindcss/forms": "0.5.7",
-    "@tailwindcss/typography": "0.5.13",
-    "autoprefixer": "10.4.19",
-    "mdsvex": "^0.12.3",
-    "postcss": "8.4.39",
-    "prettier": "^3.4.2",
-    "prettier-plugin-svelte": "^3.3.2",
-    "svelte": "^4.2.7",
-    "tailwindcss": "3.4.6",
-    "vite": "5.4.11",
-    "vite-plugin-tailwind-purgecss": "0.3.3"
-  },
-  "type": "module",
-  "dependencies": {
-    "@floating-ui/dom": "1.6.8",
-    "@sveltejs/adapter-cloudflare": "^4.8.0",
-    "highlight.js": "11.10.0",
-    "prism-themes": "^1.9.0",
-    "rehype-autolink-headings": "^7.1.0",
-    "rehype-katex-svelte": "^1.2.0",
-    "rehype-slug": "^6.0.0",
-    "remark-math": "3"
-  },
-  "prettier": {
-    "plugins": [
-      "prettier-plugin-svelte"
-    ],
-    "semi": false,
-    "singleQuote": true,
-    "trailingComma": "es5"
-  }
+	"name": "qbead-website",
+	"private": true,
+	"version": "0.0.1",
+	"type": "module",
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"format": "prettier --write .",
+		"lint": "prettier --check ."
+	},
+	"devDependencies": {
+		"@skeletonlabs/skeleton": "^3.1.2",
+		"@skeletonlabs/skeleton-svelte": "^1.2.1",
+		"@sveltejs/adapter-auto": "6.0.0",
+		"@sveltejs/kit": "^2.16.0",
+		"@sveltejs/vite-plugin-svelte": "^5.0.0",
+		"@tailwindcss/typography": "^0.5.15",
+		"@tailwindcss/vite": "^4.0.0",
+		"mdsvex": "^0.12.3",
+		"prettier": "^3.4.2",
+		"prettier-plugin-svelte": "^3.3.3",
+		"prettier-plugin-tailwindcss": "^0.6.11",
+		"shiki": "^3.2.2",
+		"svelte": "^5.0.0",
+		"svelte-check": "^4.0.0",
+		"tailwindcss": "^4.0.0",
+		"typescript": "^5.0.0",
+		"vite": "^6.2.5",
+		"rehype-autolink-headings": "^7.1.0",
+		"rehype-katex-svelte": "^1.2.0",
+		"rehype-slug": "^6.0.0",
+		"remark-math": "3"
+	},
+	"dependencies": {
+		"@lucide/svelte": "^0.501.0",
+		"@sveltejs/adapter-static": "^3.0.8"
+	}
 }

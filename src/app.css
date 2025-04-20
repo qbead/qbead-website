@@ -1,0 +1,44 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton/optional/presets';
+@import '@skeletonlabs/skeleton/themes/cerberus';
+
+@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+
+/* Header Links */
+:where(h2, h3, h4, h5, h6) {
+	.icon-link {
+		position: relative;
+
+		&::before {
+			content: '#';
+			position: absolute;
+			left: -1ch;
+			top: 0;
+			line-height: 1;
+			opacity: 0;
+			text-decoration: underline;
+		}
+	}
+
+	&:hover .icon-link::before {
+		opacity: 1;
+	}
+}
+
+/* LaTeX */
+.katex {
+	font-size: 1.1em;
+}
+
+.katex-html[aria-hidden='true'] {
+	display: none;
+	visibility: hidden;
+}
+
+/* Code */
+.codeblock {
+	margin: 1em 0;
+}
