@@ -3,8 +3,8 @@
 	export { CodeBlock }
 </script>
 
-<div class="container mx-auto px-4 py-8">
-	<article>
+<div class="mx-auto max-w-5xl px-4 py-8">
+	<article class="prose">
 		<slot>
 			<!-- the content will be slotted in here -->
 		</slot>

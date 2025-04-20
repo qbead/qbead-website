@@ -36,7 +36,7 @@
 <div class="grid grid-cols-[auto_1fr]">
   <!-- Sidebar -->
   <aside class="sticky top-0 col-span-1 h-screen">
-		<Navigation.Rail expanded={isExpansed} tilesJustify="top" value={currentRoute}>
+		<Navigation.Rail expanded={isExpansed} tilesJustify="top" widthExpanded="w-90" padding="pl-10" value={currentRoute}>
 			{#snippet header()}
 				<Navigation.Tile
 					labelExpanded="Menu"

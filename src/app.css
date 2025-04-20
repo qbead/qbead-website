@@ -39,6 +39,22 @@
 }
 
 /* Code */
-.codeblock {
+/* .codeblock {
 	margin: 1em 0;
+} */
+
+.prose {
+	color: inherit;
+	max-width: 100%;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose strong,
+.prose a,
+.prose code,
+.prose blockquote {
+	color: inherit;
 }
