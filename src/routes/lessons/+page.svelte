@@ -2,10 +2,10 @@
 	export let data
 </script>
 
-<div class="mx-auto max-w-5xl px-4 py-8">
+<div class="main-content">
 	<article class="prose">
-		<nav class="list-nav">
-			<h1 class="h1">Lessons</h1>
+		<nav>
+			<h1>Lessons</h1>
 			<ul>
 				{#each data.pages as page}
 					<li>

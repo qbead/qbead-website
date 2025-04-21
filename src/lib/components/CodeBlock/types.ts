@@ -1,7 +1,7 @@
 export interface CodeBlockProps {
 	code?: string
 	lang?: 'console' | 'html' | 'css' | 'js'
-	theme?: 'dark-plus'
+	theme?: string
 	// Base Style Props
 	base?: string
 	rounded?: string

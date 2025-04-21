@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 
 @import '@skeletonlabs/skeleton';
 @import '@skeletonlabs/skeleton/optional/presets';
 @import '@skeletonlabs/skeleton/themes/cerberus';
+@import './qbead-theme.css';
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
@@ -57,4 +59,58 @@
 .prose code,
 .prose blockquote {
 	color: inherit;
+	font-weight: 700;
+}
+
+.main-content {
+	@apply mx-auto max-w-6xl;
+	@apply py-16;
+}
+
+.main-content > article {
+	@apply px-24;
+}
+
+.sidebar {
+	@apply bg-surface-800;
+	@apply rounded-tr-4xl;
+	box-shadow: 4px -1px 10px rgba(0, 0, 0, 0.2);
+	font-weight: 400;
+	@apply text-surface-300;
+}
+
+.sidebar-active {
+	@apply bg-surface-950;
+	position: relative;
+	@apply text-surface-50;
+}
+
+.sidebar-active:before,
+.sidebar-active:after {
+	content: '';
+	position: absolute;
+	top: -1.5rem;
+	right: 0;
+	width: 1.5rem;
+	height: 1.5rem;
+	background-color: var(--color-surface-950);
+	mask-image: radial-gradient(circle at 0% 0%, transparent 70%, black 0%);
+	mask-repeat: no-repeat;
+	mask-composite: exclude; /* For Safari, not standard */
+	-webkit-mask-composite: destination-out; /* For Chrome and Edge */
+	pointer-events: none;
+}
+
+.sidebar-active:after {
+	top: auto;
+	bottom: -1.5rem;
+	mask-image: radial-gradient(circle at 0% 100%, transparent 70%, black 0%);
+}
+
+.sidebar .menu-circle {
+	@apply bg-surface-700;
+}
+
+.sidebar-active .menu-circle {
+	@apply bg-primary-500;
 }
