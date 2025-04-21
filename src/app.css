@@ -77,6 +77,13 @@
 	box-shadow: 4px -1px 10px rgba(0, 0, 0, 0.2);
 	font-weight: 400;
 	@apply text-surface-300;
+	@apply pl-1;
+}
+
+@media screen and (min-width: 900px) {
+	.sidebar {
+		@apply pl-10;
+	}
 }
 
 .sidebar-active {
@@ -105,6 +112,10 @@
 	top: auto;
 	bottom: -1.5rem;
 	mask-image: radial-gradient(circle at 0% 100%, transparent 70%, black 0%);
+}
+
+.sidebar .menu-item > div {
+	overflow: hidden;
 }
 
 .sidebar .menu-circle {

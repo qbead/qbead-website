@@ -34,6 +34,13 @@
 	let currentRoute: string = $derived(getCurrentRoute(page.url.pathname))
 	$inspect('currentRoute', currentRoute)
 
+	// only show menu button on small screens
+	let isSmallScreen = $derived(() => {
+		return window.innerWidth < 900
+	})
+
+	$inspect('isSmallScreen', isSmallScreen())
+
 	let { children } = $props()
 </script>
 
@@ -45,7 +52,8 @@
 			background="sidebar"
 			tilesJustify="top"
 			widthExpanded="w-78"
-			padding="pl-10"
+			width="w-14"
+			padding="p-0"
 			value={currentRoute}
 		>
 			{#snippet header()}
@@ -57,6 +65,10 @@
 				<Navigation.Tile
 					rounded="rounded-l-full"
 					active="sidebar-active"
+					expandedPadding="p-2"
+					expandedGap="gap-4"
+					gap="gap-0"
+					classes="menu-item"
 					labelExpanded="Home"
 					href="/"
 					id="home"
@@ -68,6 +80,10 @@
 				<Navigation.Tile
 					rounded="rounded-l-full"
 					active="sidebar-active"
+					expandedPadding="p-2"
+					expandedGap="gap-4"
+					gap="gap-0"
+					classes="menu-item"
 					labelExpanded="Lessons"
 					href="/lessons"
 					id="lessons"
@@ -79,6 +95,10 @@
 				<Navigation.Tile
 					rounded="rounded-l-full"
 					active="sidebar-active"
+					expandedPadding="p-2"
+					expandedGap="gap-4"
+					gap="gap-0"
+					classes="menu-item"
 					labelExpanded="The Playground"
 					href="/playground"
 					id="playground"
@@ -90,6 +110,10 @@
 				<Navigation.Tile
 					rounded="rounded-l-full"
 					active="sidebar-active"
+					expandedPadding="p-2"
+					expandedGap="gap-4"
+					gap="gap-0"
+					classes="menu-item"
 					labelExpanded="About Us"
 					href="/about"
 					id="about"
