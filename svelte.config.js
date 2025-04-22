@@ -12,8 +12,8 @@ const config = {
 		mdsvex({
 			extensions: ['.md'],
 			layout: {
-				book: './src/markdown-layouts/book.svelte',
-				_: './src/markdown-layouts/default.svelte',
+				book: 'src/markdown-layouts/book.svelte',
+				_: 'src/markdown-layouts/default.svelte',
 			},
 			highlight: {
 				highlighter: (code, lang) => {

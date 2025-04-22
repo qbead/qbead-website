@@ -107,7 +107,6 @@
 					gap="gap-0"
 					classes="menu-item"
 					labelExpanded="The Playground"
-					href="/playground"
 					id="playground"
 				>
 					<Avatar name="icon" size="size-8" classes="menu-circle">
@@ -122,7 +121,6 @@
 					gap="gap-0"
 					classes="menu-item"
 					labelExpanded="About Us"
-					href="/about"
 					id="about"
 				>
 					<Avatar name="icon" size="size-8" classes="menu-circle">
