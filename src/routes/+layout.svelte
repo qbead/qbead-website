@@ -9,10 +9,10 @@
 	import IconGames from '@lucide/svelte/icons/gamepad'
 	import { page } from '$app/state'
 
-	let isExpansed = $state(true)
+	let isExpanded = $state(true)
 
 	function toggleExpanded() {
-		isExpansed = !isExpansed
+		isExpanded = !isExpanded
 	}
 
 	const routes: { [key: string]: string } = {
@@ -34,32 +34,34 @@
 	let currentRoute: string = $derived(getCurrentRoute(page.url.pathname))
 	$inspect('currentRoute', currentRoute)
 
+	let clientWidth: number = $state(0)
 	// only show menu button on small screens
-	let isSmallScreen = $derived(() => {
-		return window.innerWidth < 900
-	})
-
-	$inspect('isSmallScreen', isSmallScreen())
+	let showMenu = $derived(clientWidth < 900)
 
 	let { children } = $props()
 </script>
+
+<svelte:body bind:clientWidth />
 
 <div class="grid grid-cols-[auto_1fr]">
 	<!-- Sidebar -->
 	<aside class="sticky top-0 col-span-1 h-screen">
 		<Navigation.Rail
-			expanded={isExpansed}
+			expanded={isExpanded || !showMenu}
 			background="sidebar"
 			tilesJustify="top"
 			widthExpanded="w-78"
-			width="w-14"
-			padding="p-0"
+			width=""
+			padding="p-0 pt-1"
 			value={currentRoute}
 		>
 			{#snippet header()}
-				<Navigation.Tile labelExpanded="Menu" onclick={toggleExpanded} title="Toggle Menu Width">
-					<IconMenu />
-				</Navigation.Tile>
+				<div class="menu-header" class:expanded={isExpanded}>
+					<div class="logo w-full p-4" class:hidden={!isExpanded}>QBead</div>
+					<button class="menu-header-button" onclick={toggleExpanded}>
+						<IconMenu size="16" />
+					</button>
+				</div>
 			{/snippet}
 			{#snippet tiles()}
 				<Navigation.Tile

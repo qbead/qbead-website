@@ -125,3 +125,13 @@
 .sidebar-active .menu-circle {
 	@apply bg-primary-500;
 }
+
+.sidebar .menu-header {
+	position: relative;
+	@apply w-full;
+	@apply flex;
+	@apply items-center;
+}
+.sidebar .menu-header-button {
+	@apply p-4;
+}
