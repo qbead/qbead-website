@@ -9,7 +9,7 @@
 	import IconGames from '@lucide/svelte/icons/gamepad'
 	import { page } from '$app/state'
 
-	let isExpanded = $state(true)
+	let isExpanded = $state(false)
 
 	function toggleExpanded() {
 		isExpanded = !isExpanded
@@ -34,7 +34,7 @@
 	let currentRoute: string = $derived(getCurrentRoute(page.url.pathname))
 	$inspect('currentRoute', currentRoute)
 
-	let clientWidth: number = $state(0)
+	let clientWidth: number = $state(1000)
 	// only show menu button on small screens
 	let showMenu = $derived(clientWidth < 900)
 
@@ -57,8 +57,13 @@
 		>
 			{#snippet header()}
 				<div class="menu-header" class:expanded={isExpanded}>
-					<div class="logo w-full p-4" class:hidden={!isExpanded}>QBead</div>
-					<button class="menu-header-button" onclick={toggleExpanded}>
+					<div class="logo w-full p-4" class:hidden={!isExpanded && showMenu}>QBead</div>
+					<button
+						class="menu-header-button"
+						onclick={toggleExpanded}
+						aria-label="Menu"
+						hidden={!showMenu}
+					>
 						<IconMenu size="16" />
 					</button>
 				</div>

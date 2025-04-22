@@ -13,7 +13,7 @@
 	<meta property="og:title" content={title} />
 </svelte:head>
 
-<div class="main-content">
+<div class="main-content layout-book">
 	<article class="prose">
 		<h1>{title}</h1>
 		<p class="date">on: {date}</p>

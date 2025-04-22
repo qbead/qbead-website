@@ -3,7 +3,7 @@
 </script>
 
 <div class="main-content">
-	<article class="prose">
+	<article class="content">
 		<nav>
 			<h1>Lessons</h1>
 			<ul>
