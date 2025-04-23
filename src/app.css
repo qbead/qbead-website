@@ -89,6 +89,8 @@
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* Header Links */
 :where(h2, h3, h4, h5, h6) {
 	.icon-link {
