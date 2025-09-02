@@ -5,21 +5,27 @@ import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import remarkMath from 'remark-math'
 import rehypeKatexSvelte from 'rehype-katex-svelte'
+import { resolve } from 'path'
+
+const layout = {
+	book: resolve('./src/markdown-layouts/book.svelte'),
+	_: resolve('./src/markdown-layouts/default.svelte'),
+}
 
 const config = {
 	preprocess: [
 		vitePreprocess(),
 		mdsvex({
 			extensions: ['.md'],
-			layout: {
-				book: 'src/markdown-layouts/book.svelte',
-				_: 'src/markdown-layouts/default.svelte',
-			},
+			layout,
 			highlight: {
 				highlighter: (code, lang) => {
 					let escaped = code.replace(/\\/g, '\\\\').replace(/`/g, '\\`')
 					return `<Components.CodeBlock lang="${lang}" code={\`${escaped}\`}/>`
 				},
+			},
+			smartypants: {
+				dashes: 'oldschool',
 			},
 			remarkPlugins: [remarkMath],
 			rehypePlugins: [rehypeKatexSvelte, rehypeSlug, rehypeAutolinkHeadings],
@@ -29,6 +35,7 @@ const config = {
 		adapter: adapter({
 			fallback: 'index.html', // may differ from host to host
 		}),
+		prerender: { entries: ['*'] },
 	},
 	extensions: ['.svelte', '.svx', '.md'],
 }

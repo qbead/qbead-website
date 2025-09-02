@@ -1,12 +1,15 @@
 import type { PageLoad } from './$types'
 
 export const load: PageLoad = async ({ params }) => {
-	const page = await import(`../${params.slug}.md`)
-	const { metadata, default: content } = page
-	return { metadata, content }
+	try {
+		const page = await import(`../${params.slug}.md`)
+		const { metadata, default: content } = page
+		return { metadata, content }
+	} catch (error) {
+		console.error('Error loading page:', error)
+		return { metadata: {} }
+	}
 }
-
-export const prerender = true
 
 // export function entries() {
 //   const allLessons = import.meta.glob('/src/routes/lessons/*.md')

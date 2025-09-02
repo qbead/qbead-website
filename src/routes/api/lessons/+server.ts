@@ -6,7 +6,7 @@ interface Lesson {
 }
 
 export const GET: RequestHandler = async (request) => {
-	const allLessons = import.meta.glob('/src/routes/lessons/*.md')
+	const allLessons = import.meta.glob('../../lessons/*.md')
 	const pages = await Promise.all(
 		Object.entries(allLessons).map(async ([path, resolver]) => {
 			const page = await resolver()
