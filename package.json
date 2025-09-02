@@ -38,7 +38,9 @@
 	},
 	"dependencies": {
 		"@lucide/svelte": "^0.542.0",
-		"@sveltejs/adapter-static": "^3.0.9"
+		"@qbead/bloch-sphere": "^0.1.0",
+		"@sveltejs/adapter-static": "^3.0.9",
+		"three": "^0.179.1"
 	},
 	"engines": {
 		"node": ">=22.12.0"

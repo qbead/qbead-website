@@ -3,15 +3,23 @@ title: Lesson 1
 date: 2020-08-01
 ---
 
+<script>
+  import CodeBlock from '$lib/components/CodeBlock/CodeBlock.svelte'
+  import BlochSphereElement from '$lib/components/BlochSphereElement/BlochSphereElement.svelte'
+  import { QubitDisplay, BlochVector } from '@qbead/bloch-sphere'
+</script>
+
 # Introduction
 
 This is the first lesson in the course. We will cover the following topics:
 
-## Topics
+## Lists
 
 - Topic 1
 - Topic 2
 - Topic 3
+
+## Code blocks (using different methods)
 
 ```python
 print("Hello, world!")
@@ -22,28 +30,12 @@ print("Hello, world!")
 }
 ```
 
-<script>
-  import CodeBlock from '$lib/components/CodeBlock/CodeBlock.svelte'
-</script>
 
 <CodeBlock lang="py" lineNumbers code={`
 def sayHello():
   print("Hello, world!")
 `}/>
 
-```js
-let template = `blah blah\n blah`
-```
-
-Here is some math
-
-$$
-x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
-$$
-
-```latex
-x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
-```
 
 ```json
 {
@@ -63,7 +55,38 @@ void loop() {
 }
 ```
 
+```js
+let template = `blah blah\n blah`
+```
+
+## Math
+
+Here is some math
+
+$$
+x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+$$
+
+```latex
+x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
+```
+
+## Html elements
+
 <button type="button" class="btn preset-filled-primary-500">test button</button>
+
+## Bloch sphere
+
+<BlochSphereElement options={{
+  fontSize: 1,
+  showGrid: true,
+}} created={(blochSphere) => {
+  let state = BlochVector.random()
+  const qubitArrow = new QubitDisplay(state)
+  blochSphere.add(qubitArrow)
+}} />
+
+## Prose
 
 Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
 
