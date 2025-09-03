@@ -47,7 +47,7 @@
 
 <div class="grid grid-cols-[auto_1fr]">
   <!-- Sidebar -->
-  <aside class="sticky top-0 col-span-1 h-screen">
+  <aside class="sticky top-0 h-screen">
     <Navigation.Rail
       expanded={isExpanded || !showMenu}
       background="sidebar"
@@ -136,7 +136,7 @@
     </Navigation.Rail>
   </aside>
   <!-- Main -->
-  <main class="col-span-1">
+  <main class="min-w-0">
     {@render children()}
   </main>
 </div>
