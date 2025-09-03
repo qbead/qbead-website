@@ -1,6 +1,4 @@
 <script lang="ts">
-  export const prerender = true
-
   import '../app.css'
   import { Navigation, Avatar } from '@skeletonlabs/skeleton-svelte'
   // Icons

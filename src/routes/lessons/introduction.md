@@ -78,10 +78,30 @@ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
   fontSize: 1,
   showGrid: true,
 }} created={(blochSphere) => {
-let state = BlochVector.random()
-const qubitArrow = new QubitDisplay(state)
-blochSphere.add(qubitArrow)
+  let state = BlochVector.random()
+  const qubitArrow = new QubitDisplay(state)
+  blochSphere.add(qubitArrow)
 }} />
+
+## Bloch sphere at the side
+
+<figure class="xl:float-right xl:ml-6 mt-0 xl:w-120">
+  <BlochSphereElement options={{
+    fontSize: .8,
+    showGrid: false,
+  }} created={(blochSphere) => {
+    let state = BlochVector.random()
+    const qubitArrow = new QubitDisplay(state)
+    blochSphere.add(qubitArrow)
+  }} />
+  <figcaption class="text-sm text-gray-500">
+    Figure 1. A bloch sphere without grid
+  </figcaption>
+</figure>
+
+Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+
+<div class="clear-both"></div>
 
 ## Prose
 

@@ -20,6 +20,10 @@
   onMount(() => {
     const opts = {
       backgroundColor: '#272c42',
+      enableZoom: false,
+      cameraState: {
+        zoom: 1.3,
+      },
       ...options,
     }
     instance = new BlochSphere(opts)
@@ -42,5 +46,12 @@
     aspect-ratio: 1;
     width: 100%;
     overflow: hidden;
+    border-radius: 7px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.15s;
+  }
+
+  .bloch-sphere-element:hover {
+    border-color: var(--color-yellow-500);
   }
 </style>
