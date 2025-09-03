@@ -18,7 +18,11 @@
   }
 
   onMount(() => {
-    instance = new BlochSphere(options)
+    const opts = {
+      backgroundColor: '#272c42',
+      ...options,
+    }
+    instance = new BlochSphere(opts)
     instance.attach(blochSphereElement)
     created?.(instance)
   })
