@@ -1,6 +1,10 @@
+<script>
+	import { page } from '$app/state'
+</script>
+
 <div class="main-content">
 	<article class="content">
-		<h1>Not Found (404)</h1>
-		<p>Sorry, we couldn't find the page you were looking for.</p>
+		<h1>{page.status}</h1>
+		<pre>{page.error?.message}</pre>
 	</article>
 </div>

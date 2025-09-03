@@ -1,14 +1,9 @@
 import type { PageLoad } from './$types'
 
 export const load: PageLoad = async ({ params }) => {
-	try {
-		const page = await import(`../${params.slug}.md`)
-		const { metadata, default: content } = page
-		return { metadata, content }
-	} catch (error) {
-		console.error('Error loading page:', error)
-		return { metadata: {} }
-	}
+  const page = await import(`../${params.slug}.md`)
+  const { metadata, default: content } = page
+  return { metadata, content }
 }
 
 // export function entries() {
