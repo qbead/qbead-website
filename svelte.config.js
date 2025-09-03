@@ -8,7 +8,7 @@ import rehypeKatexSvelte from 'rehype-katex-svelte'
 import { resolve } from 'path'
 
 const layout = {
-  book: resolve('./src/markdown-layouts/book.svelte'),
+  lesson: resolve('./src/markdown-layouts/lesson.svelte'),
   _: resolve('./src/markdown-layouts/default.svelte'),
 }
 

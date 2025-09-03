@@ -14,7 +14,7 @@
 </svelte:head>
 
 <div class="main-content layout-book">
-  <article class="prose">
+  <article class="prose prose-lg max-w-full">
     <h1>{title}</h1>
     <p class="date">on: {date}</p>
     <slot>
