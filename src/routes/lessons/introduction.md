@@ -92,6 +92,9 @@ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
   }} created={(blochSphere) => {
     let state = BlochVector.random()
     const qubitArrow = new QubitDisplay(state)
+    // hide the labels
+    qubitArrow.angleIndicators.visible = false
+    qubitArrow.arrow.label.visible = false
     blochSphere.add(qubitArrow)
   }} />
   <figcaption class="text-sm text-gray-500">
