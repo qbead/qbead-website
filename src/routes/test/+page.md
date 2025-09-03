@@ -21,10 +21,8 @@ print("Hello, world!")
   import CodeBlock from '$lib/components/CodeBlock/CodeBlock.svelte'
 </script>
 
-<CodeBlock lang="py" lineNumbers code={`
-def sayHello():
-  print("Hello, world!")
-`}/>
+<CodeBlock lang="py" lineNumbers code={`def sayHello():
+  print("Hello, world!")`}/>
 
 ```js
 let template = `blah blah\n blah`

@@ -1,10 +1,10 @@
 import type { PageLoad } from './$types'
 
 export const load: PageLoad = async ({ fetch }) => {
-	const response = await fetch(`/api/lessons`)
-	const pages = await response.json()
+  const response = await fetch(`/api/lessons`)
+  const pages = await response.json()
 
-	return { pages }
+  return { pages }
 }
 
 export const prerender = true

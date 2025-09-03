@@ -8,36 +8,36 @@ import rehypeKatexSvelte from 'rehype-katex-svelte'
 import { resolve } from 'path'
 
 const layout = {
-	book: resolve('./src/markdown-layouts/book.svelte'),
-	_: resolve('./src/markdown-layouts/default.svelte'),
+  book: resolve('./src/markdown-layouts/book.svelte'),
+  _: resolve('./src/markdown-layouts/default.svelte'),
 }
 
 const config = {
-	preprocess: [
-		vitePreprocess(),
-		mdsvex({
-			extensions: ['.md'],
-			layout,
-			highlight: {
-				highlighter: (code, lang) => {
-					let escaped = code.replace(/\\/g, '\\\\').replace(/`/g, '\\`')
-					return `<Components.CodeBlock lang="${lang}" code={\`${escaped}\`}/>`
-				},
-			},
-			smartypants: {
-				dashes: 'oldschool',
-			},
-			remarkPlugins: [remarkMath],
-			rehypePlugins: [rehypeKatexSvelte, rehypeSlug, rehypeAutolinkHeadings],
-		}),
-	],
-	kit: {
-		adapter: adapter({
-			fallback: 'index.html', // may differ from host to host
-		}),
-		prerender: { entries: ['*'] },
-	},
-	extensions: ['.svelte', '.svx', '.md'],
+  preprocess: [
+    vitePreprocess(),
+    mdsvex({
+      extensions: ['.md'],
+      layout,
+      highlight: {
+        highlighter: (code, lang) => {
+          let escaped = code.replace(/\\/g, '\\\\').replace(/`/g, '\\`')
+          return `<Components.CodeBlock lang="${lang}" code={\`${escaped}\`}/>`
+        },
+      },
+      smartypants: {
+        dashes: 'oldschool',
+      },
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatexSvelte, rehypeSlug, rehypeAutolinkHeadings],
+    }),
+  ],
+  kit: {
+    adapter: adapter({
+      fallback: 'index.html', // may differ from host to host
+    }),
+    prerender: { entries: ['*'] },
+  },
+  extensions: ['.svelte', '.svx', '.md'],
 }
 
 export default config

@@ -30,12 +30,8 @@ print("Hello, world!")
 }
 ```
 
-
-<CodeBlock lang="py" lineNumbers code={`
-def sayHello():
-  print("Hello, world!")
-`}/>
-
+<CodeBlock lang="py" lineNumbers code={`def sayHello():
+  print("Hello, world!")`}/>
 
 ```json
 {
@@ -81,9 +77,9 @@ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
   fontSize: 1,
   showGrid: true,
 }} created={(blochSphere) => {
-  let state = BlochVector.random()
-  const qubitArrow = new QubitDisplay(state)
-  blochSphere.add(qubitArrow)
+let state = BlochVector.random()
+const qubitArrow = new QubitDisplay(state)
+blochSphere.add(qubitArrow)
 }} />
 
 ## Prose
