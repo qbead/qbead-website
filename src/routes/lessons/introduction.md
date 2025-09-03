@@ -102,7 +102,16 @@ x = \frac{-b \pm \sqrt{b^2-4ac}}{2a}
   </figcaption>
 </figure>
 
-Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
+A bloch sphere created without labels by using the following code:
+
+```js
+let state = BlochVector.random()
+const qubitArrow = new QubitDisplay(state)
+// hide the labels
+qubitArrow.angleIndicators.visible = false
+qubitArrow.arrow.label.visible = false
+blochSphere.add(qubitArrow)
+```
 
 <div class="clear-both"></div>
 
