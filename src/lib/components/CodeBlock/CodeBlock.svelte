@@ -39,13 +39,13 @@
     lang = 'console',
     theme = 'catppuccin-frappe',
     // Base Style Props
-    base = ' overflow-hidden',
+    base = 'overflow-hidden',
     rounded = 'rounded-container',
     shadow = '',
     classes = '',
     // Pre Style Props
     preBase = '',
-    prePadding = '[&>pre]:p-4',
+    prePadding = '',
     preClasses = '',
   }: CodeBlockProps = $props()
 

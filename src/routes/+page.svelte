@@ -4,32 +4,34 @@
 </script>
 
 <div class="main-content">
-  <article class="flex flex-col gap-30">
-    <section class="grid grid-cols-[1fr_auto] items-center gap-10">
-      <div>
-        <h1 class="mb-6 text-7xl font-bold">The Qbead</h1>
-        <p class="mb-11 text-xl">
-          Introducing the qubit for your hands-on discovery of quantum phenomena.
+  <article class="flex flex-col gap-60">
+    <section class="grid grid-cols-[1fr_auto] items-center gap-36">
+      <div class="flex flex-col gap-10">
+        <h1 class="h1">
+          Put Your Hands on a <span class="text-primary-500">Qubit!</span>
+        </h1>
+        <p class="text-xl">
+          We built a custom interactive toy that uses LED lights to show quantum states in
+          real-time. Play with qubits, learn about spin and superposition, and code your own quantum
+          experiments. Perfect for curious minds from middle school through college.
         </p>
-        <p class="mb-4">
-          <a class="btn preset-filled-primary-500"> Learn more </a>
-        </p>
+        <div class="flex gap-4">
+          <a class="btn btn-lg preset-filled-primary-500"> Discover Qbead </a>
+          <a class="btn btn-lg preset-filled-surface-100-900"> View Documentation </a>
+        </div>
+        <div class="flex gap-4"></div>
       </div>
-      <div class="bg-surface-800 h-64 w-64 rounded-full"></div>
+      <div class="bg-surface-800 h-64 w-64 rounded-xl"></div>
     </section>
 
-    <section class="callout card bg-surface-800 grid grid-cols-[1fr_auto_auto] items-center gap-10">
-      <div>
-        <Avatar name="QBead" background="bg-surface-700" classes="not-prose">
-          <IconAtom />
-        </Avatar>
-      </div>
-      <span class="vr border-surface-900 border-l-2"></span>
-      <div>
-        The Qbead is a toy <span class="text-yellow-400">Bloch sphere</span> that helps people of
-        all ages learn about <span class="text-rose-400">quantum bits</span> through play. This is another
-        sentence if needed here.
-      </div>
+    <section class="">
+      <header class="text-center">
+        <h2>The <span class="text-primary-500">Qbead</span></h2>
+        <p class="text-lg">
+          A Bloch Sphere is a way to represent the state of a quantum bit or qubit, which is the
+          basic unit of quantum computing.
+        </p>
+      </header>
     </section>
 
     <section>
