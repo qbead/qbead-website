@@ -63,28 +63,34 @@ html {
   visibility: hidden;
 }
 
-h1 {
-  @apply h1;
-}
+.typography {
+  h1 {
+    @apply h1;
+  }
 
-h2 {
-  @apply h2;
-}
+  h2 {
+    @apply h2;
+  }
 
-h3 {
-  @apply h3;
-}
+  h3 {
+    @apply h3;
+  }
 
-h4 {
-  @apply h4;
-}
+  h4 {
+    @apply h4;
+  }
 
-h5 {
-  @apply h5;
-}
+  h5 {
+    @apply h5;
+  }
 
-h6 {
-  @apply h6;
+  h6 {
+    @apply h6;
+  }
+
+  a {
+    @apply anchor;
+  }
 }
 
 blockquote {
@@ -110,12 +116,6 @@ code {
   @apply my-0;
   @apply text-base;
   line-height: 180%;
-}
-
-.content {
-  a {
-    @apply anchor;
-  }
 }
 
 .btn {

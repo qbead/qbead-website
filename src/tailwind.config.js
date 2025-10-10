@@ -18,6 +18,7 @@ module.exports = {
             thead: { color: 'inherit' },
             'ol > li::marker': { color: 'inherit' },
             'ul > li::marker': { color: 'inherit' },
+            maxWidth: 'none',
           },
         },
       },

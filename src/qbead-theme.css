@@ -8,7 +8,7 @@
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
     monospace;
 
-  /* skeleton's scaling is SUPER weird so implement our own with 6 steps and 4.5 ratio */
+  /* skeleton's scaling is SUPER weird so implement our own */
   --text-xs: calc(0.6rem);
   --text-xs--line-height: calc(calc(1 / 0.6));
   --text-sm: calc(0.77rem);
@@ -19,22 +19,22 @@
   --text-lg--line-height: calc(36 / 21);
   --text-xl: calc(1.3125rem);
   --text-xl--line-height: calc(36 / 21);
-  --text-2xl: calc(2.12rem);
+  --text-2xl: calc(1.5rem);
   --text-2xl--line-height: calc(36 / 21);
   --text-3xl: calc(2.72rem);
-  --text-3xl--line-height: calc(36 / 21);
+  --text-3xl--line-height: 1.125;
   --text-4xl: calc(3.5rem);
-  --text-4xl--line-height: calc(36 / 21);
+  --text-4xl--line-height: 1.125;
   --text-5xl: calc(4.5rem);
-  --text-5xl--line-height: 1.25;
+  --text-5xl--line-height: 1.125;
   --text-6xl: calc(5.78rem);
-  --text-6xl--line-height: 1.25;
+  --text-6xl--line-height: 1.125;
   --text-7xl: calc(7.42rem);
-  --text-7xl--line-height: 1.25;
+  --text-7xl--line-height: 1.125;
   --text-8xl: calc(9.54rem);
-  --text-8xl--line-height: 1.25;
+  --text-8xl--line-height: 1.125;
   --text-9xl: calc(12.26rem);
-  --text-9xl--line-height: 1.25;
+  --text-9xl--line-height: 1.125;
 
   --color-red-50: oklch(95.33% 0.02 24.19deg);
   --color-red-100: oklch(88.08% 0.04 23.24deg);

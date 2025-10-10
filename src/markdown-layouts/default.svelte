@@ -4,7 +4,7 @@
 </script>
 
 <div class="main-content">
-  <article class="content">
+  <article class="typography">
     <slot>
       <!-- the content will be slotted in here -->
     </slot>

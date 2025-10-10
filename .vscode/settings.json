@@ -4,6 +4,9 @@
   "[markdown]": {
     "editor.formatOnSave": false
   },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "tailwindCSS.classAttributes": [
     "class",
     "accent",
