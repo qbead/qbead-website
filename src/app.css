@@ -21,6 +21,11 @@ html {
   letter-spacing: var(--base-letter-spacing);
 }
 
+html,
+body {
+  @apply w-full;
+}
+
 /* Header Links */
 :where(h2, h3, h4, h5, h6) {
   .icon-link {
@@ -122,19 +127,8 @@ code {
   @apply font-bold;
 }
 
-.main-content {
-  @apply mx-auto max-w-6xl;
-}
-
-.main-content > article {
-  @apply px-10;
-  @apply py-36;
-}
-
-.main-content .callout {
-  @apply -mx-8;
-  @apply px-14;
-  @apply py-8;
+.outer-container {
+  @apply mx-auto w-full max-w-6xl px-10 md:px-32;
 }
 
 .sidebar {

@@ -3,7 +3,7 @@
   export { CodeBlock }
 </script>
 
-<div class="main-content">
+<div class="outer-container py-36">
   <article class="typography">
     <slot>
       <!-- the content will be slotted in here -->

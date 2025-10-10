@@ -5,9 +5,10 @@
   import IconCode from '@lucide/svelte/icons/code-2'
   import IconBookOpen from '@lucide/svelte/icons/book-open'
   import IconArrowRight from '@lucide/svelte/icons/arrow-right'
+  import BioBox from '$lib/components/BioBox/BioBox.svelte'
 </script>
 
-<div class="main-content">
+<div class="outer-container py-36">
   <article class="flex flex-col gap-60">
     <section class="">
       <div class="flex flex-col gap-10">
@@ -32,7 +33,7 @@
           <a class="btn btn-lg preset-filled-primary-500"> Discover Qbead </a>
           <a class="btn btn-lg preset-filled-surface-100-900"> View Documentation </a>
         </div>
-        <ul class="flex gap-4">
+        <ul class="flex flex-wrap gap-4">
           <li class="flex items-center">
             <IconDot size={10} class="text-primary-500 h-10 w-10" />
             <span>Available by Request</span>
@@ -155,137 +156,64 @@
           things, and harnessing quantum phenomena to create the technology of tomorrow.
         </p>
       </header>
-      <!-- Simple scroll carousel of volunteers with headshots as circle images with name, role, and bio sentence -->
-      <div class="grid grid-flow-row-dense grid-cols-2 gap-12">
-        <div
-          class="bg-secondary-100-900 text-surface-700-300 flex flex-col items-center gap-10 rounded-xl p-8 text-lg"
+      <div class="grid grid-flow-row-dense gap-12 md:grid-cols-2">
+        <BioBox
+          name="Carlos"
+          role="Delft University of Technology, QuTech"
+          imgSrc="https://qbead.org/images/teampics/carlos_s.jpg"
+          tags={['Quantum Physics', 'Art', 'Engineering']}
         >
-          <Avatar
-            size="size-42"
-            src="https://qbead.org/images/teampics/carlos_s.jpg"
-            name="Carlos"
-          />
-          <div class="">
-            <div class="text-center">
-              <h3 class="h5 mb-2">Carlos</h3>
-              <p class="text-primary-500 mb-6">Delft University of Technology, QuTech</p>
-            </div>
-            <p class="">
-              Carlos loves science, crafts, and art, and sometimes combines them into a beautiful
-              gadget like the Qbead. On top of that, he enjoys mentoring and contributing to
-              diversity in science and engineering. Examples are organizing science-art workshops
-              with asylum seekers in Sweden and the quantum hackathon iQuHACK at MIT. Now at Delft
-              University of Technology and QuTech, Carlos is a professor exploring quantum photonics
-              while he continues to lead outreach projects to democratize science and technology.
-            </p>
-          </div>
-          <div class="flex gap-3">
-            <span class="badge preset-outlined-secondary-500 text-surface-950-50">
-              Quantum Physics
-            </span>
-            <span class="badge preset-outlined-secondary-500 text-surface-950-50"> Art </span>
-            <span class="badge preset-outlined-secondary-500 text-surface-950-50">
-              Engineering
-            </span>
-          </div>
-        </div>
-        <div
-          class="bg-secondary-100-900 text-surface-700-300 flex flex-col items-center gap-10 rounded-xl p-8 text-lg"
+          Carlos loves science, crafts, and art, and sometimes combines them into a beautiful gadget
+          like the Qbead. On top of that, he enjoys mentoring and contributing to diversity in
+          science and engineering. Examples are organizing science-art workshops with asylum seekers
+          in Sweden and the quantum hackathon iQuHACK at MIT. Now at Delft University of Technology
+          and QuTech, Carlos is a professor exploring quantum photonics while he continues to lead
+          outreach projects to democratize science and technology.
+        </BioBox>
+        <BioBox
+          name="Stefan"
+          role="University of Massachusetts Amherst"
+          imgSrc="https://qbead.org/images/teampics/stefan_s.jpg"
+          tags={['Quantum Physics', 'Art', 'Engineering']}
         >
-          <Avatar
-            size="size-42"
-            src="https://qbead.org/images/teampics/stefan_s.jpg"
-            name="Carlos"
-          />
-          <div class="">
-            <div class="text-center">
-              <h3 class="h5 mb-2">Stefan</h3>
-              <p class="text-primary-500 mb-6">University of Massachusetts Amherst</p>
-            </div>
-            <p class="">
-              Since high school Stefan has enjoyed sharing the wonders of science with others,
-              organizing extraculicular courses and summer break Physics events. While a graduate
-              student at Yale's Quantum Institute he felt most at home in Yale's makerspace,
-              preparing contraptions to be used in middle- and high-school outreach events. He
-              continued his reasearch work on photonic quantum computers jointly at MIT and Harvard,
-              but spends much of his free time designing hands-on outreach materials, including the
-              SpinWheel. Now, as a professor at UMass Amherst, he is designing the Qbead as a way to
-              bring the maker ethos to teaching Quantum Information Science.
-            </p>
-          </div>
-          <div class="flex gap-3">
-            <span class="badge preset-outlined-secondary-500 text-surface-950-50">
-              Quantum Physics
-            </span>
-            <span class="badge preset-outlined-secondary-500 text-surface-950-50"> Art </span>
-            <span class="badge preset-outlined-secondary-500 text-surface-950-50">
-              Engineering
-            </span>
-          </div>
-        </div>
+          Since high school Stefan has enjoyed sharing the wonders of science with others,
+          organizing extraculicular courses and summer break Physics events. While a graduate
+          student at Yale's Quantum Institute he felt most at home in Yale's makerspace, preparing
+          contraptions to be used in middle- and high-school outreach events. He continued his
+          reasearch work on photonic quantum computers jointly at MIT and Harvard, but spends much
+          of his free time designing hands-on outreach materials, including the SpinWheel. Now, as a
+          professor at UMass Amherst, he is designing the Qbead as a way to bring the maker ethos to
+          teaching Quantum Information Science.
+        </BioBox>
 
-        <div
-          class="bg-secondary-100-900 text-surface-700-300 flex flex-col items-center gap-10 rounded-xl p-8 text-lg"
+        <BioBox
+          name="Hugo"
+          role="MIT"
+          imgSrc="https://qbead.org/images/teampics/hugo_s.jpg"
+          tags={['Quantum Physics', 'Art', 'Engineering']}
         >
-          <Avatar size="size-42" src="https://qbead.org/images/teampics/hugo_s.jpg" name="Carlos" />
-          <div class="">
-            <div class="text-center">
-              <h3 class="h5 mb-2">Hugo</h3>
-              <p class="text-primary-500 mb-6">MIT</p>
-            </div>
-            <p class="">
-              Hugo appreciates taking part in various efforts promoting higher education in STEM to
-              various communities. Since his undergraduate studies at the University of Ottawa,
-              these have included participation in the university's mini-courses program and
-              engaging with elementary school students about being a grad student. He is currently a
-              doctoral student in electrical engineering at MIT.
-            </p>
-          </div>
-          <div class="flex gap-3">
-            <span class="badge preset-outlined-secondary-500 text-surface-950-50">
-              Quantum Physics
-            </span>
-            <span class="badge preset-outlined-secondary-500 text-surface-950-50"> Art </span>
-            <span class="badge preset-outlined-secondary-500 text-surface-950-50">
-              Engineering
-            </span>
-          </div>
-        </div>
+          Hugo appreciates taking part in various efforts promoting higher education in STEM to
+          various communities. Since his undergraduate studies at the University of Ottawa, these
+          have included participation in the university's mini-courses program and engaging with
+          elementary school students about being a grad student. He is currently a doctoral student
+          in electrical engineering at MIT.
+        </BioBox>
 
-        <div
-          class="bg-secondary-100-900 text-surface-700-300 flex flex-col items-center gap-10 rounded-xl p-8 text-lg"
+        <BioBox
+          name="Saumil"
+          role="MIT"
+          imgSrc="https://qbead.org/images/teampics/saumil_s.jpg"
+          tags={['Quantum Physics', 'Art', 'Engineering']}
         >
-          <Avatar
-            size="size-42"
-            src="https://qbead.org/images/teampics/saumil_s.jpg"
-            name="Carlos"
-          />
-          <div class="">
-            <div class="text-center">
-              <h3 class="h5 mb-2">Saumil</h3>
-              <p class="text-primary-500 mb-6">MIT</p>
-            </div>
-            <p class="">
-              Saumil has always held a fascination for building things. As a graduate student at
-              MIT, Saumil worked on silicon photonics, where he spent a great deal of time hacking
-              together electronics and microcontrollers to run his experiments. He also enjoys
-              teaching and has helped develop several courses and hands-on labs to introduce
-              students to photonic hardware. Saumil is now a postdoc jointly at MIT and NTT
-              Research, where he has continued his research at the intersection of optics and
-              computing. He hopes to share his love of building hardware through the Qbead and
-              inspire the next generation of quantum scientists and engineers.
-            </p>
-          </div>
-          <div class="flex gap-3">
-            <span class="badge preset-outlined-secondary-500 text-surface-950-50">
-              Quantum Physics
-            </span>
-            <span class="badge preset-outlined-secondary-500 text-surface-950-50"> Art </span>
-            <span class="badge preset-outlined-secondary-500 text-surface-950-50">
-              Engineering
-            </span>
-          </div>
-        </div>
+          Saumil has always held a fascination for building things. As a graduate student at MIT,
+          Saumil worked on silicon photonics, where he spent a great deal of time hacking together
+          electronics and microcontrollers to run his experiments. He also enjoys teaching and has
+          helped develop several courses and hands-on labs to introduce students to photonic
+          hardware. Saumil is now a postdoc jointly at MIT and NTT Research, where he has continued
+          his research at the intersection of optics and computing. He hopes to share his love of
+          building hardware through the Qbead and inspire the next generation of quantum scientists
+          and engineers.
+        </BioBox>
       </div>
     </section>
 

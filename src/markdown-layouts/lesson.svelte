@@ -13,7 +13,7 @@
   <meta property="og:title" content={title} />
 </svelte:head>
 
-<div class="main-content layout-book">
+<div class="outer-container layout-book py-36">
   <article class="typography prose prose-lg max-w-full">
     <h1>{title}</h1>
     <p class="date">on: {date}</p>
