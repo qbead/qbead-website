@@ -4,8 +4,8 @@
 
   const ROUTES = [
     { href: '/lessons', label: 'Lessons' },
-    { href: '/playground', label: 'Playground' },
-    { href: '/about', label: 'About' },
+    { href: '/', label: 'Playground' },
+    { href: '/', label: 'About' },
   ]
 
   const getCurrentRoute = (path: string): string => {
