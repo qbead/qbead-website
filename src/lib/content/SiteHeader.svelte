@@ -68,7 +68,7 @@
 </header>
 
 <style>
-  @reference '../../../app.css';
+  @reference '../../app.css';
   a.selected {
     @apply text-surface-contrast-500 bg-surface-600-400;
   }

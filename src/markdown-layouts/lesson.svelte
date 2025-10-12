@@ -3,17 +3,16 @@
   export { CodeBlock }
 </script>
 
-<script>
-  export let title
-  export let date
+<script lang="ts">
+  import SEO from '$lib/components/SEO/SEO.svelte'
+  export let title: string
+  export let description: string
+  export let date: string
 </script>
 
-<svelte:head>
-  <title>Lessons | {title}</title>
-  <meta property="og:title" content={title} />
-</svelte:head>
+<SEO {title} {description} />
 
-<div class="outer-container layout-book py-36">
+<div class="outer-container layout-lesson py-36">
   <article class="typography prose prose-lg max-w-full">
     <h1>{title}</h1>
     <p class="date">on: {date}</p>

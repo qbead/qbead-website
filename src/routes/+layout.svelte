@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.css'
-  import SiteHeader from '$lib/components/SiteHeader/SiteHeader.svelte'
-  import SiteFooter from '$lib/components/SiteFooter/SiteFooter.svelte'
+  import SiteHeader from '$lib/content/SiteHeader.svelte'
+  import SiteFooter from '$lib/content/SiteFooter.svelte'
 
   let { children } = $props()
 </script>
