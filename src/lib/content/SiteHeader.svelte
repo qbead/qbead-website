@@ -2,15 +2,15 @@
   import { page } from '$app/state'
   import IconMenu from '@lucide/svelte/icons/menu'
 
-  const ROUTES = [
+  const NAV_LINKS = [
     { href: '/lessons', label: 'Lessons' },
-    { href: '/', label: 'Playground' },
-    { href: '/', label: 'About' },
+    { href: '/playground', label: 'Playground' },
+    { href: '/about', label: 'About' },
   ]
 
   const getCurrentRoute = (path: string): string => {
     return (
-      Object.values(ROUTES).find(({ href }) => {
+      Object.values(NAV_LINKS).find(({ href }) => {
         return path.startsWith(href)
       })?.label || 'home'
     )
@@ -50,7 +50,7 @@
     <nav class:hidden={!showMenu} class="md:block">
       <!-- Nav items -->
       <ul class="bg-surface-100-900 flex flex-col items-center gap-10 md:flex-row">
-        {#each ROUTES as { href, label }}
+        {#each NAV_LINKS as { href, label }}
           <li>
             <a
               {href}

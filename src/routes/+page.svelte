@@ -16,8 +16,8 @@
       <div class="flex flex-col gap-10">
         <header class="grid grid-cols-1 items-center gap-10 md:grid-cols-[2fr_1fr] md:gap-36">
           <img
-            src="https://placeholdit.com/500x300/dddddd/999999"
-            alt="Placeholder"
+            src="https://qbead.org/images/earlypaperprot2.png"
+            alt="The Qbead, a spherical device with LED lights"
             class="rounded-xl md:order-last"
           />
           <div>
