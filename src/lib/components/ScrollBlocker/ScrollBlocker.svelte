@@ -2,23 +2,17 @@
   // utility to monitor body scroll and block interaction on children
   // when the page is scrolling
   import { onMount, onDestroy } from 'svelte'
-  let {
-    children,
-  }: {
-    children: () => any
-  } = $props()
 
-  let timeout = 100 // milliseconds
+  let delay = 100 // milliseconds
 
-  let isScrolling = $state(false)
   let scrollTimeout: ReturnType<typeof setTimeout>
 
   const handleScroll = () => {
-    isScrolling = true
+    document.body.classList.add('scrolling')
     clearTimeout(scrollTimeout)
     scrollTimeout = setTimeout(() => {
-      isScrolling = false
-    }, timeout)
+      document.body.classList.remove('scrolling')
+    }, delay)
   }
 
   onDestroy(() => {
@@ -28,18 +22,12 @@
 
 <svelte:window onscroll={handleScroll} />
 
-<div class="scroll-blocker" class:active={isScrolling}>
-  {#if children}
-    {@render children()}
-  {/if}
-</div>
-
 <style>
-  .scroll-blocker {
+  :global(.scroll-block) {
     position: relative;
   }
 
-  .scroll-blocker.active::after {
+  :global(body.scrolling .scroll-block)::after {
     content: '';
     position: absolute;
     top: 0;
