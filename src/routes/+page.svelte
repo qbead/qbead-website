@@ -81,7 +81,7 @@
           alt="Placeholder"
         />
       </div>
-      <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-3 md:gap-12">
+      <div class="items-fill grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
         <div class="bg-surface-100-900 rounded-xl p-8">
           <div class="bg-surface-200-800 mb-12 inline-block rounded-xl p-6">
             <IconBrain size={40} class="text-secondary-500" />
@@ -159,7 +159,7 @@
         <BioBox
           name="Carlos"
           role="Delft University of Technology, QuTech"
-          imgSrc="https://qbead.org/images/teampics/carlos_s.jpg"
+          imgSrc="/team/carlos_s.jpg"
           tags={['Quantum Physics', 'Art', 'Engineering']}
         >
           Carlos loves science, crafts, and art, and sometimes combines them into a beautiful gadget
@@ -172,7 +172,7 @@
         <BioBox
           name="Stefan"
           role="University of Massachusetts Amherst"
-          imgSrc="https://qbead.org/images/teampics/stefan_s.jpg"
+          imgSrc="/team/stefan_s.jpg"
           tags={['Quantum Physics', 'Art', 'Engineering']}
         >
           Since high school Stefan has enjoyed sharing the wonders of science with others,
@@ -188,7 +188,7 @@
         <BioBox
           name="Hugo"
           role="MIT"
-          imgSrc="https://qbead.org/images/teampics/hugo_s.jpg"
+          imgSrc="/team/hugo_s.jpg"
           tags={['Quantum Physics', 'Art', 'Engineering']}
         >
           Hugo appreciates taking part in various efforts promoting higher education in STEM to
@@ -201,7 +201,7 @@
         <BioBox
           name="Saumil"
           role="MIT"
-          imgSrc="https://qbead.org/images/teampics/saumil_s.jpg"
+          imgSrc="/team/saumil_s.jpg"
           tags={['Quantum Physics', 'Art', 'Engineering']}
         >
           Saumil has always held a fascination for building things. As a graduate student at MIT,
@@ -220,8 +220,9 @@
       <header class="text-center">
         <span
           class="badge preset-outlined-surface-500 text-surface-950-50 border-surface-200-800 mb-4"
-          >Play</span
         >
+          Play
+        </span>
         <h2 class="h2 mb-6">The <span class="text-primary-500">Learning Guide</span></h2>
         <p class="text-lg">
           Everything you need to learn with, teach with, and program your Qbead. From basic quantum
