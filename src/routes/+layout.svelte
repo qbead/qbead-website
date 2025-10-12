@@ -9,7 +9,7 @@
 <div class="flex min-h-screen flex-col">
   <SiteHeader />
 
-  <main class="w-full min-w-0 flex-grow">
+  <main class="min-h-0 flex-1 overflow-y-auto">
     {@render children()}
   </main>
 
