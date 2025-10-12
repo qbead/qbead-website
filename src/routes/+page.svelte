@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { Avatar } from '@skeletonlabs/skeleton-svelte'
   import IconDot from '@lucide/svelte/icons/dot'
   import IconBrain from '@lucide/svelte/icons/brain'
   import IconCode from '@lucide/svelte/icons/code-2'
