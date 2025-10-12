@@ -1,6 +1,7 @@
 <script lang="ts">
   import { BlochSphere } from '@qbead/bloch-sphere'
   import { onMount, onDestroy } from 'svelte'
+  import ScrollBlocker from '../ScrollBlocker/ScrollBlocker.svelte'
   let blochSphereElement: HTMLDivElement
 
   let {
@@ -38,7 +39,9 @@
 
 <svelte:window on:resize={onResize} />
 
-<div bind:this={blochSphereElement} class="bloch-sphere-element"></div>
+<ScrollBlocker>
+  <div bind:this={blochSphereElement} class="bloch-sphere-element"></div>
+</ScrollBlocker>
 
 <style>
   .bloch-sphere-element {
