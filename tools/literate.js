@@ -20,7 +20,7 @@
 // will produce `hello.cpp.md` containing Markdown prose extracted from `//` comments
 // and fenced `cpp` code blocks for everything else.
 
-import { readFileSync, writeFileSync } from 'node:fs'
+import { readFileSync, writeFileSync, statSync, mkdirSync } from 'node:fs'
 import path from 'node:path'
 
 // ## Supported language configurations
@@ -106,27 +106,54 @@ function flush(context) {
 // ```
 function parseArgs(argConfig) {
   const args = process.argv.slice(2)
-  const parsed = {}
-  let skipNext = false
+  const parsed = {
+    others: [],
+  }
 
   for (let i = 0; i < args.length; i++) {
-    if (skipNext) {
-      skipNext = false
+    const arg = args[i]
+    const entry = argConfig[arg]
+    if (!entry) {
+      parsed.others.push(arg)
       continue
     }
-    const arg = args[i]
-    if (typeof argConfig[arg] === 'object' && argConfig[arg].value !== undefined) {
-      parsed[arg] = args[i + 1]
-      skipNext = true
-    } else if (argConfig[arg] === 'boolean') {
-      parsed[arg] = true
+
+    const name = typeof entry === 'string' ? entry : entry.name
+
+    if (typeof entry === 'string') {
+      parsed[name] = true
+    } else {
+      const value = args[i + 1]
+      if (!value || value.startsWith('-')) {
+        console.error(`Expected value after ${arg}`)
+        process.exit(1)
+      }
+      parsed[name] = value
+      i += 1
     }
   }
-  parsed.others = args.filter((arg, idx) => {
-    if (skipNext && idx === i + 1) return false
-    return !Object.keys(argConfig).includes(arg)
-  })
+
   return parsed
+}
+
+// ### createOutputDir(dir)
+//
+// Ensures that the output directory exists, creating it if necessary.
+function createOutputDir(dir) {
+  try {
+    const stats = statSync(dir)
+    if (!stats.isDirectory()) {
+      console.error(`Output path ${dir} is not a directory`)
+      process.exit(1)
+    }
+  } catch (err) {
+    try {
+      mkdirSync(dir, { recursive: true })
+    } catch (mkdirErr) {
+      console.error(`Failed to create output directory ${dir}:`, mkdirErr)
+      process.exit(1)
+    }
+  }
 }
 
 // ## main()
@@ -134,9 +161,9 @@ function parseArgs(argConfig) {
 // The main entry point that orchestrates reading, processing, and writing output.
 function main() {
   const ARGS = {
-    verbose: '-v',
-    outputDir: {
-      flag: '-o',
+    '-v': 'verbose',
+    '-o': {
+      name: 'outputDir',
       value: null,
     },
   }
@@ -164,7 +191,7 @@ function main() {
     process.exit(1)
   }
 
-  log(`Parsing ${inputFile} as ${config.fence}`)
+  log(`Parsing ${inputFile}`)
 
   const lines = readFileSync(inputFile, 'utf8').split(/\r?\n/)
 
@@ -189,6 +216,8 @@ function main() {
   }
 
   context.output = flush(context)
+
+  createOutputDir(outputDir)
 
   const mdFile = path.join(outputDir, path.basename(inputFile) + '.md')
   writeFileSync(mdFile, context.output.trim() + '\n')
