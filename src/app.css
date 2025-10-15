@@ -28,6 +28,9 @@ body {
 
 /* Header Links */
 :where(h2, h3, h4, h5, h6) {
+  /* Buffer to ensure that headings are not hidden behind fixed headers */
+  scroll-margin-top: 6rem;
+
   .icon-link {
     position: relative;
 

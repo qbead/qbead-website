@@ -5,6 +5,7 @@ import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import remarkMath from 'remark-math'
 import rehypeKatexSvelte from 'rehype-katex-svelte'
+import rehypeToc from '@jsdevtools/rehype-toc'
 import { resolve } from 'path'
 
 const layout = {
@@ -28,7 +29,17 @@ const config = {
         dashes: 'oldschool',
       },
       remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatexSvelte, rehypeSlug, rehypeAutolinkHeadings],
+      rehypePlugins: [
+        rehypeKatexSvelte,
+        rehypeSlug,
+        rehypeAutolinkHeadings,
+        [
+          rehypeToc,
+          {
+            headings: ['h2', 'h3', 'h4', 'h5', 'h6'],
+          },
+        ],
+      ],
     }),
   ],
   kit: {
