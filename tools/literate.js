@@ -35,6 +35,15 @@ const LANGUAGE_MAP = {
   '.cpp': { single: '//', fence: '```cpp' },
   '.cc': { single: '//', fence: '```cpp' },
   '.c': { single: '//', fence: '```c' },
+  '.h': { single: '//', fence: '```c' },
+  '.ino': { single: '//', fence: '```cpp' },
+  '.java': { single: '//', fence: '```java' },
+  '.js': { single: '//', fence: '```javascript' },
+  '.jsx': { single: '//', fence: '```jsx' },
+  '.mjs': { single: '//', fence: '```javascript' },
+  '.cjs': { single: '//', fence: '```javascript' },
+  '.tsx': { single: '//', fence: '```tsx' },
+  '.go': { single: '//', fence: '```go' },
   '.js': { single: '//', fence: '```js' },
   '.ts': { single: '//', fence: '```ts' },
   '.rs': { single: '//', fence: '```rust' },
@@ -83,13 +92,59 @@ function flush(context) {
   return context.output
 }
 
+// ### parseArgs(argConfig)
+//
+// Parses command-line arguments based on a configuration object.
+// And also returns non-flag arguments as a list in the `others` property.
+//
+// Config example:
+// ```json
+// {
+//   'verbose': 'boolean', // flag
+//   'outputDir': { flag: '-o', value: null } // option with value
+// }
+// ```
+function parseArgs(argConfig) {
+  const args = process.argv.slice(2)
+  const parsed = {}
+  let skipNext = false
+
+  for (let i = 0; i < args.length; i++) {
+    if (skipNext) {
+      skipNext = false
+      continue
+    }
+    const arg = args[i]
+    if (typeof argConfig[arg] === 'object' && argConfig[arg].value !== undefined) {
+      parsed[arg] = args[i + 1]
+      skipNext = true
+    } else if (argConfig[arg] === 'boolean') {
+      parsed[arg] = true
+    }
+  }
+  parsed.others = args.filter((arg, idx) => {
+    if (skipNext && idx === i + 1) return false
+    return !Object.keys(argConfig).includes(arg)
+  })
+  return parsed
+}
+
 // ## main()
 //
 // The main entry point that orchestrates reading, processing, and writing output.
 function main() {
-  const args = process.argv.slice(2)
-  const verbose = args.includes('-v')
-  const inputFile = args.find((arg) => !arg.startsWith('-'))
+  const ARGS = {
+    verbose: '-v',
+    outputDir: {
+      flag: '-o',
+      value: null,
+    },
+  }
+  const options = parseArgs(ARGS)
+  const verbose = options.verbose || false
+  const outputDir = options.outputDir || '.'
+  const others = options.others || []
+  const inputFile = others[0] || null
 
   if (!inputFile) {
     console.error('Usage: bun literate.js [-v] <sourcefile>')
@@ -135,7 +190,7 @@ function main() {
 
   context.output = flush(context)
 
-  const mdFile = `${inputFile}.md`
+  const mdFile = path.join(outputDir, path.basename(inputFile) + '.md')
   writeFileSync(mdFile, context.output.trim() + '\n')
 
   log(`Wrote ${mdFile}`)
