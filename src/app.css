@@ -114,6 +114,14 @@ code {
   @apply my-7;
 }
 
+code {
+  &:not(pre &, .ec-line &) {
+    @apply text-sm;
+    @apply bg-surface-800;
+    @apply text-surface-50;
+  }
+}
+
 .codeblock {
   @apply my-7;
 }
