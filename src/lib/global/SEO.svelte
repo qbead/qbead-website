@@ -1,5 +1,5 @@
 <script lang="ts">
-  import SITE_META from '$lib/global/site-metadata.json'
+  import SITE_META from './site-metadata.json'
 
   let { title = '', description = '' } = $props()
 
