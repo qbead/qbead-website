@@ -4,7 +4,7 @@
 </script>
 
 <script lang="ts">
-  import SEO from '$lib/components/SEO/SEO.svelte'
+  import SEO from '$lib/global/SEO.svelte'
   export let title: string
   export let description: string
   export let date: string

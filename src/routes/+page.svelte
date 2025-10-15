@@ -5,7 +5,7 @@
   import IconBookOpen from '@lucide/svelte/icons/book-open'
   import IconArrowRight from '@lucide/svelte/icons/arrow-right'
   import BioBox from '$lib/components/BioBox/BioBox.svelte'
-  import SEO from '$lib/components/SEO/SEO.svelte'
+  import SEO from '$lib/global/SEO.svelte'
 </script>
 
 <SEO />

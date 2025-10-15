@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.css'
-  import SiteHeader from '$lib/content/SiteHeader.svelte'
-  import SiteFooter from '$lib/content/SiteFooter.svelte'
+  import SiteHeader from '$lib/global/SiteHeader.svelte'
+  import SiteFooter from '$lib/global/SiteFooter.svelte'
   import ScrollBlocker from '$lib/components/ScrollBlocker/ScrollBlocker.svelte'
 
   let { children } = $props()
