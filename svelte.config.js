@@ -21,7 +21,7 @@ const config = {
       layout,
       highlight: {
         highlighter: (code, lang) => {
-          let escaped = code.replace(/\\/g, '\\\\').replace(/`/g, '\\`')
+          let escaped = code.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$/g, '\\$')
           return `<Components.CodeBlock lang="${lang}" code={\`${escaped}\`}/>`
         },
       },
