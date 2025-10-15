@@ -8,7 +8,8 @@
   import codeTheme from 'shiki/themes/catppuccin-frappe.mjs'
   // Languages
   // https://shiki.style/languages
-  import console from 'shiki/langs/console.mjs'
+  import consoleLang from 'shiki/langs/console.mjs'
+  import shellscript from 'shiki/langs/shellscript.mjs'
   import html from 'shiki/langs/html.mjs'
   import css from 'shiki/langs/css.mjs'
   import js from 'shiki/langs/javascript.mjs'
@@ -27,7 +28,21 @@
     // Implement your import theme.
     themes: [codeTheme],
     // Implement your imported and supported languages.
-    langs: [console, html, css, js, json, ts, python, cpp, csharp, yaml, latex, xml],
+    langs: [
+      consoleLang,
+      shellscript,
+      html,
+      css,
+      js,
+      json,
+      ts,
+      python,
+      cpp,
+      csharp,
+      yaml,
+      latex,
+      xml,
+    ],
   })
 </script>
 
@@ -50,7 +65,14 @@
   }: CodeBlockProps = $props()
 
   // Shiki convert to HTML
-  const generatedHtml = shiki.codeToHtml(code, { lang, theme })
+  const generatedHtml = $derived.by(() => {
+    try {
+      return shiki.codeToHtml(code, { lang, theme })
+    } catch (e) {
+      console.error('Code highlighting error:', e)
+      return shiki.codeToHtml(code, { lang: 'console', theme })
+    }
+  })
 </script>
 
 <div class="codeblock {base} {rounded} {shadow} {classes} {preBase} {prePadding} {preClasses}">

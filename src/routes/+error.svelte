@@ -1,5 +1,12 @@
 <script>
+  // @ts-nocheck
+
+  import { onMount } from 'svelte'
   import { page } from '$app/state'
+
+  onMount(() => {
+    console.error('Error page mounted with error:', page.error)
+  })
 </script>
 
 <div class="outer-container py-36">
@@ -13,6 +20,7 @@
       <pre>
         status: {page.status}
         {page.error?.message}
+        {page.error?.stack}
       </pre>
     {/if}
   </article>
