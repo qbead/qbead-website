@@ -5,6 +5,10 @@ interface Lesson {
   metadata: { [key: string]: any }
 }
 
+// Get all markdown files in specified slug directory
+// and return their metadata and path
+//
+// This is used by various pages to get a list of directory contents
 export const GET: RequestHandler = async (request) => {
   const { slug } = request.params
   const allLessons = import.meta.glob('../../**/*.md')
