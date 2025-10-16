@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+@config './tailwind.config.js';
+
+@import '@skeletonlabs/skeleton';
+@import '@skeletonlabs/skeleton/optional/presets';
+/* @import '@skeletonlabs/skeleton/themes/cerberus'; */
+@import './qbead-theme.css';
+
+@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  font-family: var(--base-font-family);
+  font-weight: var(--base-font-weight);
+  font-style: var(--base-font-style);
+  letter-spacing: var(--base-letter-spacing);
+}
+
+html,
+body {
+  @apply w-full;
+}
+
+/* Header Links */
+:where(h2, h3, h4, h5, h6) {
+  /* Buffer to ensure that headings are not hidden behind fixed headers */
+  scroll-margin-top: 6rem;
+
+  .icon-link {
+    position: relative;
+
+    &::before {
+      content: '#';
+      position: absolute;
+      font-size: 0.8em;
+      left: -1.5ch;
+      top: 0.3em;
+      /* line-height: 1; */
+      opacity: 0;
+      color: var(--color-tertiary-500);
+      text-decoration: underline;
+      transition: opacity 0.15s ease-in-out 0.3s;
+    }
+  }
+
+  &:hover .icon-link::before {
+    opacity: 1;
+    transition: opacity 0.15s ease-in-out;
+  }
+
+  @media (hover: none) {
+    .icon-link::before {
+      opacity: 1;
+      transition: none;
+    }
+  }
+}
+
+/* LaTeX */
+.katex {
+  font-size: 1.1em;
+}
+
+.katex-html[aria-hidden='true'] {
+  display: none;
+  visibility: hidden;
+}
+
+.typography {
+  h1 {
+    @apply h1;
+  }
+
+  h2 {
+    @apply h2;
+  }
+
+  h3 {
+    @apply h3;
+  }
+
+  h4 {
+    @apply h4;
+  }
+
+  h5 {
+    @apply h5;
+  }
+
+  h6 {
+    @apply h6;
+  }
+
+  a {
+    @apply anchor;
+  }
+}
+
+blockquote {
+  @apply blockquote;
+}
+
+kbd {
+  @apply kbd;
+}
+
+code {
+  @apply code;
+  @apply my-7;
+}
+
+code {
+  &:not(pre &, .ec-line &) {
+    @apply text-sm;
+    @apply bg-surface-800;
+    @apply text-surface-50;
+  }
+}
+
+.codeblock {
+  @apply my-7;
+}
+
+.codeblock > pre {
+  @apply pre;
+  @apply p-5;
+  @apply my-0;
+  @apply text-base;
+  line-height: 180%;
+}
+
+.btn {
+  @apply font-bold;
+}
+
+.outer-container {
+  @apply mx-auto w-full max-w-6xl px-10 md:px-32;
+}
+
+.sidebar {
+  @apply bg-surface-800;
+  @apply rounded-tr-4xl;
+  box-shadow: 4px -1px 10px rgba(0, 0, 0, 0.2);
+  font-weight: 400;
+  @apply text-surface-300;
+  @apply pl-1;
+}
+
+@media screen and (min-width: 900px) {
+  .sidebar {
+    @apply pl-10;
+  }
+}
+
+.sidebar-active {
+  @apply bg-surface-950;
+  position: relative;
+  @apply text-surface-50;
+}
+
+.sidebar-active:before,
+.sidebar-active:after {
+  content: '';
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--color-surface-950);
+  mask-image: radial-gradient(circle at 0% 0%, transparent 70%, black 0%);
+  mask-repeat: no-repeat;
+  mask-composite: exclude; /* For Safari, not standard */
+  -webkit-mask-composite: destination-out; /* For Chrome and Edge */
+  pointer-events: none;
+}
+
+.sidebar-active:after {
+  top: auto;
+  bottom: -1.5rem;
+  mask-image: radial-gradient(circle at 0% 100%, transparent 70%, black 0%);
+}
+
+.sidebar .menu-item > div {
+  overflow: hidden;
+}
+
+.sidebar .menu-circle {
+  @apply bg-surface-700;
+}
+
+.sidebar-active .menu-circle {
+  @apply bg-primary-500;
+}
+
+.sidebar .menu-header {
+  position: relative;
+  @apply w-full;
+  @apply flex;
+  @apply items-center;
+}
+.sidebar .menu-header-button {
+  @apply p-4;
+}
+
+.sidebar .menu-header .logo {
+  @apply py-8;
+}
