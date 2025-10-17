@@ -6,6 +6,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import remarkMath from 'remark-math'
 import rehypeKatexSvelte from 'rehype-katex-svelte'
 import rehypeToc from '@jsdevtools/rehype-toc'
+import { sveltex } from '@nvl/sveltex'
 import { resolve } from 'path'
 
 const layout = {
@@ -16,31 +17,65 @@ const layout = {
 const config = {
   preprocess: [
     vitePreprocess(),
-    mdsvex({
-      extensions: ['.md'],
-      layout,
-      highlight: {
-        highlighter: (code, lang) => {
-          let escaped = code.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$/g, '\\$')
-          return `<Components.CodeBlock lang="${lang}" code={\`${escaped}\`}/>`
-        },
+    await sveltex(
+      {
+        markdownBackend: 'unified',
+        codeBackend: 'shiki',
+        mathBackend: 'mathjax',
       },
-      smartypants: {
-        dashes: 'oldschool',
-      },
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [
-        rehypeKatexSvelte,
-        rehypeSlug,
-        rehypeAutolinkHeadings,
-        [
-          rehypeToc,
-          {
-            headings: ['h2', 'h3', 'h4', 'h5', 'h6'],
+      {
+        extensions: ['.sveltex', '.md'],
+        code: {
+          shiki: {
+            theme: 'catppuccin-frappe',
           },
-        ],
-      ],
-    }),
+        },
+        verbatim: { Tex: { type: 'tex', aliases: ['TeX'] } },
+        markdown: {
+          directives: {
+            enabled: false,
+            bracesArePartOfDirective: false,
+          },
+          remarkPlugins: [],
+          retextPlugins: [],
+          rehypePlugins: [
+            rehypeSlug,
+            rehypeAutolinkHeadings,
+            [
+              rehypeToc,
+              {
+                headings: ['h2', 'h3', 'h4', 'h5', 'h6'],
+              },
+            ],
+          ],
+        },
+      }
+    ),
+    // mdsvex({
+    //   extensions: ['.md'],
+    //   layout,
+    //   highlight: {
+    //     highlighter: (code, lang) => {
+    //       let escaped = code.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$/g, '\\$')
+    //       return `<Components.CodeBlock lang="${lang}" code={\`${escaped}\`}/>`
+    //     },
+    //   },
+    //   smartypants: {
+    //     dashes: 'oldschool',
+    //   },
+    //   remarkPlugins: [remarkMath],
+    //   rehypePlugins: [
+    //     rehypeKatexSvelte,
+    //     rehypeSlug,
+    //     rehypeAutolinkHeadings,
+    //     [
+    //       rehypeToc,
+    //       {
+    //         headings: ['h2', 'h3', 'h4', 'h5', 'h6'],
+    //       },
+    //     ],
+    //   ],
+    // }),
   ],
   kit: {
     adapter: adapter({
@@ -48,7 +83,7 @@ const config = {
     }),
     prerender: { entries: ['*'] },
   },
-  extensions: ['.svelte', '.svx', '.md'],
+  extensions: ['.svelte', '.svx', '.md', '.sveltex'],
 }
 
 export default config

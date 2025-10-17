@@ -139,7 +139,10 @@ code {
 }
 
 .outer-container {
-  @apply mx-auto w-full max-w-6xl px-10 md:px-32;
+  @apply mx-auto w-full max-w-6xl px-10;
+  @variant md {
+    @apply px-32;
+  }
 }
 
 .sidebar {
@@ -209,4 +212,46 @@ code {
 
 .sidebar .menu-header .logo {
   @apply py-8;
+}
+
+.layout-literate {
+}
+
+.layout-literate article {
+  padding-inline: 2.5rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .layout-literate article {
+    position: relative;
+    display: grid;
+    grid-template-columns: 30rem max-content;
+    column-gap: 2rem;
+    padding-right: 0;
+    overflow-x: auto;
+
+    :not(.codeblock) {
+      grid-column: 1;
+    }
+
+    .codeblock {
+      grid-column: 2;
+      margin: 0;
+      border-radius: 0;
+      align-self: center;
+    }
+
+    .lit-bg {
+      position: absolute;
+      top: 0;
+      left: 32rem;
+      right: 0;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none;
+      justify-self: stretch;
+      align-self: stretch;
+      background: #303446;
+    }
+  }
 }
