@@ -31,6 +31,8 @@ import path from 'node:path'
 //
 // If a file extension is not recognized, we exit with an error message.
 
+const CODE_META = 'class=codeblock'
+
 const LANGUAGE_MAP = {
   '.cpp': { single: '//', fence: '```cpp' },
   '.cc': { single: '//', fence: '```cpp' },
@@ -83,9 +85,10 @@ function flush(context) {
   if (!context.currentType || context.buffer.length === 0) return context.output
   if (context.currentType === 'code') {
     const content = context.buffer.join('\n').trimEnd()
-    if (content) context.output += `\n${context.config.fence}\n${content}\n${close}\n`
+    if (content) context.output += `\n${context.config.fence} ${CODE_META}\n${content}\n${close}\n`
   } else if (context.currentType === 'text') {
-    context.output += '\n' + context.buffer.join('\n') + '\n'
+    context.output +=
+      '\n<div class="literate-text">\n\n' + context.buffer.join('\n') + '\n\n</div>\n'
   }
   context.buffer = []
   context.currentType = null
@@ -174,7 +177,7 @@ function main() {
   const inputFile = others[0] || null
 
   if (!inputFile) {
-    console.error('Usage: bun literate.js [-v] <sourcefile>')
+    console.error('Usage: bun literate.js [-v] [-o outputDir] <sourcefile>')
     process.exit(1)
   }
 
@@ -225,13 +228,5 @@ function main() {
   log(`Wrote ${mdFile}`)
 }
 
-// ## Example
-//
-// ```bash
-// bun literate.js literate.js
-// ```
-//
-// Running this script on itself produces a human-readable Markdown guide
-// describing how the tool works — a self-documenting example of literate programming.
-
+// Run the main function
 main()

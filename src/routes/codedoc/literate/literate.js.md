@@ -29,7 +29,6 @@ import { readFileSync, writeFileSync, statSync, mkdirSync } from 'node:fs'
 import path from 'node:path'
 ```
 
-
 <div class="literate-text">
 
 ## Supported language configurations
@@ -43,6 +42,8 @@ If a file extension is not recognized, we exit with an error message.
 </div>
 
 ```js class=codeblock
+const CODE_META = 'class=codeblock'
+
 const LANGUAGE_MAP = {
   '.cpp': { single: '//', fence: '```cpp' },
   '.cc': { single: '//', fence: '```cpp' },
@@ -64,11 +65,19 @@ const LANGUAGE_MAP = {
 }
 ```
 
+<div class="literate-text">
+
 ## Utility Functions
+
+</div>
+
+<div class="literate-text">
 
 ### classify(context, line)
 
 Determines whether a line is prose, code, or blank based on the comment syntax.
+
+</div>
 
 ```js class=codeblock
 function classify(context, line) {
@@ -80,11 +89,15 @@ function classify(context, line) {
 }
 ```
 
+<div class="literate-text">
+
 ### clean(context, line)
 
 Removes comment markers for prose lines, leaving readable Markdown.
 
-```js
+</div>
+
+```js class=codeblock
 function clean(context, line) {
   const token = context.config.single
   if (context.currentType !== 'text') return line
@@ -94,25 +107,32 @@ function clean(context, line) {
 }
 ```
 
+<div class="literate-text">
+
 ### flush(context)
 
 Writes buffered lines into the Markdown output.
 
-```js
+</div>
+
+```js class=codeblock
 function flush(context) {
   const close = '```'
   if (!context.currentType || context.buffer.length === 0) return context.output
   if (context.currentType === 'code') {
     const content = context.buffer.join('\n').trimEnd()
-    if (content) context.output += `\n${context.config.fence}\n${content}\n${close}\n`
+    if (content) context.output += `\n${context.config.fence} ${CODE_META}\n${content}\n${close}\n`
   } else if (context.currentType === 'text') {
-    context.output += '\n' + context.buffer.join('\n') + '\n'
+    context.output +=
+      '\n<div class="literate-text">\n\n' + context.buffer.join('\n') + '\n\n</div>\n'
   }
   context.buffer = []
   context.currentType = null
   return context.output
 }
 ```
+
+<div class="literate-text">
 
 ### parseArgs(argConfig)
 
@@ -127,7 +147,9 @@ Config example:
 }
 ```
 
-```js
+</div>
+
+```js class=codeblock
 function parseArgs(argConfig) {
   const args = process.argv.slice(2)
   const parsed = {
@@ -161,11 +183,15 @@ function parseArgs(argConfig) {
 }
 ```
 
+<div class="literate-text">
+
 ### createOutputDir(dir)
 
 Ensures that the output directory exists, creating it if necessary.
 
-```js
+</div>
+
+```js class=codeblock
 function createOutputDir(dir) {
   try {
     const stats = statSync(dir)
@@ -184,11 +210,15 @@ function createOutputDir(dir) {
 }
 ```
 
+<div class="literate-text">
+
 ## main()
 
 The main entry point that orchestrates reading, processing, and writing output.
 
-```js
+</div>
+
+```js class=codeblock
 function main() {
   const ARGS = {
     '-v': 'verbose',
@@ -204,7 +234,7 @@ function main() {
   const inputFile = others[0] || null
 
   if (!inputFile) {
-    console.error('Usage: bun literate.js [-v] <sourcefile>')
+    console.error('Usage: bun literate.js [-v] [-o outputDir] <sourcefile>')
     process.exit(1)
   }
 
@@ -256,15 +286,12 @@ function main() {
 }
 ```
 
-## Example
+<div class="literate-text">
 
-```bash
-bun literate.js literate.js
-```
+Run the main function
 
-Running this script on itself produces a human-readable Markdown guide
-describing how the tool works — a self-documenting example of literate programming.
+</div>
 
-```js
+```js class=codeblock
 main()
 ```
