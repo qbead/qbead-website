@@ -214,9 +214,6 @@ code {
   @apply py-8;
 }
 
-.layout-literate {
-}
-
 .layout-literate article {
   padding-inline: 2.5rem;
 }
@@ -228,7 +225,10 @@ code {
     grid-template-columns: 30rem max-content;
     column-gap: 2rem;
     padding-right: 0;
-    overflow-x: auto;
+    background: linear-gradient(to right, transparent 34rem, #303446 34rem);
+    min-width: max-content;
+    max-width: max-content;
+    margin: auto;
 
     :not(.codeblock) {
       grid-column: 1;
@@ -241,17 +241,8 @@ code {
       align-self: center;
     }
 
-    .lit-bg {
-      position: absolute;
-      top: 0;
-      left: 32rem;
-      right: 0;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none;
-      justify-self: stretch;
-      align-self: stretch;
-      background: #303446;
+    .toc {
+      display: none;
     }
   }
 }
