@@ -71,9 +71,17 @@ function classify(context, line) {
 // Removes comment markers for prose lines, leaving readable Markdown.
 function clean(context, line) {
   const token = context.config.single
-  if (context.currentType !== 'text') return line
-  if (token && line.trimStart().startsWith(token))
-    return line.replace(new RegExp(`^\\s*${token}+\\s?`), '')
+  if (context.currentType !== 'text') {
+    return line
+  }
+  if (token && line.trimStart().startsWith(token)) {
+    line = line.replace(new RegExp(`^\\s*${token}+\\s?`), '')
+    // TODO: we remove backticks from headings in markdown because of a
+    // bug with the markdown "slug" renerer
+    if (line.trimStart().startsWith('#')) {
+      line = line.replace(/`/g, '')
+    }
+  }
   return line
 }
 

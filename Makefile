@@ -20,7 +20,6 @@ all: docs
 clone:
 	@echo "📥 Cloning repository into temporary directory..."
 	@git clone --depth=1 $(REPO_URL) $(TMP_DIR) >/dev/null
-	@echo "✅ Repository cloned to $(TMP_DIR)"
 
 # Generate documentation for configured filetypes
 docs: clone
@@ -28,17 +27,15 @@ docs: clone
 	@mkdir -p $(OUT_DIR)
 	@find $(SRC_DIR) -type f \( $(foreach ext,$(FILETYPES),-name '*.$(ext)' -o ) -false \) | while read -r file; do \
 		base=$$(basename $$file); \
-		out=$(OUT_DIR)/$$base.md; \
+		out=$(OUT_DIR); \
 		echo "  → $$file → $$out"; \
 		bun $(SCRIPT) -v -o $$out $$file; \
 	done
 	@echo "✅ Documentation generation complete."
 	@echo "🧹 Cleaning up temporary directory..."
 	@rm -rf $(TMP_DIR)
-	@echo "✅ Temporary directory removed."
 
 # Remove generated markdown files
 clean:
 	@echo "🧹 Removing generated markdown files..."
 	@rm -f $(OUT_DIR)/*.md
-	@echo "✅ Clean complete."

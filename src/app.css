@@ -116,7 +116,7 @@ code {
 
 code {
   &:not(pre &, .ec-line &) {
-    @apply text-sm;
+    font-size: 0.75em;
     @apply bg-surface-800;
     @apply text-surface-50;
   }
