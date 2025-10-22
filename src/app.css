@@ -216,22 +216,29 @@ code {
 
 .layout-literate article {
   padding-inline: 2.5rem;
+
+  .toc {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 68rem) {
   .layout-literate article {
+    --doc-width: 70ch;
+    --bg-seam: calc(var(--doc-width) + 4.25rem);
     position: relative;
     display: grid;
-    grid-template-columns: 30rem max-content;
+    grid-template-columns: var(--doc-width) max-content;
     column-gap: 2rem;
     padding-right: 0;
-    background: linear-gradient(to right, transparent 34rem, #303446 34rem);
+    background: linear-gradient(to right, transparent var(--bg-seam), #303446 var(--bg-seam));
     min-width: max-content;
     max-width: max-content;
     margin: auto;
 
     :not(.codeblock) {
       grid-column: 1;
+      text-align: right;
     }
 
     .codeblock {
@@ -239,10 +246,6 @@ code {
       margin: 0;
       border-radius: 0;
       align-self: center;
-    }
-
-    .toc {
-      display: none;
     }
   }
 }
