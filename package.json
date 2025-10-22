@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "bunx --bun vite dev",
-    "build": "bunx --bun vite build",
+    "codedocs:spinwearables": "make REPO_URL=https://github.com/qbead/SpinWearablesFirmware SRC_DIR=src",
+    "build": "bun run codedocs:spinwearables && bunx --bun vite build",
     "preview": "bunx --bun vite preview",
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",

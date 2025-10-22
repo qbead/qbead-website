@@ -1,14 +1,14 @@
-# Makefile — Literate Documentation Builder
+# Makefile — Literate Documentation Builder (CI-friendly single-repo version)
 
 # ---- Configuration ----
-REPO_URL := https://github.com/qbead/SpinWearablesFirmware
-TMP_DIR := codedoc_tmp
-SRC_DIR := $(TMP_DIR)/src
-OUT_DIR := src/routes/codedoc/literate
-SCRIPT := tools/literate.js
+REPO_URL  ?= https://github.com/qbead/SpinWearablesFirmware
+SRC_DIR   ?= src
+TMP_DIR   := codedoc_tmp
+OUT_DIR   := src/routes/codedoc/literate
+SCRIPT    := tools/literate.js
 
 # Filetypes to render — override with "make FILETYPES='h ini cpp'"
-FILETYPES   ?= h ino c cpp
+FILETYPES ?= h ino c cpp
 
 # ---- Phony targets ----
 .PHONY: all clone docs clean
@@ -16,20 +16,20 @@ FILETYPES   ?= h ino c cpp
 # Default target
 all: docs
 
-# Clone the repo into a temporary directory
+# ---- Targets ----
+
+# Clone the specified repo into a temporary directory
 clone:
-	@echo "📥 Cloning repository into temporary directory..."
+	@echo "📥 Cloning repository: $(REPO_URL)"
 	@git clone --depth=1 $(REPO_URL) $(TMP_DIR) >/dev/null
 
-# Generate documentation for configured filetypes
+# Generate documentation
 docs: clone
-	@echo "📘 Generating markdown documentation for filetypes: $(FILETYPES)"
+	@echo "📘 Generating markdown documentation from $(SRC_DIR) (filetypes: $(FILETYPES))"
 	@mkdir -p $(OUT_DIR)
-	@find $(SRC_DIR) -type f \( $(foreach ext,$(FILETYPES),-name '*.$(ext)' -o ) -false \) | while read -r file; do \
-		base=$$(basename $$file); \
-		out=$(OUT_DIR); \
-		echo "  → $$file → $$out"; \
-		bun $(SCRIPT) -v -o $$out $$file; \
+	@find $(TMP_DIR)/$(SRC_DIR) -type f \( $(foreach ext,$(FILETYPES),-name '*.$(ext)' -o ) -false \) | while read -r file; do \
+		echo "  → $$file → $(OUT_DIR)"; \
+		bun $(SCRIPT) -v -o $(OUT_DIR) $$file; \
 	done
 	@echo "✅ Documentation generation complete."
 	@echo "🧹 Cleaning up temporary directory..."
