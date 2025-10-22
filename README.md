@@ -30,7 +30,7 @@ Development builds are automatically published as:
 <branch>.qbead-website.pages.dev
 ```
 
-The main branch is a development branch. So to view what's on the main branch:
+The `main` branch is a development branch. So to view what's on the `main` branch:
 
 [https://main.qbead-website.pages.dev/](https://main.qbead-website.pages.dev/)
 
