@@ -1,18 +1,18 @@
-import { mdsvex } from 'mdsvex'
 import adapter from '@sveltejs/adapter-static'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import remarkMath from 'remark-math'
-import rehypeKatexSvelte from 'rehype-katex-svelte'
 import rehypeToc from '@jsdevtools/rehype-toc'
 import { sveltex } from '@nvl/sveltex'
-import { resolve } from 'path'
 
-const layout = {
-  lesson: resolve('./src/markdown-layouts/lesson.svelte'),
-  _: resolve('./src/markdown-layouts/default.svelte'),
-}
+// import { resolve } from 'path'
+// import { mdsvex } from 'mdsvex'
+// import remarkMath from 'remark-math'
+// import rehypeKatexSvelte from 'rehype-katex-svelte'
+// const layout = {
+//   lesson: resolve('./src/markdown-layouts/lesson.svelte'),
+//   _: resolve('./src/markdown-layouts/default.svelte'),
+// }
 
 const config = {
   preprocess: [
