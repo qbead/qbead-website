@@ -22,6 +22,29 @@ This is a work in progress.
   - `literate.js`: Script to generate "literate programming" markdown files from source code.
 - `Makefile`: Makefile that creates literate programming codedocs from an external git repo.
 
+## Development builds
+
+Development builds are automatically published as:
+
+```
+<branch>.qbead-website.pages.dev
+```
+
+The main branch is a development branch. So to view what's on the main branch:
+
+[https://main.qbead-website.pages.dev/](https://main.qbead-website.pages.dev/)
+
+## Production build
+
+Any changes to the `production` branch trigger a production build that will go live.
+
+The workflow should be:
+
+1. Commit changes (pull requests, etc) to `main`
+2. Check that the changes built correctly and [https://main.qbead-website.pages.dev/](https://main.qbead-website.pages.dev/) looks alright.
+3. [Create a pull request from main to production](https://github.com/qbead/qbead-website/compare/production...main?expand=1)
+4. Merge the pull request
+
 ## Developing
 
 ### Prerequisites
