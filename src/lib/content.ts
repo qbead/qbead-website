@@ -16,6 +16,9 @@ function makePageData(slug: string, data: any) {
   const metadata = data.metadata || {}
   const section = metadata.section ?? parentSlug(slug)
   const layout = metadata?.layout ?? 'article'
+  if (!metadata.title) {
+    metadata.title = slug.split('/').pop()
+  }
   return {
     slug,
     layout,

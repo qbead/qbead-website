@@ -207,7 +207,7 @@ function main() {
   const lines = readFileSync(inputFile, 'utf8').split(/\r?\n/)
 
   const context = {
-    output: '',
+    output: '---\nlayout: literate\n---',
     buffer: [],
     currentType: null,
     config,
