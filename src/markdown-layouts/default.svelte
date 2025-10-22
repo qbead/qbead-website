@@ -11,10 +11,14 @@
 
 <SEO {title} {description} />
 
-<div class="outer-container layout-default py-36">
-  <article class="typography prose prose-lg max-w-full">
-    <slot>
-      <!-- the content will be slotted in here -->
-    </slot>
-  </article>
-</div>
+<!-- <div class="outer-container layout-default py-36">
+  <article class="typography prose prose-lg max-w-full"> -->
+<slot>
+  <!-- the content will be slotted in here -->
+</slot>
+
+<!-- </article>
+</div> -->
+
+<style lang="postcss">
+</style>
