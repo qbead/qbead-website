@@ -1,3 +1,7 @@
+---
+layout: literate
+---
+
 <div class="literate-text">
 
 # The SpinWheel firmware v0.0.1
@@ -155,7 +159,7 @@ one for each component into a single 32-bit word.
 
 ```c class=codeblock
 uint32_t color(uint8_t r, uint8_t g, uint8_t b) {
-  return (((uint32_t)r)<<16)+(((uint32_t)g)<<8)+b;  
+  return (((uint32_t)r)<<16)+(((uint32_t)g)<<8)+b;
 }
 ```
 
@@ -313,7 +317,7 @@ Ensure that the large LEDs, controlled by the Adafruit NeoPixel library are also
 </div>
 
 ```c class=codeblock
-      largeLEDs.begin(); 
+      largeLEDs.begin();
       largeLEDs.show();
 ```
 
@@ -483,7 +487,7 @@ It simply calls into the Adafruit NeoPixel library.
 
 ```c class=codeblock
     void drawLargeLEDFrame() {
-      largeLEDs.show();  
+      largeLEDs.show();
     }
 ```
 
@@ -586,14 +590,14 @@ signal is preserved.
       if (i<0 || i>11) return;
       smallLEDs[i*3] = r;
       smallLEDs[i*3+1] = g;
-      smallLEDs[i*3+2] = b;  
+      smallLEDs[i*3+2] = b;
     }
 
     void setSmallLED(int i, uint32_t rgb) {
       if (i<0 || i>11) return;
       smallLEDs[i*3] = rgb>>16;
       smallLEDs[i*3+1] = rgb>>8;
-      smallLEDs[i*3+2] = rgb;  
+      smallLEDs[i*3+2] = rgb;
     }
 
     void setSmallLEDs(int i, int j, uint8_t r, uint8_t g, uint8_t b) {
@@ -608,7 +612,7 @@ signal is preserved.
       for (int i=0; i<12; i++) {
         smallLEDs[i*3] = r;
         smallLEDs[i*3+1] = g;
-        smallLEDs[i*3+2] = b;  
+        smallLEDs[i*3+2] = b;
       }
     }
 
@@ -645,7 +649,7 @@ signal is preserved.
     }
 
     void clearSmallLEDs() {
-      setSmallLEDsUniform(0);  
+      setSmallLEDsUniform(0);
     }
 
     void clearLargeLEDs() {
@@ -653,8 +657,8 @@ signal is preserved.
     }
 
     void clearAllLEDs() {
-      setSmallLEDsUniform(0);  
-      setLargeLEDsUniform(0);      
+      setSmallLEDsUniform(0);
+      setLargeLEDsUniform(0);
     }
 ```
 
@@ -744,7 +748,7 @@ void bootAnimation() {
     SpinWheel.setLargeLEDsUniform(i,i,i);
     SpinWheel.drawFrame();
   }
-  SpinWheel.clearLargeLEDs();  
+  SpinWheel.clearLargeLEDs();
   SpinWheel.drawFrame();
 }
 ```
@@ -900,7 +904,7 @@ As the name suggests, this function turns all LEDs on to full brightness.
 
 ```c class=codeblock
 void flashlight() {
-  SpinWheel.setSmallLEDsUniform(0xffffff);  
+  SpinWheel.setSmallLEDsUniform(0xffffff);
   SpinWheel.setLargeLEDsUniform(0xffffff);
 }
 ```
@@ -914,7 +918,7 @@ As the name suggests, this function turns all LEDs on to full brightness.
 
 ```c class=codeblock
 void tealLight() {
-  SpinWheel.setSmallLEDsUniform(0, 255, 170);  
+  SpinWheel.setSmallLEDsUniform(0, 255, 170);
   SpinWheel.setLargeLEDsUniform(0, 255, 216);
 }
 ```

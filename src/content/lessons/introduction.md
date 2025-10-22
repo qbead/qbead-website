@@ -1,7 +1,7 @@
 ---
 title: Lesson 1
 date: 2020-08-01
-layout: lesson
+layout: article
 ---
 
 <script>

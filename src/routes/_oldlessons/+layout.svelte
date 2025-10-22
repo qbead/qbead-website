@@ -1,4 +1,4 @@
-<script context="module">
+<script context="module" lang="ts">
   import CodeBlock from '$lib/components/CodeBlock/CodeBlock.svelte'
   export { CodeBlock }
 </script>
@@ -7,17 +7,17 @@
   import SEO from '$lib/global/SEO.svelte'
   export let title: string
   export let description: string
-  export let date: string
 </script>
 
 <SEO {title} {description} />
 
-<div class="outer-container layout-lesson py-36">
+<div class="outer-container layout-default py-36">
   <article class="typography prose prose-lg max-w-full">
-    <h1>{title}</h1>
-    <p class="date">on: {date}</p>
     <slot>
-      <!-- the mdsvex content will be slotted in here -->
+      <!-- the content will be slotted in here -->
     </slot>
   </article>
 </div>
+
+<style lang="postcss">
+</style>

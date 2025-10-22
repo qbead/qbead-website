@@ -3,20 +3,22 @@
   import IconMenu from '@lucide/svelte/icons/menu'
 
   const NAV_LINKS = [
-    { href: '/lessons', label: 'Lessons' },
-    { href: '/playground', label: 'Playground' },
-    { href: '/about', label: 'About' },
+    { href: '/lessons', label: 'Lessons', section: 'lessons' },
+    { href: '/codedoc', label: 'Code Docs', section: 'codedoc' },
+    { href: '/about', label: 'About', section: 'about' },
   ]
 
-  const getCurrentRoute = (path: string): string => {
+  const getCurrentRoute = (): string => {
     return (
-      Object.values(NAV_LINKS).find(({ href }) => {
-        return path.startsWith(href)
+      Object.values(NAV_LINKS).find(({ href, section }) => {
+        return page.data.section
+          ? page.data.section === section
+          : page.url.pathname.startsWith(href)
       })?.label || 'home'
     )
   }
 
-  let currentRoute: string = $derived(getCurrentRoute(page.url.pathname))
+  let currentRoute: string = $derived(getCurrentRoute())
   $inspect('currentRoute', currentRoute)
 
   let showMenu: boolean = $state(false)

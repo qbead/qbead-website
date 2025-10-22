@@ -4,7 +4,7 @@
 REPO_URL  ?= https://github.com/qbead/SpinWearablesFirmware
 SRC_DIR   ?= src
 TMP_DIR   := codedoc_tmp
-OUT_DIR   := src/routes/codedoc/literate
+OUT_DIR   := src/content/codedoc
 SCRIPT    := tools/literate.js
 
 # Filetypes to render — override with "make FILETYPES='h ini cpp'"

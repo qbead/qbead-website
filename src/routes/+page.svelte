@@ -5,10 +5,7 @@
   import IconBookOpen from '@lucide/svelte/icons/book-open'
   import IconArrowRight from '@lucide/svelte/icons/arrow-right'
   import BioBox from '$lib/components/BioBox/BioBox.svelte'
-  import SEO from '$lib/global/SEO.svelte'
 </script>
-
-<SEO />
 
 <div class="outer-container py-36">
   <article class="flex flex-col gap-60">
