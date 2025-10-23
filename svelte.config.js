@@ -81,7 +81,7 @@ const config = {
     adapter: adapter({
       fallback: 'index.html', // may differ from host to host
     }),
-    prerender: { entries: ['*'] },
+    prerender: { entries: ['*'], handleHttpError: 'warn' },
   },
   extensions: ['.svelte', '.svx', '.md', '.sveltex'],
 }

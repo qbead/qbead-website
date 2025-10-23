@@ -1,8 +1,15 @@
 import { error } from '@sveltejs/kit'
 import type { PageLoad } from './$types'
-import { getContent } from '$lib/content'
+import { getContent, getAllContent } from '$lib/content'
 
 export const prerender = true
+export const ssr = true
+
+export async function entries() {
+  const contents = await getAllContent()
+  const routes = contents.map((page) => ({ path: page.slug }))
+  return routes
+}
 
 export const load: PageLoad = async ({ params }) => {
   const slug = params.path
