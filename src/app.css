@@ -159,6 +159,10 @@ code {
   }
 }
 
+.toc:has(.toc-level:empty) {
+  display: none;
+}
+
 @media screen and (min-width: 144rem) {
   .toc {
     position: fixed;
