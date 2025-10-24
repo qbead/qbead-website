@@ -138,8 +138,11 @@ code {
   @apply font-bold;
 }
 
-.outer-container {
-  @apply mx-auto w-full max-w-7xl px-10;
+.centered-layout {
+  @apply grid grid-cols-1 justify-items-center;
+  > * {
+    @apply w-full max-w-7xl px-10;
+  }
 }
 
 .layout-literate article {
