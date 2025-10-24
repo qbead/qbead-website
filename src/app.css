@@ -145,6 +145,28 @@ code {
   }
 }
 
+.toc {
+  margin-bottom: 5rem;
+  display: inline-block;
+  @apply bg-surface-100-900 rounded-lg px-8 py-6 pb-4;
+  > ol {
+    margin: 0;
+    padding-left: 1em;
+  }
+  &::before {
+    content: 'Contents';
+    @apply h4 text-surface-950-50;
+  }
+}
+
+@media screen and (min-width: 144rem) {
+  .toc {
+    position: fixed;
+    top: 14rem;
+    left: calc(50% - 72rem);
+  }
+}
+
 .layout-literate article {
   padding-inline: 2.5rem;
 
