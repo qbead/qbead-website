@@ -1,5 +1,5 @@
-<div class="layout-literate">
-  <article class="typography prose prose-lg max-w-full py-36">
+<div class="layout-literate py-28">
+  <article class="typography prose prose-lg max-w-full">
     <slot>
       <!-- the content will be slotted in here -->
     </slot>

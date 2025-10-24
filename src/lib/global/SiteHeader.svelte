@@ -24,7 +24,7 @@
   let showMenu: boolean = $state(false)
 </script>
 
-<header class="bg-surface-100-900 sticky top-0 z-10 flex flex-col gap-16 px-10 py-6 md:px-32">
+<header class="bg-surface-100-900 sticky top-0 z-10 flex flex-col gap-16 px-10 py-8 md:px-32">
   <div
     class="mx-auto flex w-full max-w-7xl flex-col items-stretch justify-between gap-10 md:flex-row md:items-center"
   >

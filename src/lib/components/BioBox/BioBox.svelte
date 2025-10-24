@@ -12,13 +12,13 @@
 <div
   class="bg-secondary-100-900 text-surface-700-300 flex flex-col items-center gap-10 rounded-xl p-8 text-lg"
 >
-  <Avatar size="size-42" src={imgSrc} {name} />
+  <Avatar size="size-38" src={imgSrc} {name} />
   <div class="">
     <div class="text-center">
-      <h3 class="h5 mb-2">{name}</h3>
+      <h3 class="h5 mb-2 text-2xl">{name}</h3>
       <p class="text-primary-500 mb-6">{role}</p>
     </div>
-    <p class="">
+    <p class="text-xl">
       {@render children()}
     </p>
   </div>
