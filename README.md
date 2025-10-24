@@ -45,7 +45,27 @@ The workflow should be:
 3. [Create a pull request from main to production](https://github.com/qbead/qbead-website/compare/production...main?expand=1)
 4. Merge the pull request
 
-## Developing
+## Literate Programming Rendering
+
+As part of the build process, external repos are fetched and their
+source code is processed by `make` to create literate programming conent.
+
+The flow of execution is: `bun -> make -> literate.js`.
+
+To customize what repos are pulled in, you should edit `package.json`:
+
+```json
+"scripts": {
+  "codedocs:my_repo_name": "make REPO_URL=https://github.com/qbead/my-repo SRC_DIR=src OUT_DIR=some-folder-under-codedoc",
+  ...
+  "codedocs": "bun run codedoc:some_other_name && bun run codedocs:my_repo_name",
+}
+```
+
+All content will be rendered inside the `src/content/codedoc/` directory,
+and if specified with `OUT_DIR`, it will be nested in further subdirectories.
+
+## Developing locally
 
 ### Prerequisites
 
