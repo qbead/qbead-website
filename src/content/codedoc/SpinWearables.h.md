@@ -516,8 +516,7 @@ rotation (G for gyroscope), magnetism (M), and temperature (T) data.
 
 First smooth out the measurements using an exponential averaging filter.
 Each new value is used to slowly update the filtered value, through the formula
-$$x_\text{filtered}=\alpha\times x_\text{newest reading} + (1-\alpha)\times
-x_\text{old value},$$ where $\alpha$ is between 0 and 1. If $\alpha$ is large we
+$$x_\text{filtered}=\alpha\times x_\text{newest reading} + (1-\alpha)\times x_\text{old value},$$ where $\alpha$ is between 0 and 1. If $\alpha$ is large we
 rapidly follow the sensor readings, but if it is small, only a smooth filtered
 signal is preserved.
 

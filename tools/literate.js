@@ -76,7 +76,8 @@ function clean(context, line) {
   }
   if (token && line.trimStart().startsWith(token)) {
     line = line.replace(new RegExp(`^\\s*${token}+\\s?`), '')
-    // TODO: we remove backticks from headings in markdown because of a
+    // TODO: remove this fix later
+    // we remove backticks from headings in markdown because of a
     // bug with the markdown "slug" renerer
     if (line.trimStart().startsWith('#')) {
       line = line.replace(/`/g, '')
@@ -95,8 +96,13 @@ function flush(context) {
     const content = context.buffer.join('\n').trimEnd()
     if (content) context.output += `\n${context.config.fence} ${CODE_META}\n${content}\n${close}\n`
   } else if (context.currentType === 'text') {
-    context.output +=
-      '\n<div class="literate-text">\n\n' + context.buffer.join('\n') + '\n\n</div>\n'
+    let text = context.buffer.join('\n')
+
+    // TODO: remove fix later
+    // ensure that anything inside $$ isn't line-broken
+    text = text.replace(/(?<=\$\$[^$]*)\n(?=[^$]*\$\$)/g, ' ')
+
+    context.output += `\n<div class="literate-text">\n\n${text}\n\n</div>\n`
   }
   context.buffer = []
   context.currentType = null

@@ -30,6 +30,11 @@ const config = {
             theme: 'catppuccin-frappe',
           },
         },
+        math: {
+          delims: {
+            doubleDollarSignsDisplay: 'always',
+          },
+        },
         verbatim: { Tex: { type: 'tex', aliases: ['TeX'] } },
         markdown: {
           directives: {
