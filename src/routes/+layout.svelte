@@ -9,9 +9,6 @@
   const { children } = $props()
 </script>
 
-<SEO />
-<ScrollBlocker />
-
 <div class="flex min-h-screen flex-col">
   <SiteHeader />
 
@@ -21,3 +18,6 @@
 
   <SiteFooter />
 </div>
+
+<SEO />
+<ScrollBlocker />
