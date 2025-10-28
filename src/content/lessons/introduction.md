@@ -5,12 +5,11 @@ layout: article
 ---
 
 <script>
-  import CodeBlock from '$lib/components/CodeBlock/CodeBlock.svelte'
   import BlochSphereElement from '$lib/components/BlochSphereElement/BlochSphereElement.svelte'
   import { QubitDisplay, BlochVector } from '@qbead/bloch-sphere'
 </script>
 
-# Introduction
+# {title}
 
 This is the first lesson in the course. We will cover the following topics:
 
@@ -30,9 +29,6 @@ print("Hello, world!")
   "city": "New York"
 }
 ```
-
-<CodeBlock lang="py" lineNumbers code={`def sayHello():
-  print("Hello, world!")`}/>
 
 ```json
 {

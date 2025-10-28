@@ -99,6 +99,10 @@ body {
   a {
     @apply anchor;
   }
+
+  strong {
+    @apply text-surface-300;
+  }
 }
 
 blockquote {
