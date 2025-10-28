@@ -9,7 +9,7 @@ FULL_OUT_DIR   := src/content/codedoc/$(OUT_DIR)
 SCRIPT    := tools/literate.js
 
 # Filetypes to render — override with "make FILETYPES='h ini cpp'"
-FILETYPES ?= h ino c cpp
+FILETYPES ?= h ino c cpp js
 
 # ---- Phony targets ----
 .PHONY: all clone docs clean
