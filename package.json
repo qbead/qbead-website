@@ -8,7 +8,7 @@
     "codedocs:spinwearables": "make REPO_URL=https://github.com/qbead/SpinWearablesFirmware SRC_DIR=src",
     "codedocs:literate": "make REPO_URL=https://github.com/qbead/qbead-website SRC_DIR=tools",
     "codedocs": "bun run codedocs:spinwearables && bun run codedocs:literate",
-    "build": "bun run codedocs && bunx --bun vite build",
+    "build": "vite build",
     "preview": "bunx --bun vite preview",
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
