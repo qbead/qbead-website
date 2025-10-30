@@ -138,7 +138,7 @@ code {
   line-height: 180%;
 }
 
-.btn {
+.btn-lg {
   @apply font-bold;
 }
 
@@ -207,6 +207,58 @@ code {
       margin: 0;
       border-radius: 0;
       align-self: center;
+    }
+  }
+}
+
+@keyframes hoverFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-6px) scale(1.02);
+  }
+  50% {
+    transform: translateY(0) scale(0.99);
+  }
+  75% {
+    transform: translateY(5px) scale(1.01);
+  }
+}
+
+#hero {
+  position: relative;
+
+  &:hover .circles-background {
+    transform: scale(1.1);
+  }
+
+  .circles-background {
+    position: absolute;
+    top: -20%;
+    right: 0;
+    z-index: -1;
+    width: 50%;
+    transition: transform ease 0.5s;
+
+    .dot {
+      transform-origin: center;
+      animation: hoverFloat 6s ease-in-out infinite;
+      opacity: 0.3;
+    }
+
+    .dot.large {
+      animation-duration: 7s;
+      animation-delay: 0s;
+    }
+    .dot.medium {
+      animation-duration: 5.5s;
+      animation-delay: 1s;
+    }
+    .dot.small {
+      animation-duration: 4.5s;
+      animation-delay: 2s;
     }
   }
 }

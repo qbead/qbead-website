@@ -5,6 +5,7 @@
   const NAV_LINKS = [
     { href: '/lessons', label: 'Lessons', section: 'lessons' },
     { href: '/codedoc', label: 'Code Docs', section: 'codedoc' },
+    { href: '/team', label: 'Team', section: 'team' },
     { href: '/about', label: 'About', section: 'about' },
   ]
 
@@ -25,10 +26,10 @@
 </script>
 
 <header
-  class="bg-surface-100-900 sticky top-0 z-10 flex flex-col gap-16 px-10 py-4 shadow-xl md:px-32 md:py-8"
+  class="bg-surface-100-900 sticky top-0 z-10 flex flex-col gap-16 px-10 py-4 shadow-xl md:py-8"
 >
   <div
-    class="mx-auto flex w-full max-w-7xl flex-col items-stretch justify-between gap-10 md:flex-row md:items-center"
+    class="m-auto flex w-full max-w-7xl flex-col items-stretch justify-between gap-10 md:flex-row md:items-center"
   >
     <div class="flex items-stretch justify-between">
       <a href="/" aria-label="Qbead Home">
@@ -58,7 +59,7 @@
           <li>
             <a
               {href}
-              class="hover:text-surface-contrast-500 hover:bg-surface-600-400 rounded-full px-4 py-3 transition-colors duration-200 ease-in-out"
+              class="hover:text-surface-contrast-300-700 hover:bg-surface-200-800 rounded-full px-4 py-3 transition-colors duration-200 ease-in-out"
               class:selected={currentRoute.toLowerCase() === label.toLowerCase()}
               onclick={() => (showMenu = false)}
             >
@@ -75,5 +76,6 @@
   @reference '../../app.css';
   a.selected {
     @apply text-surface-contrast-500 bg-surface-600-400;
+    font-weight: 700;
   }
 </style>

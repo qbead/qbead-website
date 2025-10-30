@@ -5,28 +5,30 @@
     role: string
     imgSrc: string
     children: () => any
-    tags: string[]
+    tags?: string[]
   }>()
 </script>
 
 <div
-  class="bg-secondary-100-900 text-surface-700-300 flex flex-col items-center gap-10 rounded-xl p-8 text-lg"
+  class="bg-surface-200-800 text-surface-700-300 flex flex-col items-center rounded-xl p-8 text-lg"
 >
-  <Avatar size="size-38" src={imgSrc} {name} />
-  <div class="">
+  <Avatar size="size-38 border-1 border-surface-600 mb-6" src={imgSrc} {name} />
+  <div>
     <div class="text-center">
-      <h3 class="h5 mb-2 text-2xl">{name}</h3>
-      <p class="text-primary-500 mb-6">{role}</p>
+      <h3 class="h5 text-2xl">{name}</h3>
+      <p class="text-secondary-600 mb-6 text-base">{role}</p>
     </div>
-    <p class="text-xl">
+    <p class="text-center text-lg">
       {@render children()}
     </p>
   </div>
-  <div class="flex flex-wrap gap-3">
-    {#each tags as tag}
-      <span class="badge preset-outlined-secondary-500 text-surface-950-50">
-        {tag}
-      </span>
-    {/each}
-  </div>
+  {#if tags}
+    <div class="mt-10 flex flex-wrap gap-3">
+      {#each tags as tag}
+        <span class="badge preset-outlined-secondary-500 text-surface-950-50 text-sm">
+          {tag}
+        </span>
+      {/each}
+    </div>
+  {/if}
 </div>
