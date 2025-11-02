@@ -281,3 +281,41 @@
     </div>
   </section>
 </div>
+
+<style lang="postcss">
+  #hero {
+    position: relative;
+
+    &:hover .circles-background {
+      transform: scale(1.1);
+    }
+
+    .circles-background {
+      position: absolute;
+      top: -20%;
+      right: 0;
+      z-index: -1;
+      width: 50%;
+      transition: transform ease 0.5s;
+
+      .dot {
+        transform-origin: center;
+        animation: hoverFloat 6s ease-in-out infinite;
+        opacity: 0.3;
+      }
+
+      .dot.large {
+        animation-duration: 7s;
+        animation-delay: 0s;
+      }
+      .dot.medium {
+        animation-duration: 5.5s;
+        animation-delay: 1s;
+      }
+      .dot.small {
+        animation-duration: 4.5s;
+        animation-delay: 2s;
+      }
+    }
+  }
+</style>

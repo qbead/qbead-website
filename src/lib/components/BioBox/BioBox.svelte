@@ -18,9 +18,9 @@
       <h3 class="h5 text-2xl">{name}</h3>
       <p class="text-secondary-600 mb-6 text-base">{role}</p>
     </div>
-    <p class="text-center text-lg">
+    <div class="text-center text-lg">
       {@render children()}
-    </p>
+    </div>
   </div>
   {#if tags}
     <div class="mt-10 flex flex-wrap gap-3">

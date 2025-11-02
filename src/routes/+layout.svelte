@@ -13,7 +13,9 @@
   <SiteHeader />
 
   <main class="min-h-0 flex-1 overflow-y-auto">
-    <Layout {children}></Layout>
+    <Layout>
+      {@render children()}
+    </Layout>
   </main>
 
   <SiteFooter />
