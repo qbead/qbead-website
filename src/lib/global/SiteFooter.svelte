@@ -40,7 +40,7 @@
   ]
 </script>
 
-<footer class="bg-surface-100-900 flex flex-col gap-16 px-10 py-12 md:py-24">
+<footer class="bg-surface-100-900 flex flex-col gap-16 px-10 py-12 md:pt-24">
   <div class="mx-auto w-full max-w-7xl">
     <nav class="grid grid-cols-1 gap-20 md:grid-cols-3">
       <div class="flex flex-col gap-6">

@@ -156,17 +156,20 @@ code {
   @apply font-bold;
 }
 
-.centered-layout {
-  @apply grid grid-cols-1 justify-items-center;
-  > * {
+@layer base {
+  .centered-layout {
+    @apply grid grid-cols-1 justify-items-center;
+  }
+
+  :where(.centered-layout > *) {
     @apply w-full max-w-7xl px-10;
   }
 }
 
 .toc {
+  display: none;
   margin-bottom: 5rem;
-  display: inline-block;
-  @apply bg-surface-100-900 rounded-lg px-8 py-6 pb-4;
+  @apply bg-surface-100-900 w-sm rounded-lg px-8 py-6 pb-4;
   > ol {
     margin: 0;
     padding-left: 1em;
@@ -181,20 +184,20 @@ code {
   display: none;
 }
 
-@media screen and (min-width: 144rem) {
+.with-toc .toc {
+  display: inline-block;
+}
+
+@media screen and (min-width: 80rem) {
   .toc {
     position: fixed;
-    top: 14rem;
-    left: calc(50% - 72rem);
+    top: 13.3rem;
+    left: calc(50% - 36rem);
   }
 }
 
 .layout-literate article {
   padding-inline: 2.5rem;
-
-  .toc {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 68rem) {

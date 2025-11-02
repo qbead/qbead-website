@@ -109,7 +109,7 @@ which [supports many languages](https://shiki.style/languages).
 
 To create a codeblock, create a "fence" of backticks with the language label. For example:
 
-````text
+````
 ```python
 somePython()
 ```

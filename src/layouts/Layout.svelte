@@ -1,6 +1,7 @@
 <script lang="ts">
   import Article from './Article.svelte'
   import Literate from './Literate.svelte'
+  import Lesson from './Lesson.svelte'
   import { page } from '$app/state'
 
   const { children } = $props()
@@ -15,6 +16,10 @@
   <Literate>
     {@render children()}
   </Literate>
+{:else if layout == 'lesson'}
+  <Lesson>
+    {@render children()}
+  </Lesson>
 {:else}
   {@render children()}
 {/if}
