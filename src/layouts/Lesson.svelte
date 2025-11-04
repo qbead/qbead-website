@@ -6,11 +6,13 @@
   const description = $derived(page.data?.metadata?.description)
 </script>
 
-<div class="layout-lesson centered-layout py-28 xl:pl-[28rem]">
-  <article class="typography prose prose-lg with-toc max-w-3xl">
-    <div class="bg-surface-100-900 border-surface-50-950 rounded-md border-1">
+<div class="layout-lesson centered-layout md:py-28 xl:pl-[28rem]">
+  <article class="typography prose prose-lg with-toc text-surface-600-400 max-w-3xl">
+    <div
+      class="bg-surface-100-900 border-surface-50-950 -mx-10 mb-10 border-b-0 md:rounded-md md:border-1 xl:mb-0"
+    >
       {#if headerImage}
-        <img class="header-image mt-0 mb-12 rounded-t-md" src={headerImage} />
+        <img class="header-image mt-0 mb-12 md:rounded-t-md" src={headerImage} />
       {/if}
       <div class="p-10 pb-4">
         <h1>{title}</h1>
