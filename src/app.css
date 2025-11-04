@@ -86,37 +86,39 @@ body.scrolling .scroll-block::after {
   visibility: hidden;
 }
 
-.typography {
-  h1 {
-    @apply h1;
-  }
+@layer base {
+  .typography {
+    h1 {
+      @apply h1;
+    }
 
-  h2 {
-    @apply h2;
-  }
+    h2 {
+      @apply h2;
+    }
 
-  h3 {
-    @apply h3;
-  }
+    h3 {
+      @apply h3;
+    }
 
-  h4 {
-    @apply h4;
-  }
+    h4 {
+      @apply h4;
+    }
 
-  h5 {
-    @apply h5;
-  }
+    h5 {
+      @apply h5;
+    }
 
-  h6 {
-    @apply h6;
-  }
+    h6 {
+      @apply h6;
+    }
 
-  a {
-    @apply anchor;
-  }
+    a {
+      @apply anchor;
+    }
 
-  strong {
-    @apply text-surface-300;
+    strong {
+      @apply text-surface-300;
+    }
   }
 }
 
@@ -170,9 +172,11 @@ code {
 .toc {
   display: none;
   margin-bottom: 5rem;
-  @apply bg-surface-100-900 w-sm rounded-lg px-8 py-6 pb-4;
+  @apply bg-surface-100-900 w-sm rounded-lg px-8 py-8;
   > ol {
     margin: 0;
+    margin-left: 0.25em;
+    margin-bottom: 1rem;
     padding-left: 1em;
   }
   &::before {
@@ -186,7 +190,8 @@ code {
 }
 
 .with-toc .toc {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 80rem) {

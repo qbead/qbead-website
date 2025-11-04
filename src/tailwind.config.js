@@ -5,8 +5,8 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            color: 'inherit',
-            a: { color: 'inherit' },
+            color: '-1',
+            a: { color: '-1' },
             strong: { color: 'inherit' },
             h1: { color: 'inherit' },
             h2: { color: 'inherit' },

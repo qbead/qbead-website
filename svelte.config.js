@@ -4,7 +4,6 @@ import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeToc from '@jsdevtools/rehype-toc'
 import { sveltex } from '@nvl/sveltex'
-
 // import { resolve } from 'path'
 // import { mdsvex } from 'mdsvex'
 // import remarkMath from 'remark-math'
@@ -41,6 +40,12 @@ const config = {
             enabled: false,
             bracesArePartOfDirective: false,
           },
+          components: [
+            {
+              name: 'BackLink',
+              importPath: '$lib/components/BackLink/BackLink.svelte',
+            },
+          ],
           remarkPlugins: [],
           retextPlugins: [],
           rehypePlugins: [
@@ -50,6 +55,14 @@ const config = {
               rehypeToc,
               {
                 headings: ['h2', 'h3', 'h4', 'h5', 'h6'],
+                customizeTOC(toc) {
+                  toc.children.push({
+                    type: 'element',
+                    tagName: 'BackLink',
+                    properties: {},
+                    children: [],
+                  })
+                },
               },
             ],
           ],

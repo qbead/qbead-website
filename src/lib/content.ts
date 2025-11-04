@@ -6,7 +6,7 @@ export type ContentEntry = {
   content: any
 }
 
-function parentSlug(slug: string) {
+export function parentSlug(slug: string) {
   let parents = slug.split('/')
   parents.pop()
   return parents.join('/')
