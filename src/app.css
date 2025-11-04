@@ -173,7 +173,7 @@ code {
 .toc {
   display: none;
   margin-bottom: 5rem;
-  @apply bg-surface-100-900 w-sm rounded-lg px-8 py-8;
+  @apply bg-surface-100-900 rounded-lg px-8 py-8 md:w-xs;
   > ol {
     margin: 0;
     margin-left: 0.25em;
