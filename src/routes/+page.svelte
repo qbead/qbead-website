@@ -22,7 +22,7 @@
     <div id="hero" class="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-36">
       <img src="https://picsum.photos/600/400" alt="Placeholder" class="rounded-xl md:order-last" />
       <div>
-        <h1 class="h1 mb-8">
+        <h1 class="h1 mb-8 text-6xl">
           Put Your Hands on a <span class="text-primary-500">Qubit!</span>
         </h1>
         <p class="text-xl">
