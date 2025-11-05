@@ -1,6 +1,7 @@
 <script lang="ts">
   import IconAlert from '@lucide/svelte/icons/alert-circle'
   import IconInfo from '@lucide/svelte/icons/info'
+  import IconQuestion from '@lucide/svelte/icons/circle-question-mark'
 
   let {
     title,
@@ -8,7 +9,7 @@
     children,
   } = $props<{
     title?: string
-    type?: 'info' | 'plain' | 'alert'
+    type?: 'info' | 'plain' | 'alert' | 'question'
     children: () => any
   }>()
 
@@ -16,6 +17,10 @@
     info: {
       color: 'text-primary-500',
       component: IconInfo,
+    },
+    question: {
+      color: 'text-secondary-500',
+      component: IconQuestion,
     },
     alert: {
       color: 'text-warning-500',
@@ -38,7 +43,7 @@
 
 <aside class="bg-surface-100-900 text-surface-700-300 mb-8 flex flex-col gap-8 rounded-lg p-8">
   {#if title}
-    <div class=" h4 flex items-center gap-6 {IconChoice.color}">
+    <div class="h4 flex items-center gap-6 {IconChoice.color}">
       {@render icon(IconChoice)}
       <span>{title}</span>
     </div>
@@ -46,9 +51,9 @@
       {@render children()}
     </div>
   {:else}
-    <div class="flex items-center gap-6">
+    <div class="flex items-start gap-6">
       {@render icon(IconChoice)}
-      <div class="content">
+      <div class="content flex-1 pt-3">
         {@render children()}
       </div>
     </div>

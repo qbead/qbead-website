@@ -19,7 +19,7 @@ description: Learn how to make a lesson
 
 ## This is a section title
 
-This is some body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris. Vivamus massa justo, sagittis non viverra sed, sodales non nisi. Nunc semper, massa a aliquet dictum, enim nisi malesuada orci, et elementum lectus turpis et velit.
+This is some body text. You can use **bold text** to draw the eye to important information. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris. Vivamus massa justo, sagittis non viverra sed, sodales non nisi. Nunc semper, massa a aliquet dictum, enim nisi malesuada orci, et elementum lectus turpis et velit.
 
 ### And Here is a Subsection
 
@@ -43,7 +43,17 @@ Here is a warning
 
 ## You can also add math
 
-To solve for `x` we can apply the *quadratic formula*.
+<Callout type="question">
+
+Solve for $x$ given,
+
+$
+x^2 + x - 2 = 0
+$
+
+</Callout>
+
+To solve for $x$ we can apply the *quadratic formula*.
 
 $$
 x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a},
@@ -55,7 +65,7 @@ $$
 \begin{aligned}
 a &= 1 \\
 b &= 1 \\
-c &= -1
+c &= -2
 \end{aligned}
 $$
 
@@ -63,8 +73,10 @@ Substituting the values we get:
 
 $$
 \begin{aligned}
-x &= \frac{-1 \pm \sqrt{1^2 - 4(1)(-1)}}{2(1)} \\
-&= \frac{-1 \pm \sqrt{1^2 + 4}}{2}
+x &= \frac{-1 \pm \sqrt{1^2 - 4(1)(-2)}}{2(1)} \\
+&= \frac{-1 \pm \sqrt{1^2 + 8}}{2} \\
+&= -0.5 \pm 3/2 \\
+&= -2, 1
 \end{aligned}
 $$
 
