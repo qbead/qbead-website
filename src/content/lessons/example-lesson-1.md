@@ -13,21 +13,15 @@ description: Learn how to make a lesson
 
 <script>
   import Callout from '$lib/components/Callout/Callout.svelte'
-  import { Segment } from '@skeletonlabs/skeleton-svelte'
-  const SegmentItem = Segment.Item
 
-  let align = $state('left')
+  let a = 1
 </script>
 
-## Some subtitle
+## This is a section title
 
-To solve for `x` we can apply the *quadratic formula*.
+This is some body text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris. Vivamus massa justo, sagittis non viverra sed, sodales non nisi. Nunc semper, massa a aliquet dictum, enim nisi malesuada orci, et elementum lectus turpis et velit.
 
-$$
-x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a},
-$$
-
-where,
+### And Here is a Subsection
 
 <Callout title="Lesson Note">
 
@@ -47,6 +41,16 @@ Here is a warning
 
 </Callout>
 
+## You can also add math
+
+To solve for `x` we can apply the *quadratic formula*.
+
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a},
+$$
+
+where,
+
 $$
 \begin{aligned}
 a &= 1 \\
@@ -64,7 +68,32 @@ x &= \frac{-1 \pm \sqrt{1^2 - 4(1)(-1)}}{2(1)} \\
 \end{aligned}
 $$
 
-<Segment name="align" value={align} onValueChange={(e) => (align = e.value)}>
-<SegmentItem value="left">One</SegmentItem>
-<SegmentItem value="center">Two</SegmentItem>
-</Segment>
+## You could even add some code
+
+<div class="grid grid-cols-2 items-start gap-6">
+
+<div>
+
+A side-by-side may be useful when referring to code blocks or outlining/describing sections of code, though these can be formatted in any way you'd like.
+
+</div>
+
+```py
+def say_hello():
+  print("Oh. Hi there.")
+```
+
+</div>
+
+## Images
+
+You can easily add an image the normal markdown way. But to align it
+and to add captions, you'll have to wrap it in a `figure` with appropriate
+classes.
+
+<figure class="flex flex-col items-center">
+
+![Some image](https://spinwearables.com/images/banners/compass.png)
+
+<figcaption>Figure 1: Some figure.</figcaption>
+</figure>

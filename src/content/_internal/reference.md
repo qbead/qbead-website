@@ -17,6 +17,11 @@ robots: false # will hide from search engines
 
 # Reference for creating content
 
+## Common Gotchas
+
+1. There is a bug that prevents page rendering when content has a "curly apostrophe":
+  <abbr class="bg-surface-200-800 p-2">&#x2018;</abbr> so be careful to check your content for punctuation that isn't plain.
+
 ## Frontmatter
 
 Metadata for every page is created by frontmatter; a yaml formatted
