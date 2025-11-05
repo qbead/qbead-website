@@ -42,8 +42,8 @@
 
 <footer class="bg-surface-100-900 flex flex-col gap-16 px-10 py-12 md:pt-24">
   <div class="mx-auto w-full max-w-7xl">
-    <nav class="grid grid-cols-1 gap-20 md:grid-cols-3">
-      <div class="flex flex-col gap-6">
+    <nav class="grid grid-cols-1 gap-20 text-center md:grid-cols-3 md:text-left">
+      <div class="flex flex-col items-center gap-6 md:items-start">
         <img src="/Qbead-Logo-Dark-Mode-White-Rgb.svg" alt="Qbead Logo" width="136" />
         <ul class="flex gap-6">
           {#each socialLinks as { icon, href, label }}
@@ -77,7 +77,12 @@
       <div class="flex flex-col">
         <h3 class="h4 text-on-surface-variant-900 mb-5 font-semibold">Contact</h3>
         <ul class="flex flex-col gap-3 text-xl">
-          <li><a href="mailto:info@qbead.org" class="hover:underline">info@qbead.org</a></li>
+          <li>
+            <a href="mailto:info@qbead.org" class="flex items-center gap-3 hover:underline">
+              <IconMail />
+              <span>info@qbead.org</span>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
