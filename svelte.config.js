@@ -4,6 +4,7 @@ import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeToc from '@jsdevtools/rehype-toc'
 import { sveltex } from '@nvl/sveltex'
+import rehypeImageToolkit from 'rehype-image-toolkit'
 // import { resolve } from 'path'
 // import { mdsvex } from 'mdsvex'
 // import remarkMath from 'remark-math'
@@ -49,6 +50,7 @@ const config = {
           remarkPlugins: [],
           retextPlugins: [],
           rehypePlugins: [
+            rehypeImageToolkit,
             rehypeSlug,
             rehypeAutolinkHeadings,
             [

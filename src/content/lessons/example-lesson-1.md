@@ -99,13 +99,13 @@ def say_hello():
 
 ## Images
 
-You can easily add an image the normal markdown way. But to align it
-and to add captions, you'll have to wrap it in a `figure` with appropriate
+You can easily add an image the normal markdown way. To add a caption,
+you can add a `^` to the image text like so: `![^some caption](url)`.
+But to align it you'll have to wrap it in a `<div>` with appropriate
 classes.
 
-<figure class="flex flex-col items-center">
+<div class="flex flex-col items-center">
 
-![Some image](https://spinwearables.com/images/banners/compass.png)
+![^Figure 1: Some image](https://spinwearables.com/images/banners/compass.png)
 
-<figcaption>Figure 1: Some figure.</figcaption>
-</figure>
+</div>
