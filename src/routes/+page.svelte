@@ -154,7 +154,7 @@
         unit of quantum computing.
       </p>
     </div>
-    <div class="grid grid-cols-[2fr_1fr] items-center gap-10">
+    <div class="grid items-center gap-10 lg:grid-cols-[2fr_1fr]">
       <div class="prose px-8 text-xl">
         <p>
           The north pole of the sphere represents the "0" state, and the south pole represents the
@@ -198,7 +198,7 @@
         and harnessing quantum phenomena to create the technology of tomorrow.
       </p>
     </div>
-    <div class="grid grid-flow-row-dense gap-6 md:grid-cols-4">
+    <div class="grid grid-flow-row-dense gap-6 md:grid-cols-2 xl:grid-cols-4">
       <BioBox
         name="Carlos"
         role="Delft University of Technology, QuTech"

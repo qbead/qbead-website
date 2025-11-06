@@ -14,7 +14,7 @@
   const description = $derived(page.data?.metadata?.description)
   const difficulty = $derived(page.data?.metadata?.difficulty)
   const objectives = $derived(page.data?.metadata?.objectives)
-  const topics = $derived(splitkeywords(page.data?.metadata?.keywords))
+  const topics = $derived(splitkeywords(page.data?.metadata?.topics))
 
   const nextLesson = $derived.by(async () => {
     const next = page.data?.metadata?.nextLesson

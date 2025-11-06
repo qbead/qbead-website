@@ -1,8 +1,10 @@
 ---
 title: Example Lesson 1
 layout: lesson
-# below is metadata for lessons
+# topics can be keywords for SEO
 keywords: example, lesson, learning
+# below is metadata for lessons
+topics: example, lesson, learning
 difficulty: Beginner
 objectives:
   - Learn how to add metadata

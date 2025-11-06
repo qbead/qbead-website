@@ -12,7 +12,7 @@
 <div class="flex min-h-screen flex-col">
   <SiteHeader />
 
-  <main class="min-h-0 flex-1 overflow-y-auto">
+  <main class="min-h-0 flex-1">
     <Layout>
       {@render children()}
     </Layout>
