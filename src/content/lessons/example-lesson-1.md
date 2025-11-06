@@ -1,6 +1,7 @@
 ---
 title: Example Lesson 1
 layout: lesson
+# below is metadata for lessons
 keywords: example, lesson, learning
 difficulty: Beginner
 objectives:
@@ -9,7 +10,7 @@ objectives:
   - Create your own lesson
 headerImage: https://spinwearables.com/images/banners/sensor_controller_actuator.png
 description: Learn how to make a lesson
-nextLesson: _internal/reference
+nextLesson: _internal/reference # specifically used by lessons to add a "next lesson" below
 ---
 
 <script>
