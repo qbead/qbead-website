@@ -9,12 +9,11 @@ objectives:
   - Create your own lesson
 headerImage: https://spinwearables.com/images/banners/sensor_controller_actuator.png
 description: Learn how to make a lesson
+nextLesson: _internal/reference
 ---
 
 <script>
   import Callout from '$lib/components/Callout/Callout.svelte'
-
-  let a = 1
 </script>
 
 ## This is a section title

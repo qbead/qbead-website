@@ -2,6 +2,7 @@
   import IconAlert from '@lucide/svelte/icons/alert-circle'
   import IconInfo from '@lucide/svelte/icons/info'
   import IconQuestion from '@lucide/svelte/icons/circle-question-mark'
+  import BookOpen from '@lucide/svelte/icons/book-open'
 
   let {
     title,
@@ -9,7 +10,7 @@
     children,
   } = $props<{
     title?: string
-    type?: 'info' | 'plain' | 'alert' | 'question'
+    type?: 'info' | 'plain' | 'alert' | 'question' | 'book'
     children: () => any
   }>()
 
@@ -25,6 +26,10 @@
     alert: {
       color: 'text-warning-500',
       component: IconAlert,
+    },
+    book: {
+      color: 'text-secondary-500',
+      component: BookOpen,
     },
   }
 

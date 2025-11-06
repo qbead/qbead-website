@@ -185,7 +185,7 @@ code {
 .toc {
   display: none;
   margin-bottom: 5rem;
-  @apply bg-surface-100-900 rounded-lg px-8 py-8 md:w-xs;
+  @apply bg-surface-100-900 border-surface-200-800 rounded-lg border-1 px-8 py-8 md:w-xs;
   > ol {
     margin: 0;
     margin-left: 0.25em;
@@ -195,6 +195,9 @@ code {
   &::before {
     content: 'Contents';
     @apply h4 text-surface-950-50;
+  }
+  a {
+    text-decoration: none;
   }
 }
 

@@ -3,6 +3,9 @@
   import IconBook from '@lucide/svelte/icons/book'
   import IconTarget from '@lucide/svelte/icons/target'
   import IconSubtitles from '@lucide/svelte/icons/subtitles'
+  import Callout from '$lib/components/Callout/Callout.svelte'
+  import { getContent } from '$lib/content'
+  import { resolve } from '$app/paths'
 
   const splitkeywords = (str: string) => str?.split(/,\s+/)
 
@@ -12,6 +15,21 @@
   const difficulty = $derived(page.data?.metadata?.difficulty)
   const objectives = $derived(page.data?.metadata?.objectives)
   const topics = $derived(splitkeywords(page.data?.metadata?.keywords))
+
+  const nextLesson = $derived.by(async () => {
+    const next = page.data?.metadata?.nextLesson
+    if (!next) {
+      return false
+    }
+    const doc = await getContent(next)
+    if (!doc) {
+      return false
+    }
+    return {
+      href: resolve('/[...path]', { path: doc.slug }),
+      title: doc.metadata.title,
+    }
+  })
 </script>
 
 <div class="layout-lesson centered-layout py-12 md:py-28 xl:pl-[26rem]">
@@ -69,8 +87,23 @@
         </section>
       {/if}
     </div>
+
     <slot>
       <!-- the mdsvex content will be slotted in here -->
     </slot>
+
+    {#await nextLesson then next}
+      {#if next}
+        <footer class="not-prose mt-24">
+          <Callout type="book" title="Next Lesson">
+            <div class="ml-20">
+              <a href={next.href}>
+                → {next.title}
+              </a>
+            </div>
+          </Callout>
+        </footer>
+      {/if}
+    {/await}
   </article>
 </div>

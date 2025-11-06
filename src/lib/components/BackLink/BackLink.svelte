@@ -1,7 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state'
   import { parentSlug } from '$lib/content'
-  import IconLeftArrow from '@lucide/svelte/icons/arrow-left'
   const TEXT_MAP: any = {
     // map section tags to their text title
     codedocs: 'Code Documentation',
@@ -15,6 +14,5 @@
 </script>
 
 <a href={path} class="anchor text-secondary-500 flex items-center gap-2">
-  <IconLeftArrow />
-  <span>Back to {name}</span>
+  <span>← Back to {name}</span>
 </a>

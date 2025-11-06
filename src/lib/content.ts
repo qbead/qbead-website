@@ -1,7 +1,7 @@
 export type ContentEntry = {
   slug: string
   section?: string
-  metadata?: Record<string, any>
+  metadata: Record<string, any>
   layout?: string
   content: any
 }
