@@ -129,6 +129,11 @@ body.scrolling .scroll-block::after {
   }
 }
 
+.prose p:has(img:only-child) > img {
+  margin-top: unset;
+  margin-bottom: unset;
+}
+
 @layer base {
   .typography a {
     @apply anchor;
