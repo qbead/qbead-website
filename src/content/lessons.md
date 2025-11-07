@@ -1,6 +1,6 @@
 ---
 title: The Learning Guide
-layout: minimal
+layout: base
 ---
 
 <script lang="ts">
@@ -10,110 +10,128 @@ layout: minimal
   import FancyHeading from '$lib/components/FancyHeading/FancyHeading.svelte'
   type Lesson = {
     title: string
+    slug: string
     href: string
     headerImage: string
     topics?: string[]
     difficulty: string
+    nextLesson?: string
   }
 
   const mockImage = () =>
     `https://lipsum.app/random/640x480?${Math.random().toFixed(6)}`
 
-  const _pages: Lesson[] = [
-    {
-      title: 'What Is Quantum Information?',
-      href: '/lessons/what-is-quantum-information',
-      headerImage: mockImage(),
-      topics: ['classical vs quantum information', 'qubits', 'measurement'],
-      difficulty: 'beginner'
-    },
-    {
-      title: 'Superposition and the Nature of Qubits',
-      href: '/lessons/superposition-and-qubits',
-      headerImage: mockImage(),
-      topics: ['superposition', 'state vectors', 'Bloch sphere'],
-      difficulty: 'beginner'
-    },
-    {
-      title: 'Quantum Entanglement Basics',
-      href: '/lessons/quantum-entanglement-basics',
-      headerImage: mockImage(),
-      topics: ['entanglement', 'Bell pairs', 'nonlocality'],
-      difficulty: 'intermediate'
-    },
-    {
-      title: 'Quantum Gates and Circuits',
-      href: '/lessons/quantum-gates-and-circuits',
-      headerImage: mockImage(),
-      topics: ['Pauli matrices', 'Hadamard gate', 'CNOT gate'],
-      difficulty: 'intermediate'
-    },
-    {
-      title: 'Measuring Quantum States',
-      href: '/lessons/measuring-quantum-states',
-      headerImage: mockImage(),
-      topics: ['projection', 'probability amplitudes', 'wavefunction collapse'],
-      difficulty: 'intermediate'
-    },
-    {
-      title: 'Quantum Teleportation Explained',
-      href: '/lessons/quantum-teleportation',
-      headerImage: mockImage(),
-      topics: ['entanglement swapping', 'classical channel', 'information transfer'],
-      difficulty: 'advanced'
-    }
-  ]
-
   function toLesson(page): Lesson {
     return {
       title: page.metadata.title,
+      slug: page.slug,
       href: resolve('/[...path]', { path: page.slug }),
       headerImage: page.metadata.headerImage,
       topics: page.metadata.topics,
-      difficulty: page.metadata.difficulty
+      difficulty: page.metadata.difficulty,
+      nextLesson: page.metadata.nextLesson
     }
   }
 
-  const pages = getAllContent('lessons').then(p => {
-    return p.map(toLesson).concat(_pages)
+  function sortLessons(lessons: Lesson[]) {
+    const bySlug = new Map(lessons.map(l => [l.slug, l]))
+    const nextToPrev = new Map()
+    const prevToNext = new Map()
+
+    // Build bidirectional lookup
+    for (const lesson of lessons) {
+      if (lesson.nextLesson && bySlug.has(lesson.nextLesson)) {
+        prevToNext.set(lesson.slug, lesson.nextLesson)
+        nextToPrev.set(lesson.nextLesson, lesson.slug)
+      }
+    }
+
+    // Find all possible heads (slugs that aren't referenced as nextLesson)
+    const heads = lessons
+      .map(l => l.slug)
+      .filter(slug => !nextToPrev.has(slug))
+
+    // Fallback: if no head (i.e. circular chain), pick any node to start
+    const startSlugs = heads.length ? heads : [lessons[0].slug]
+
+    const sorted = []
+    const visited = new Set()
+
+    for (const startSlug of startSlugs) {
+      let current = startSlug
+      while (current && !visited.has(current)) {
+        const node = bySlug.get(current)
+        if (!node) break
+
+        sorted.push(node)
+        visited.add(current)
+        current = prevToNext.get(current)
+      }
+    }
+
+    // Prepend any disconnected nodes that weren't visited
+    for (const l of lessons) {
+      if (!visited.has(l.slug)) sorted.unshift(l)
+    }
+
+    return sorted
+  }
+
+  const allPages = getAllContent('lessons').then(p => {
+    return sortLessons(p.map(toLesson))
   })
+
+  const pages = $derived(allPages)
 
 </script>
 
-<FancyHeading
-  title="The Learning Guide"
-  highlightText="Learning Guide"
-  altText="Play"
-  class="mb-20">
-Everything you need to learn with, teach with, and program your Qbead. From basic quantum concepts to advanced coding tutorials.
-</FancyHeading>
-
-<div class="flex flex-col items-center">
-<ol class="hex-grid not-prose">
-{#await pages then pages}
-  {#each pages as entry}
-    <li>
-      <a href={entry.href}>
-        <img src={entry.headerImage}/>
-        <div class="content">
-          <h5 class="title h6 leading-1">{entry.title}</h5>
-          {#if entry.difficulty}
-            <p>
-              <span class="badge text-sm bg-surface-50-950 text-surface-50">
-                <IconBookUp2 size="12" />
-                {entry.difficulty}
-              </span>
-            </p>
-          {/if}
-        </div>
-      </a>
-    </li>
-  {/each}
-{/await}
-</ol>
+<div class="lesson-list-layout py-32">
+  <div class="head-area">
+    <FancyHeading
+      title="The Learning Guide"
+      highlightText="Learning Guide"
+      altText="Play"
+      class="mb-20">
+    Everything you need to learn with, teach with, and program your Qbead. From basic quantum concepts to advanced coding tutorials.
+    </FancyHeading>
+  </div>
+  <div class="filter-menu-area">
+    <p>Filters</p>
+  </div>
+  <div class="lesson-area">
+    <div class="flex flex-col items-center">
+    <ol class="hex-grid not-prose">
+    {#await pages then pages}
+      {#each pages as entry}
+        <li>
+          <a href={entry.href}>
+            <img src={entry.headerImage}/>
+            <div class="content">
+              <h5 class="title h6 leading-1">{entry.title}</h5>
+              {#if entry.difficulty}
+                <p>
+                  <span class="badge text-sm bg-surface-50-950 text-surface-50">
+                    <IconBookUp2 size="12" />
+                    {entry.difficulty}
+                  </span>
+                </p>
+              {/if}
+            </div>
+          </a>
+        </li>
+      {/each}
+    {/await}
+    </ol>
+    </div>
+  </div>
 </div>
 
 <style lang="postcss">
+  .lesson-list-layout {
+    .head-area {
+    }
+  }
+
   .hex-grid {
     --border-size: 2px;
     --background-color: var(--color-surface-900);
@@ -150,7 +168,6 @@ Everything you need to learn with, teach with, and program your Qbead. From basi
       }
     }
 
-
     > * > a {
       position: relative;
       top: var(--border-size);
@@ -181,6 +198,7 @@ Everything you need to learn with, teach with, and program your Qbead. From basi
       height: 50%;
       width: 100%;
       object-fit: cover;
+      pointer-events: none;
     }
 
     img:not([src]){

@@ -1,5 +1,22 @@
-  # Introduction
-  Welcome to the first interactive lecture on the QBead! In this lecture, we will observe the problem of Decoherence and apply an error correction technique to restore coherence in our quantum state.
+---
+title: The Problem of Decoherence
+layout: lesson
+# topics can be keywords for SEO
+keywords: quantum decoherence
+# below is metadata for lessons
+topics: quantum decoherence
+difficulty: Advanced
+objectives:
+  - Find out the problem with decoherence
+  - Learn about Perfect Dynamical Decoupling
+  - Understand Imperfect Dynamical Decoupling
+headerImage: https://lipsum.app/random/800x450?_CHANGE_ME
+description: Observe the problem of Decoherence and apply an error correction technique to restore coherence in our quantum state.
+nextLesson: lessons/example-lesson-1
+---
+
+## Introduction
+Welcome to the first interactive lecture on the QBead! In this lecture, we will observe the problem of Decoherence and apply an error correction technique to restore coherence in our quantum state.
 
 ## Quantum Decoherence and Dynamical Decoupling
 Quantum decoherence is the loss of quantum coherence, where a loss of information of a system to its environment occurs due to noise. Quantum computing relies on quantum coherence. In order to suppress decoherence, a method, called Dynamic Decoupling (DD), can be applied. In this lesson you will use an electronic device, called the QBead, to explore decoherence and see how Dynamical Decoupling can help us solve it. By experimenting with the QBead, you will get a hands-on sense of how quantum infromation can be preserved!
@@ -10,7 +27,7 @@ Quantum decoherence is the loss of quantum coherence, where a loss of informatio
 - Challenge : Imperfect Dynamical Decoupling
 
 ## Spin Precession
-In this lesson, we have assumed that our quantum system is a spin-1/2 particle placed inside an external magnetic field. In this case, the quantum state of the spin can be visualized as a vector pointing somewhere on a sphere, the *Bloch Sphere*. 
+In this lesson, we have assumed that our quantum system is a spin-1/2 particle placed inside an external magnetic field. In this case, the quantum state of the spin can be visualized as a vector pointing somewhere on a sphere, the *Bloch Sphere*.
 When the field is not aligned with the phase of the system, it induces a torque on the system's magnetic moment that causes the system to `wobble' around the magnetic field axis. This wobbling is known as *precession*.
 
 % Widget of precessing vector!
@@ -20,7 +37,7 @@ Quantum systems are fragile. When a system interacts with its environment (throu
 This process is called decoherence, and it destroys the interference effects that quantum computers rely on. Without coherence, operations on a quantum computer become unreliable.
 
 ## Decoherence in Spin Systems
-In real spin systems such as the one we simulate with our QBead, small variations in the magnetic field or random interactions with the environment cause different spins in an ensemble to precess at slightly different rates. 
+In real spin systems such as the one we simulate with our QBead, small variations in the magnetic field or random interactions with the environment cause different spins in an ensemble to precess at slightly different rates.
 Over time, these small differences accumulate, causing the spins to fan out around the precession axis. This spreading represents a loss of phase coherence between individual spins, that is the manifestation of *decoherence*.
 
 ## Dynamic Decoupling
@@ -48,9 +65,9 @@ This experiment gives you the opportunity to observe phase decoherence in a syst
 
 The quantum ensemble is modeled by a white light on the QBead that immediately begins to rotate around the green point at the top. This rotating behaviour is called *precession*; see the end of this lesson if you would like to learn more. As time progresses, notice how two other lights (a blue and a red one) begin to emerge from around the white one... these represent states in our quantum system that have decohered from the system itself, due to something called quantum noise.
 
-After some time, these points will have spread out from one another, and now the Dynamical Decoupling procedure is required to bring them back together so that the system is once again coherent. This procedure is surprisingly straightforward; all you have to do is flip the QBead upside down! 
+After some time, these points will have spread out from one another, and now the Dynamical Decoupling procedure is required to bring them back together so that the system is once again coherent. This procedure is surprisingly straightforward; all you have to do is flip the QBead upside down!
 
-% figure/demonstration of how to flip the QBead 
+% figure/demonstration of how to flip the QBead
 
 Once you have inverted the QBead, watch as the vectors begin to overlap with one another again; the blue vector is now  "behind" the others and rushes to "catch up", while the red vector (now at the front) "slows" down. This means that the quantum noise is now undoing its previous decoherence!
 
