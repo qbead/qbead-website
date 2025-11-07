@@ -8,6 +8,7 @@
   import IconHand from '@lucide/svelte/icons/hand'
   import BioBox from '$lib/components/BioBox/BioBox.svelte'
   import BlochSphereElement from '$lib/components/BlochSphereElement/BlochSphereElement.svelte'
+  import FancyHeading from '$lib/components/FancyHeading/FancyHeading.svelte'
   import { BlochVector, QubitDisplay } from '@qbead/bloch-sphere'
 </script>
 
@@ -80,17 +81,11 @@
   </section>
 
   <section class="centered-layout gap-24">
-    <div class="text-center">
-      <span
-        class="badge preset-outlined-surface-500 text-surface-950-50 border-surface-200-800 mb-4 text-sm"
-        >About</span
-      >
-      <h2 class="h2 mb-6">Introducing the <span class="text-primary-500">Qbead</span></h2>
-      <p class="m-auto max-w-3xl text-lg">
-        The Qbead is a gadget you can hold in your hand that represents a qubit (a quantum bit) and
-        can teach you about quantum computing.
-      </p>
-    </div>
+    <FancyHeading title="Introducing the Qbead" highlightText="Qbead" altText="About">
+      The Qbead is a gadget you can hold in your hand that represents a qubit (a quantum bit) and
+      can teach you about quantum computing.
+    </FancyHeading>
+
     <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-24">
       <div class="prose prose-lg">
         <h3 class="h3">How It Works</h3>
@@ -143,17 +138,14 @@
   </section>
 
   <section class="centered-layout gap-20">
-    <div class="text-center">
-      <span
-        class="badge preset-outlined-surface-500 text-surface-950-50 border-surface-200-800 mb-4 text-sm"
-        >Interactive</span
-      >
-      <h2 class="h2 mb-6">Intro to <span class="text-primary-500">Bloch Spheres</span></h2>
-      <p class="m-auto max-w-3xl text-lg">
-        A Bloch Sphere is a way to represent the state of a quantum bit or qubit, which is the basic
-        unit of quantum computing.
-      </p>
-    </div>
+    <FancyHeading
+      title="Intro to Bloch Spheres"
+      highlightText="Bloch Spheres"
+      altText="Interactive"
+    >
+      A Bloch Sphere is a way to represent the state of a quantum bit or qubit, which is the basic
+      unit of quantum computing.
+    </FancyHeading>
     <div class="grid items-center gap-10 lg:grid-cols-[2fr_1fr]">
       <div class="prose px-8 text-xl">
         <p>
@@ -187,17 +179,10 @@
   </section>
 
   <section class="bg-surface-100-900 centered-layout gap-20 py-64">
-    <div class="text-center">
-      <span
-        class="badge preset-outlined-surface-500 text-surface-950-50 border-surface-200-800 mb-4 text-sm"
-        >Team</span
-      >
-      <h2 class="h2 mb-6">Meet Our <span class="text-primary-500">Team</span></h2>
-      <p class="m-auto max-w-3xl text-lg">
-        We are a group of volunteers with a passion for teaching science, building beautiful things,
-        and harnessing quantum phenomena to create the technology of tomorrow.
-      </p>
-    </div>
+    <FancyHeading title="Meet Our Team" highlightText="Team" altText="Team">
+      We are a group of volunteers with a passion for teaching science, building beautiful things,
+      and harnessing quantum phenomena to create the technology of tomorrow.
+    </FancyHeading>
     <div class="grid grid-flow-row-dense gap-6 md:grid-cols-2 xl:grid-cols-4">
       <BioBox
         name="Carlos"
@@ -261,18 +246,10 @@
   </section>
 
   <section class="centered-layout mb-30 gap-20">
-    <div class="text-center">
-      <span
-        class="badge preset-outlined-surface-500 text-surface-950-50 border-surface-200-800 mb-4 text-sm"
-      >
-        Play
-      </span>
-      <h2 class="h2 mb-6">The <span class="text-primary-500">Lessons</span></h2>
-      <p class="m-auto max-w-3xl text-lg">
-        Everything you need to learn with, teach with, and program your Qbead. From basic quantum
-        concepts to advanced coding tutorials.
-      </p>
-    </div>
+    <FancyHeading title="The Learning Guide" highlightText="Learning Guide" altText="Play">
+      Everything you need to learn with, teach with, and program your Qbead. From basic quantum
+      concepts to advanced coding tutorials.
+    </FancyHeading>
     <div class="text-center">
       <a href="/lessons" class="btn btn-lg preset-filled-primary-500">
         <span>View the Lessons</span>

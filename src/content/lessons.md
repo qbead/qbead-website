@@ -1,7 +1,13 @@
+---
+title: The Learning Guide
+layout: minimal
+---
+
 <script lang="ts">
   import { resolve } from '$app/paths'
   import IconBookUp2 from '@lucide/svelte/icons/book-up-2'
   import { getAllContent } from '$lib/content.ts'
+  import FancyHeading from '$lib/components/FancyHeading/FancyHeading.svelte'
   type Lesson = {
     title: string
     href: string
@@ -74,7 +80,13 @@
 
 </script>
 
-# Lessons
+<FancyHeading
+  title="The Learning Guide"
+  highlightText="Learning Guide"
+  altText="Play"
+  class="mb-20">
+Everything you need to learn with, teach with, and program your Qbead. From basic quantum concepts to advanced coding tutorials.
+</FancyHeading>
 
 <div class="flex flex-col items-center">
 <ol class="hex-grid not-prose">
@@ -84,7 +96,7 @@
       <a href={entry.href}>
         <img src={entry.headerImage}/>
         <div class="content">
-          <h5 class="title leading-1">{entry.title}</h5>
+          <h5 class="title h6 leading-1">{entry.title}</h5>
           {#if entry.difficulty}
             <p>
               <span class="badge text-sm bg-surface-50-950 text-surface-50">
@@ -108,11 +120,10 @@
     --border-color: color-mix(in lab, var(--background-color) 88%, white);
     padding: 0;
     display: grid;
-    max-width: 50em;
+    max-width: 30em;
     width: 106.25%;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     position: relative;
-    left: 6.25%;
     padding-bottom: 20%;
 
     > * {
@@ -138,14 +149,7 @@
         transform: scale(1.05);
       }
     }
-    > *:nth-child(2n+1) {
-      margin-left: 0;
-    }
-    > *:nth-child(2n) {
-      top: 50%;
-      right: 25%;
-      margin-right: 0;
-    }
+
 
     > * > a {
       position: relative;
@@ -199,5 +203,23 @@
       margin-bottom: 1em;
     }
 
+    @media screen and (width >= 56em){
+      &{
+        grid-template-columns: 1fr 1fr;
+        left: 6.25%;
+        max-width: 54em;
+      }
+      .title {
+        font-size: var(--text-xl);
+      }
+      > *:nth-child(2n+1) {
+        margin-left: 0;
+      }
+      > *:nth-child(2n) {
+        top: 50%;
+        right: 25%;
+        margin-right: 0;
+      }
+    }
   }
 </style>

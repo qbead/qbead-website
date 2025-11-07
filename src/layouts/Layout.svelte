@@ -2,6 +2,7 @@
   import Article from './Article.svelte'
   import Literate from './Literate.svelte'
   import Lesson from './Lesson.svelte'
+  import Minimal from './Minimal.svelte'
   import { page } from '$app/state'
 
   const { children } = $props()
@@ -20,6 +21,10 @@
   <Lesson>
     {@render children()}
   </Lesson>
+{:else if layout == 'minimal'}
+  <Minimal>
+    {@render children()}
+  </Minimal>
 {:else}
   {@render children()}
 {/if}

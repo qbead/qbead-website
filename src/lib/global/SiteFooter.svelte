@@ -78,7 +78,10 @@
         <h3 class="h4 text-on-surface-variant-900 mb-5 font-semibold">Contact</h3>
         <ul class="flex flex-col gap-3 text-xl">
           <li>
-            <a href="mailto:info@qbead.org" class="flex items-center gap-3 hover:underline">
+            <a
+              href="mailto:info@qbead.org"
+              class="flex items-center justify-center gap-3 hover:underline md:justify-start"
+            >
               <IconMail />
               <span>info@qbead.org</span>
             </a>
