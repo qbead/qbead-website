@@ -84,20 +84,78 @@ $$
 
 ## You could even add some code
 
+```py
+def say_hello():
+  print("Oh. Hi there.")
+```
+
+
 <div class="grid grid-cols-2 items-start gap-6">
 
 <div>
 
 A side-by-side may be useful when referring to code blocks or outlining/describing sections of code, though these can be formatted in any way you'd like.
 
+However, this won't _collapse_ on mobile.
+
 </div>
 
-```py
-def say_hello():
-  print("Oh. Hi there.")
+```html
+<!-- Create a side-by-side layout -->
+<div class="grid grid-cols-2 items-start gap-6">
+
+<div>
+
+Left Side.
+
+</div>
+
+<div>
+
+Right Side.
+
+</div>
+
+</div>
 ```
 
 </div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 items-start md:gap-6">
+
+<div>
+
+So to collapse on mobile, set the default grid cols to 1
+with `grid-cols-1` then specify that on medium and up
+we want 2 cols: `md: grid-cols-2`.
+
+Do the same for the gap: `md:gap-6`.
+
+</div>
+
+```html
+<!-- Create a side-by-side layout that collapses on mobile -->
+<div class="grid grid-cols-1 md:grid-cols-2 items-start md:gap-6">
+
+<div>
+
+Left Side.
+
+</div>
+
+<div>
+
+Right Side.
+
+</div>
+
+</div>
+```
+
+</div>
+
+
+
 
 ## Images
 
