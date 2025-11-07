@@ -3,7 +3,7 @@
   // when the page is scrolling
   import { onMount, onDestroy } from 'svelte'
 
-  let delay = 100 // milliseconds
+  let delay = 500 // milliseconds
 
   let scrollTimeout: ReturnType<typeof setTimeout>
 
