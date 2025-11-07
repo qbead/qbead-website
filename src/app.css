@@ -99,31 +99,31 @@ body.scrolling .scroll-block::after {
 }
 
 .typography {
-  h1 {
+  :where(h1):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply h1;
   }
 
-  h2 {
+  :where(h2):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply h2;
   }
 
-  h3 {
+  :where(h3):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply h3;
   }
 
-  h4 {
+  :where(h4):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply h4;
   }
 
-  h5 {
+  :where(h5):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply h5;
   }
 
-  h6 {
+  :where(h6):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply h6;
   }
 
-  strong {
+  :where(strong):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply text-primary-500;
     font-weight: bold;
   }

@@ -1,8 +1,13 @@
 ---
-title: About
+title: Learn About the Qbead
+highlight: Qbead
+keywords: qbead
 ---
 
+<script>
+  import FancyHeader from '$lib/components/FancyHeading/FancyHeading.svelte'
+</script>
 
-# About
+<FancyHeader title={title} highlightText={highlight} altText="About"/>
 
-About Qbead
+All about the qbead.
