@@ -6,10 +6,15 @@
   import IconArrowRight from '@lucide/svelte/icons/arrow-right'
   import IconZap from '@lucide/svelte/icons/zap'
   import IconHand from '@lucide/svelte/icons/hand'
+  import IconMicroscope from '@lucide/svelte/icons/microscope'
+  import IconCog from '@lucide/svelte/icons/cog'
+  import IconBrush from '@lucide/svelte/icons/brush'
+  import IconCircleDot from '@lucide/svelte/icons/circle-dot'
   import BioBox from '$lib/components/BioBox/BioBox.svelte'
   import BlochSphereElement from '$lib/components/BlochSphereElement/BlochSphereElement.svelte'
   import FancyHeading from '$lib/components/FancyHeading/FancyHeading.svelte'
   import { BlochVector, QubitDisplay } from '@qbead/bloch-sphere'
+  import Callout from '$lib/components/Callout/Callout.svelte'
 </script>
 
 <div class="flex flex-col gap-60 py-28">
@@ -243,6 +248,46 @@
         </a>
       </BioBox>
     </div>
+
+    <h3 class="h3 text-center">Our Values</h3>
+    <div class="grid grid-cols-1 gap-10 text-center text-lg md:grid-cols-2 xl:grid-cols-4">
+      <div>
+        <h5 class="h5 mb-6 flex items-center justify-center gap-3">
+          <span class="text-secondary-500 font-normal">
+            <IconCircleDot size="32" />
+          </span>
+          <span>Open Education</span>
+        </h5>
+        <p>Not for profit educational tools</p>
+      </div>
+      <div>
+        <h5 class="h5 mb-6 flex items-center justify-center gap-3">
+          <span class="text-primary-500 font-normal">
+            <IconCircleDot size="32" />
+          </span>
+          <span>Hands-On Learning</span>
+        </h5>
+        <p>Not for profit educational tools</p>
+      </div>
+      <div>
+        <h5 class="h5 mb-6 flex items-center justify-center gap-3">
+          <span class="text-error-500 font-normal">
+            <IconCircleDot size="32" />
+          </span>
+          <span>Student-Focused</span>
+        </h5>
+        <p>Not for profit educational tools</p>
+      </div>
+      <div>
+        <h5 class="h5 mb-6 flex items-center justify-center gap-3">
+          <span class="text-warning-500 font-normal">
+            <IconCircleDot size="32" />
+          </span>
+          <span>Volunteer-Run</span>
+        </h5>
+        <p>Not for profit educational tools</p>
+      </div>
+    </div>
   </section>
 
   <section class="centered-layout mb-30 gap-20">
@@ -255,6 +300,34 @@
         <span>View the Lessons</span>
         <IconArrowRight size={24} />
       </a>
+    </div>
+    <div class="grid grid-cols-1 gap-x-10 md:grid-cols-2 xl:grid-cols-[repeat(4,auto)]">
+      <Callout title="Physics" icon={IconMicroscope} iconColor="text-primary-500">
+        <ul class="text-surface-500 flex flex-col gap-3 pl-2 text-lg">
+          <li>Qubits</li>
+          <li>Quantum Computing</li>
+          <li>Quantum Teleportation</li>
+        </ul>
+      </Callout>
+      <Callout title="Code" icon={IconCode} iconColor="text-primary-500">
+        <ul class="text-surface-500 flex flex-col gap-3 pl-2 text-lg">
+          <li>Arduino</li>
+          <li>Programming 101</li>
+        </ul>
+      </Callout>
+      <Callout title="Engineering" icon={IconCog} iconColor="text-primary-500">
+        <ul class="text-surface-500 flex flex-col gap-3 pl-2 text-lg">
+          <li>Circuits</li>
+          <li>Coordinated Activation</li>
+          <li>Learn Linear Algebra</li>
+        </ul>
+      </Callout>
+      <Callout title="Art" icon={IconBrush} iconColor="text-primary-500">
+        <ul class="text-surface-500 flex flex-col gap-3 pl-2 text-lg">
+          <li>Color Control</li>
+          <li>Audio Reactivity</li>
+        </ul>
+      </Callout>
     </div>
   </section>
 </div>
