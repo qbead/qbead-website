@@ -29,7 +29,7 @@
   class="bg-surface-100-900 sticky top-0 z-10 flex flex-col gap-16 px-10 py-4 shadow-xl md:py-8"
 >
   <div
-    class="m-auto flex w-full max-w-7xl flex-col items-stretch justify-between gap-10 md:flex-row md:items-center"
+    class="m-auto flex w-full max-w-7xl flex-col items-stretch justify-between md:flex-row md:items-center md:gap-10"
   >
     <div class="flex items-stretch justify-between">
       <a href="/" aria-label="Qbead Home">
@@ -52,11 +52,13 @@
         <IconMenu />
       </button>
     </div>
-    <nav class:hidden={!showMenu} class="md:block">
+    <nav class:closed={!showMenu} class="grid md:block">
       <!-- Nav items -->
-      <ul class="bg-surface-100-900 flex flex-col items-center gap-10 md:flex-row">
+      <menu
+        class="bg-surface-100-900 flex flex-col items-center gap-10 overflow-hidden md:flex-row md:overflow-visible"
+      >
         {#each NAV_LINKS as { href, label }}
-          <li>
+          <li class="whitespace-nowrap">
             <a
               {href}
               class="hover:text-surface-contrast-300-700 hover:bg-surface-200-800 rounded-full px-4 py-3 transition-colors duration-200 ease-in-out"
@@ -67,7 +69,7 @@
             </a>
           </li>
         {/each}
-      </ul>
+      </menu>
     </nav>
   </div>
 </header>
@@ -77,5 +79,30 @@
   a.selected {
     @apply text-surface-contrast-500 bg-surface-600-400;
     font-weight: 700;
+  }
+
+  nav {
+    transform-origin: top center;
+    transform: scaleY(1);
+    opacity: 1;
+    transition: grid-template-rows 0.2s cubic-bezier(0.2, 0.9, 0.25, 1);
+    grid-template-rows: 1fr;
+
+    &.closed {
+      grid-template-rows: 0fr;
+    }
+
+    > menu {
+      &::before,
+      &:after {
+        content: '';
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      & {
+        transition: none !important;
+      }
+    }
   }
 </style>
