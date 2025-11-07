@@ -12,7 +12,7 @@
 <div
   class="bg-surface-200-800 text-surface-700-300 flex flex-col items-center rounded-xl p-8 text-lg"
 >
-  <Avatar size="size-38 border-1 border-surface-600 mb-6" src={imgSrc} {name} />
+  <Avatar size="size-38" classes="border-1 border-surface-600 mb-6" src={imgSrc} {name} />
   <div>
     <div class="text-center">
       <h3 class="h5 text-2xl">{name}</h3>

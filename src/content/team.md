@@ -10,9 +10,9 @@ highlight: Team
 
 <FancyHeader title={title} highlightText={highlight} altText="Team"/>
 
-<div class="grid grid-cols-[1fr_auto] gap-8">
+<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
 
-<Avatar size="size-38 border-1 border-surface-600 mb-6" src="/team/carlos_s.jpg" name="Carlos" />
+<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/carlos_s.jpg" name="Carlos" />
 
 Carlos loves science, crafts, and art, and sometimes combines them into a beautiful gadget
 like the Qbead. On top of that, he enjoys mentoring and contributing to diversity in science
@@ -23,9 +23,9 @@ projects to democratize science and technology.
 
 </div>
 
-<div class="grid grid-cols-[1fr_auto] gap-8">
+<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
 
-<Avatar size="size-38 border-1 border-surface-600 mb-6" src="/team/stefan_s.jpg" name="Stefan" />
+<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/stefan_s.jpg" name="Stefan" />
 
 Since high school Stefan has enjoyed sharing the wonders of science with others, organizing
 extraculicular courses and summer break Physics events. While a graduate student at Yale's
@@ -38,9 +38,9 @@ Science.
 
 </div>
 
-<div class="grid grid-cols-[1fr_auto] gap-8">
+<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
 
-<Avatar size="size-38 border-1 border-surface-600 mb-6" src="/team/hugo_s.jpg" name="Hugo" />
+<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/hugo_s.jpg" name="Hugo" />
 
 Hugo appreciates taking part in various efforts promoting higher education in STEM to
 various communities. Since his undergraduate studies at the University of Ottawa, these have
@@ -51,9 +51,9 @@ engineering at MIT.
 </div>
 
 
-<div class="grid grid-cols-[1fr_auto] gap-8">
+<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
 
-<Avatar size="size-38 border-1 border-surface-600 mb-6" src="/team/saumil_s.jpg" name="Saumil" />
+<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/saumil_s.jpg" name="Saumil" />
 
 Saumil has always held a fascination for building things. As a graduate student at MIT,
 Saumil worked on silicon photonics, where he spent a great deal of time hacking together
