@@ -4,6 +4,7 @@
   import { getAllContent } from '$lib/content'
   import FancyHeading from '$lib/components/FancyHeading/FancyHeading.svelte'
   import { onMount } from 'svelte'
+  import FilterSelector from '$lib/components/FilterSelector/FilterSelector.svelte'
   type Lesson = {
     title: string
     slug: string
@@ -106,19 +107,9 @@
       }
     })
   })
-
-  const filterByDiff = (diff: string) => (e: Event) => {
-    e.preventDefault()
-    diffFilter = diff
-  }
-
-  const filterByTopic = (topic: string) => (e: Event) => {
-    e.preventDefault()
-    topicFilter = topic
-  }
 </script>
 
-<div class="lesson-list-layout m-auto my-32 max-w-7xl">
+<div class="lesson-list-layout m-auto my-32 max-w-7xl px-10">
   <div class="head-area">
     <FancyHeading
       title="The Learning Guide"
@@ -131,64 +122,44 @@
     </FancyHeading>
   </div>
   <div class="filter-menu-area">
-    <div class="top-32 grid grid-cols-1 gap-8 md:sticky">
+    <div class="top-32 m-auto grid max-w-md grid-cols-1 gap-8 md:sticky">
       <aside class=" bg-surface-100-900 rounded-lg p-8 text-lg">
         <h2 class="h4 mb-4">Topics</h2>
-        <menu class="flex flex-col gap-1 capitalize">
-          <li>
-            <a
-              href="#"
-              class="anchor"
-              class:text-surface-500={topicFilter}
-              onclick={filterByTopic('')}>All</a
-            >
-          </li>
-          {#each topics as topic}
-            <li>
-              <a
-                href="#"
-                class="anchor"
-                class:text-surface-500={topicFilter !== topic}
-                onclick={filterByTopic(topic)}>{topic}</a
-              >
-            </li>
-          {/each}
-        </menu>
+        <FilterSelector
+          selection={topicFilter}
+          onSelect={(value) => {
+            topicFilter = value
+          }}
+          items={[{ label: 'All', value: '' }, ...topics.map((t) => ({ label: t, value: t }))]}
+        />
       </aside>
 
       <aside class="bg-surface-100-900 rounded-lg p-8 text-lg">
         <h2 class="h4 mb-4">Level</h2>
-        <menu class="flex flex-col gap-1 capitalize">
-          <li>
-            <a
-              href="#"
-              class="anchor"
-              class:text-surface-500={diffFilter}
-              onclick={filterByDiff('')}>All</a
-            >
-          </li>
-          {#each difficulties as diff}
-            <li>
-              <a
-                href="#"
-                class="anchor"
-                class:text-surface-500={diffFilter !== diff}
-                onclick={filterByDiff(diff)}>{diff}</a
-              >
-            </li>
-          {/each}
-        </menu>
+        <FilterSelector
+          selection={diffFilter}
+          onSelect={(value) => {
+            diffFilter = value
+          }}
+          items={[
+            { label: 'All', value: '' },
+            ...difficulties.map((d) => ({ label: d, value: d })),
+          ]}
+        />
       </aside>
     </div>
   </div>
   <div class="lesson-area">
     <div class="flex flex-col items-center">
+      {#if pages.length === 0}
+        <p class="text-surface-500 text-center">No lessons found. Try adjusting your filters.</p>
+      {/if}
       <ol class="hex-grid not-prose">
         {#each pages as entry}
           {#key entry.slug}
             <li>
               <a href={entry.href}>
-                <img src={entry.headerImage} />
+                <img src={entry.headerImage} alt={entry.title} />
                 <div class="content">
                   <h5 class="title h6 leading-1">{entry.title}</h5>
                   {#if entry.difficulty}
@@ -213,7 +184,6 @@
   .lesson-list-layout {
     display: grid;
     gap: 2rem;
-    padding: 0 4rem;
     grid-template-areas:
       'head'
       'filter-menu'
