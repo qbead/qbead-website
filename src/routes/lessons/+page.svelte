@@ -219,7 +219,7 @@
     position: relative;
     padding-bottom: 20%;
 
-    > * {
+    & > * {
       position: relative;
       list-style: none;
       margin: 1rem;
@@ -240,7 +240,7 @@
       }
     }
 
-    > * > a {
+    & > * > a {
       position: relative;
       top: var(--border-size);
       left: var(--border-size);
@@ -303,10 +303,10 @@
       .title {
         font-size: var(--text-xl);
       }
-      > *:nth-child(2n + 1) {
+      & > *:nth-child(2n + 1) {
         margin-left: 0;
       }
-      > *:nth-child(2n) {
+      & > *:nth-child(2n) {
         top: 50%;
         right: 25%;
         margin-right: 0;
