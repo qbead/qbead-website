@@ -23,26 +23,16 @@
   // Edit this to define social icon links
   const socialLinks = [
     {
-      icon: 'instagram',
-      href: 'https://www.instagram.com/',
-      label: 'Instagram',
-    },
-    {
       icon: 'github',
-      href: 'https://github.com',
+      href: 'https://github.com/qbead/',
       label: 'GitHub',
-    },
-    {
-      icon: 'facebook',
-      href: 'https://www.facebook.com',
-      label: 'Facebook',
     },
   ]
 </script>
 
 <footer class="bg-surface-100-900 flex flex-col gap-16 px-10 py-12 md:pt-24">
   <div class="mx-auto w-full max-w-7xl">
-    <nav class="grid grid-cols-1 gap-20 text-center md:grid-cols-3 md:text-left">
+    <nav class="grid grid-cols-1 gap-20 text-center md:grid-cols-4 md:text-left">
       <div class="flex flex-col items-center gap-6 md:items-start">
         <img src="/Qbead-Logo-Dark-Mode-White-Rgb.svg" alt="Qbead Logo" width="136" />
         <ul class="flex gap-6">
@@ -87,6 +77,11 @@
             </a>
           </li>
         </ul>
+      </div>
+
+      <div class="flex flex-col">
+        <h3 class="h4 text-on-surface-variant-900 mb-5 font-semibold">Sponsored by</h3>
+        <a href="https://quantumdelta.nl/" target="_blank" rel="noopener noreferrer"><img src="/sponsor/QDNL-logo-L-neg-RGB.png" width="80"></a>
       </div>
     </nav>
     <div class="text-on-surface-variant-900 border-surface-200-800 mt-16 border-t pt-10">

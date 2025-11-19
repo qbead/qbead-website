@@ -26,7 +26,16 @@
       </span>
     </div>
     <div id="hero" class="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-36">
-      <img src="https://picsum.photos/600/400" alt="Placeholder" class="rounded-xl md:order-last" />
+      <video
+        src="/qbeadmedia/qbead_onshape_explode_crop.mp4"
+        alt="Demo of Qbead in motion"
+        class="rounded-xl md:order-last"
+        autoplay
+        loop
+        muted
+        playsinline
+        on:loadedmetadata={e => { e.target.playbackRate = 2; }}
+      ></video>
       <div>
         <h1 class="h1 mb-8 text-6xl">
           Put Your Hands on a <span class="text-primary-500">Qubit!</span>
@@ -71,7 +80,7 @@
       <ul class="flex flex-wrap gap-4">
         <li class="flex items-center">
           <IconDot size={10} class="text-primary-500 h-10 w-10" />
-          <span class="ml-[-6px]">Available by Request</span>
+          <span class="ml-[-6px]">Free & Open Source</span>
         </li>
         <li class="flex items-center">
           <IconDot size={10} class="text-secondary-500 h-10 w-10" />
@@ -79,7 +88,7 @@
         </li>
         <li class="flex items-center">
           <IconDot size={10} class="h-10 w-10 text-red-400" />
-          <span class="ml-[-6px]">Learn to Code</span>
+          <span class="ml-[-6px]">Learn Quantum Information</span>
         </li>
       </ul>
     </div>
@@ -108,7 +117,7 @@
           <span>Learn More</span><IconArrowRight size={16} />
         </a>
       </div>
-      <img class="rounded-xl" src="https://picsum.photos/600/400" alt="Placeholder" />
+      <img class="rounded-xl" src="/qbeadmedia/qbead_kicad_pcb.png" alt="Qbead PCB" />
     </div>
     <div class="items-fill grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
       <div class="bg-surface-100-900 rounded-xl p-8">
@@ -155,12 +164,12 @@
       <div class="prose px-8 text-xl">
         <p>
           The north pole of the sphere represents the "0" state, and the south pole represents the
-          "1" state. Instead of just being 0 or 1 (like a regular computer bit), a qubit can be
-          anywhere on this sphere, meaning it can be a mix of both 0 and 1 at the same time.
+          "1" state. Instead of just being 0 or 1 (like a regular computer bit), a qubit's state can be
+          anywhere on this sphere, providing for a great deal of new possible computational dynamics.
         </p>
         <p>
-          Since a qubit can be anywhere on the surface of the sphere, it can hold much more
-          information in a fuzzy, in-between way.
+          While reading a qubit still gives you just a single bit of information, you can orchestrate
+          the dance of many qubits to process information in ways infeasible with classical bits.
         </p>
       </div>
       <figure class="relative order-first m-auto w-full">
@@ -188,7 +197,7 @@
       We are a group of volunteers with a passion for teaching science, building beautiful things,
       and harnessing quantum phenomena to create the technology of tomorrow.
     </FancyHeading>
-    <div class="grid grid-flow-row-dense gap-6 md:grid-cols-2 xl:grid-cols-4">
+    <div class="grid grid-flow-row-dense gap-6 md:grid-cols-2 xl:grid-cols-2">
       <BioBox
         name="Carlos"
         role="Delft University of Technology, QuTech"
@@ -220,33 +229,6 @@
         </a>
       </BioBox>
 
-      <BioBox name="Hugo" role="MIT" imgSrc="/team/hugo_s.jpg">
-        <p class="mb-6">
-          Hugo appreciates taking part in various efforts promoting higher education in STEM to
-          various communities...
-        </p>
-        <a
-          href="/team"
-          class="btn preset-outlined-secondary-500 text-secondary-500 inline-flex items-center gap-1"
-        >
-          <span>Read More</span>
-          <IconArrowRight size={16} />
-        </a>
-      </BioBox>
-
-      <BioBox name="Saumil" role="MIT" imgSrc="/team/saumil_s.jpg">
-        <p class="mb-6">
-          Saumil has always held a fascination for building things. As a graduate student at MIT,
-          Saumil worked on silicon photonics...
-        </p>
-        <a
-          href="/team"
-          class="btn preset-outlined-secondary-500 text-secondary-500 inline-flex items-center gap-1"
-        >
-          <span>Read More</span>
-          <IconArrowRight size={16} />
-        </a>
-      </BioBox>
     </div>
 
     <h3 class="h3 text-center">Our Values</h3>
@@ -258,7 +240,7 @@
           </span>
           <span>Open Education</span>
         </h5>
-        <p>Not for profit educational tools</p>
+        <p>All resources in the open, accessible by everyone</p>
       </div>
       <div>
         <h5 class="h5 mb-6 flex items-center justify-center gap-3">
@@ -267,7 +249,7 @@
           </span>
           <span>Hands-On Learning</span>
         </h5>
-        <p>Not for profit educational tools</p>
+        <p>Experience it yourself</p>
       </div>
       <div>
         <h5 class="h5 mb-6 flex items-center justify-center gap-3">
@@ -276,7 +258,7 @@
           </span>
           <span>Student-Focused</span>
         </h5>
-        <p>Not for profit educational tools</p>
+        <p>Different learning approaches, meeting students where they are</p>
       </div>
       <div>
         <h5 class="h5 mb-6 flex items-center justify-center gap-3">
@@ -285,7 +267,7 @@
           </span>
           <span>Volunteer-Run</span>
         </h5>
-        <p>Not for profit educational tools</p>
+        <p>Not-for-profit educational tools</p>
       </div>
     </div>
   </section>

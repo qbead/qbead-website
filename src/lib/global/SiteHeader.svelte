@@ -4,7 +4,7 @@
 
   const NAV_LINKS = [
     { href: '/lessons', label: 'Lessons', section: 'lessons' },
-    { href: '/codedoc', label: 'Code Docs', section: 'codedoc' },
+    /*{ href: '/codedoc', label: 'Code Docs', section: 'codedoc' },*/
     { href: '/team', label: 'Team', section: 'team' },
     { href: '/about', label: 'About', section: 'about' },
   ]
