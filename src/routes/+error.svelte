@@ -9,7 +9,7 @@
   })
 </script>
 
-<div class="outer-container py-36">
+<div class="centered-layout py-28">
   <article class="flex flex-col text-lg">
     {#if page.status === 404}
       <h1 class="h1 mb-8">Page Not Found</h1>

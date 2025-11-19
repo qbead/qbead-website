@@ -1,5 +1,0 @@
-{
-  "defaultTitle": "Qbead",
-  "defaultDescription": "Explore quantum states with the Qbead, an interactive toy that visualizes qubits using LED lights.",
-  "titleTemplate": "%s | Qbead"
-}

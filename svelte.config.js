@@ -1,54 +1,109 @@
-import { mdsvex } from 'mdsvex'
 import adapter from '@sveltejs/adapter-static'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import remarkMath from 'remark-math'
-import rehypeKatexSvelte from 'rehype-katex-svelte'
 import rehypeToc from '@jsdevtools/rehype-toc'
-import { resolve } from 'path'
-
-const layout = {
-  lesson: resolve('./src/markdown-layouts/lesson.svelte'),
-  _: resolve('./src/markdown-layouts/default.svelte'),
-}
+import { sveltex } from '@nvl/sveltex'
+import rehypeImageToolkit from 'rehype-image-toolkit'
+// import { resolve } from 'path'
+// import { mdsvex } from 'mdsvex'
+// import remarkMath from 'remark-math'
+// import rehypeKatexSvelte from 'rehype-katex-svelte'
+// const layout = {
+//   lesson: resolve('./src/markdown-layouts/lesson.svelte'),
+//   _: resolve('./src/markdown-layouts/default.svelte'),
+// }
 
 const config = {
   preprocess: [
     vitePreprocess(),
-    mdsvex({
-      extensions: ['.md'],
-      layout,
-      highlight: {
-        highlighter: (code, lang) => {
-          let escaped = code.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$/g, '\\$')
-          return `<Components.CodeBlock lang="${lang}" code={\`${escaped}\`}/>`
-        },
+    await sveltex(
+      {
+        markdownBackend: 'unified',
+        codeBackend: 'shiki',
+        mathBackend: 'mathjax',
       },
-      smartypants: {
-        dashes: 'oldschool',
-      },
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [
-        rehypeKatexSvelte,
-        rehypeSlug,
-        rehypeAutolinkHeadings,
-        [
-          rehypeToc,
-          {
-            headings: ['h2', 'h3', 'h4', 'h5', 'h6'],
+      {
+        extensions: ['.sveltex', '.md'],
+        code: {
+          shiki: {
+            theme: 'catppuccin-frappe',
           },
-        ],
-      ],
-    }),
+        },
+        math: {
+          delims: {
+            doubleDollarSignsDisplay: 'always',
+          },
+        },
+        verbatim: { Tex: { type: 'tex', aliases: ['TeX'] } },
+        markdown: {
+          directives: {
+            enabled: false,
+            bracesArePartOfDirective: false,
+          },
+          components: [
+            {
+              name: 'BackLink',
+              importPath: '$lib/components/BackLink/BackLink.svelte',
+            },
+          ],
+          remarkPlugins: [],
+          retextPlugins: [],
+          rehypePlugins: [
+            rehypeImageToolkit,
+            rehypeSlug,
+            rehypeAutolinkHeadings,
+            [
+              rehypeToc,
+              {
+                headings: ['h2', 'h3', 'h4', 'h5', 'h6'],
+                customizeTOC(toc) {
+                  toc.children.push({
+                    type: 'element',
+                    tagName: 'BackLink',
+                    properties: {},
+                    children: [],
+                  })
+                },
+              },
+            ],
+          ],
+        },
+      }
+    ),
+    // mdsvex({
+    //   extensions: ['.md'],
+    //   layout,
+    //   highlight: {
+    //     highlighter: (code, lang) => {
+    //       let escaped = code.replace(/\\/g, '\\\\').replace(/`/g, '\\`').replace(/\$/g, '\\$')
+    //       return `<Components.CodeBlock lang="${lang}" code={\`${escaped}\`}/>`
+    //     },
+    //   },
+    //   smartypants: {
+    //     dashes: 'oldschool',
+    //   },
+    //   remarkPlugins: [remarkMath],
+    //   rehypePlugins: [
+    //     rehypeKatexSvelte,
+    //     rehypeSlug,
+    //     rehypeAutolinkHeadings,
+    //     [
+    //       rehypeToc,
+    //       {
+    //         headings: ['h2', 'h3', 'h4', 'h5', 'h6'],
+    //       },
+    //     ],
+    //   ],
+    // }),
   ],
   kit: {
     adapter: adapter({
       fallback: 'index.html', // may differ from host to host
     }),
-    prerender: { entries: ['*'] },
+    prerender: { entries: ['*'], handleHttpError: 'warn' },
   },
-  extensions: ['.svelte', '.svx', '.md'],
+  extensions: ['.svelte', '.svx', '.md', '.sveltex'],
 }
 
 export default config

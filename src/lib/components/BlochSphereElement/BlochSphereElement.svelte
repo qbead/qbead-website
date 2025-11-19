@@ -1,20 +1,20 @@
 <script lang="ts">
-  import { BlochSphere } from '@qbead/bloch-sphere'
+  import { BlochSphere, type BlochSphereOptions } from '@qbead/bloch-sphere'
   import { onMount, onDestroy } from 'svelte'
   let blochSphereElement: HTMLDivElement
 
   let {
-    options,
+    options = {},
     instance,
     created,
   }: {
-    options: any
-    instance: BlochSphere
+    options?: BlochSphereOptions
+    instance?: BlochSphere
     created?: (instance: BlochSphere) => void
   } = $props()
 
   const onResize = () => {
-    instance.resize()
+    instance!.resize()
   }
 
   onMount(() => {

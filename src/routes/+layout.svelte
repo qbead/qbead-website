@@ -1,20 +1,25 @@
 <script lang="ts">
   import '../app.css'
+  import SEO from '$lib/global/SEO.svelte'
   import SiteHeader from '$lib/global/SiteHeader.svelte'
   import SiteFooter from '$lib/global/SiteFooter.svelte'
   import ScrollBlocker from '$lib/components/ScrollBlocker/ScrollBlocker.svelte'
+  import Layout from '../layouts/Layout.svelte'
 
-  let { children } = $props()
+  const { children } = $props()
 </script>
-
-<ScrollBlocker />
 
 <div class="flex min-h-screen flex-col">
   <SiteHeader />
 
-  <main class="min-h-0 flex-1 overflow-y-auto">
-    {@render children()}
+  <main class="min-h-0 flex-1">
+    <Layout>
+      {@render children()}
+    </Layout>
   </main>
 
   <SiteFooter />
 </div>
+
+<SEO />
+<ScrollBlocker />

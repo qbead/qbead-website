@@ -3,7 +3,7 @@
   // when the page is scrolling
   import { onMount, onDestroy } from 'svelte'
 
-  let delay = 100 // milliseconds
+  let delay = 500 // milliseconds
 
   let scrollTimeout: ReturnType<typeof setTimeout>
 
@@ -21,19 +21,3 @@
 </script>
 
 <svelte:window onscroll={handleScroll} />
-
-<style>
-  :global(.scroll-block) {
-    position: relative;
-  }
-
-  :global(body.scrolling .scroll-block)::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-</style>

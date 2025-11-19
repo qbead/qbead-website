@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import './styles/reset.css' layer(base);
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 @config './tailwind.config.js';
@@ -39,8 +40,8 @@ body {
       position: absolute;
       font-size: 0.8em;
       left: -1.5ch;
-      top: 0.3em;
-      /* line-height: 1; */
+      top: 0.85em;
+      line-height: 0;
       opacity: 0;
       color: var(--color-tertiary-500);
       text-decoration: underline;
@@ -61,6 +62,42 @@ body {
   }
 }
 
+select {
+  appearance: none;
+  print-color-adjust: exact;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='oklch(55.1%25 0.027 264.364)' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+.scroll-block {
+  position: relative;
+}
+
+body.scrolling .scroll-block::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
 /* LaTeX */
 .katex {
   font-size: 1.1em;
@@ -72,31 +109,43 @@ body {
 }
 
 .typography {
-  h1 {
+  :where(h1):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply h1;
   }
 
-  h2 {
+  :where(h2):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply h2;
   }
 
-  h3 {
+  :where(h3):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply h3;
   }
 
-  h4 {
+  :where(h4):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply h4;
   }
 
-  h5 {
+  :where(h5):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply h5;
   }
 
-  h6 {
+  :where(h6):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
     @apply h6;
   }
 
-  a {
+  :where(strong):not(:where([class~='not-typography'], [class~='not-typography'] *)) {
+    @apply text-primary-500;
+    font-weight: bold;
+  }
+}
+
+.prose p:has(img:only-child) > img {
+  margin-top: unset;
+  margin-bottom: unset;
+}
+
+@layer base {
+  .typography a {
     @apply anchor;
   }
 }
@@ -116,7 +165,7 @@ code {
 
 code {
   &:not(pre &, .ec-line &) {
-    @apply text-sm;
+    font-size: 0.75em;
     @apply bg-surface-800;
     @apply text-surface-50;
   }
@@ -134,79 +183,100 @@ code {
   line-height: 180%;
 }
 
-.btn {
+.btn-lg {
   @apply font-bold;
 }
 
-.outer-container {
-  @apply mx-auto w-full max-w-6xl px-10 md:px-32;
-}
+@layer base {
+  .centered-layout {
+    @apply grid grid-cols-1 justify-items-center;
+  }
 
-.sidebar {
-  @apply bg-surface-800;
-  @apply rounded-tr-4xl;
-  box-shadow: 4px -1px 10px rgba(0, 0, 0, 0.2);
-  font-weight: 400;
-  @apply text-surface-300;
-  @apply pl-1;
-}
-
-@media screen and (min-width: 900px) {
-  .sidebar {
-    @apply pl-10;
+  :where(.centered-layout > *) {
+    @apply w-full max-w-7xl px-10;
   }
 }
 
-.sidebar-active {
-  @apply bg-surface-950;
-  position: relative;
-  @apply text-surface-50;
+.toc {
+  display: none;
+  margin-bottom: 5rem;
+  @apply bg-surface-100-900 border-surface-200-800 rounded-lg border-1 px-8 py-8 md:w-xs;
+  > ol {
+    margin: 0;
+    margin-left: 0.25em;
+    margin-bottom: 1rem;
+    padding-left: 1em;
+  }
+  &::before {
+    content: 'Contents';
+    @apply h4 text-surface-950-50;
+  }
+  a {
+    text-decoration: none;
+  }
 }
 
-.sidebar-active:before,
-.sidebar-active:after {
-  content: '';
-  position: absolute;
-  top: -1.5rem;
-  right: 0;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: var(--color-surface-950);
-  mask-image: radial-gradient(circle at 0% 0%, transparent 70%, black 0%);
-  mask-repeat: no-repeat;
-  mask-composite: exclude; /* For Safari, not standard */
-  -webkit-mask-composite: destination-out; /* For Chrome and Edge */
-  pointer-events: none;
+.toc:has(.toc-level:empty) {
+  display: none;
 }
 
-.sidebar-active:after {
-  top: auto;
-  bottom: -1.5rem;
-  mask-image: radial-gradient(circle at 0% 100%, transparent 70%, black 0%);
+.with-toc .toc {
+  display: flex;
+  flex-direction: column;
 }
 
-.sidebar .menu-item > div {
-  overflow: hidden;
+@media screen and (min-width: 80rem) {
+  .toc {
+    position: fixed;
+    top: 13.3rem;
+    left: calc(50% - 36rem);
+  }
 }
 
-.sidebar .menu-circle {
-  @apply bg-surface-700;
+.layout-literate article {
+  padding-inline: 2.5rem;
 }
 
-.sidebar-active .menu-circle {
-  @apply bg-primary-500;
+@media screen and (min-width: 68rem) {
+  .layout-literate article {
+    --doc-width: 70ch;
+    --bg-seam: calc(var(--doc-width) + 4.25rem);
+    position: relative;
+    display: grid;
+    grid-template-columns: var(--doc-width) max-content;
+    column-gap: 2rem;
+    padding-right: 0;
+    background: linear-gradient(to right, transparent var(--bg-seam), #303446 var(--bg-seam));
+    min-width: max-content;
+    max-width: max-content;
+    margin: auto;
+
+    :not(.codeblock) {
+      grid-column: 1;
+      /* text-align: right; */
+    }
+
+    .codeblock {
+      grid-column: 2;
+      margin: 0;
+      border-radius: 0;
+      align-self: center;
+    }
+  }
 }
 
-.sidebar .menu-header {
-  position: relative;
-  @apply w-full;
-  @apply flex;
-  @apply items-center;
-}
-.sidebar .menu-header-button {
-  @apply p-4;
-}
-
-.sidebar .menu-header .logo {
-  @apply py-8;
+@keyframes hoverFloat {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-6px) scale(1.02);
+  }
+  50% {
+    transform: translateY(0) scale(0.99);
+  }
+  75% {
+    transform: translateY(5px) scale(1.01);
+  }
 }
