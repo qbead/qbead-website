@@ -12,6 +12,8 @@ keywords: code, api, docs, qbead
 
 <FancyHeader title={title} highlightText={highlight} altText="Docs"/>
 
+<p>This page is unfinished and links to many poorly documented scripts!!!</p>
+
 <ol>
 {#await pages then pages}
   {#each pages as entry}
