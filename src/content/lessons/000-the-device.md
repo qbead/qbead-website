@@ -8,10 +8,10 @@ topics: example, lesson, learning
 difficulty: Beginner
 objectives:
   - What is the Qbead
-  - Inside the Qbead: hardware
-  - Inside the Qbead: software
+  - Inside the Qbead - hardware
+  - Inside the Qbead - software
   - How is it meant to represent a qubit
-headerImage: https://spinwearables.com/images/banners/sensor_controller_actuator.png
+headerImage: "../../static/qbeadmedia/qbead_pic_round_nobck.png"
 description: Introduction to the qbead toy
 nextLesson: _internal/reference # specifically used by lessons to add a "next lesson" below
 ---
@@ -24,13 +24,13 @@ nextLesson: _internal/reference # specifically used by lessons to add a "next le
 
 The Qbead is a simulator that allows you to interact with a qubit with your hands
 - Operations done via movement
-- Fully programmable via USB and bluetooth
 - Website-guided lecure materials
+- Fully programmable through USB and bluetooth
 - Open source (and cheap!) hardware and software
 
 <div class="flex flex-col items-center">
 
-![^Figure 1: One of our Qbead prototypes]("https://github.com/qbead/qbead-website/blob/main/static/qbeadmedia/qbead_pic_round_nobck.png")
+![^Figure 1: One of our Qbead prototypes]("../../static/qbeadmedia/qbead_pic_round_nobck.png")
 
 </div>
 
@@ -51,13 +51,13 @@ The Qbead is a simulator that allows you to interact with a qubit with your hand
 
 <div class="flex flex-col items-center">
 
-![^Figure 2: The components inside your Qbead]("https://github.com/qbead/qbead-website/blob/main/static/qbeadmedia/qbead_components.png")
+![^Figure 2: The components inside your Qbead]("../../static/qbeadmedia/qbead_components.png")
 
 </div>
 
 <div class="flex flex-col items-center">
 
-![^Figure 3: Blowup of the Qbead frame]("https://github.com/qbead/qbead-website/blob/main/static/qbeadmedia/qbead_onshape_explode_crop.mp4")
+![^Figure 3: Blowup of the Qbead frame]("../../static/qbeadmedia/qbead_onshape_explode_crop.mp4")
 
 </div>
 
