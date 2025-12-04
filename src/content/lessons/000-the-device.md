@@ -7,7 +7,9 @@ keywords: example, lesson, learning
 topics: example, lesson, learning
 difficulty: Beginner
 objectives:
-  - What is the qbead toy
+  - What is the Qbead
+  - Inside the Qbead: hardware
+  - Inside the Qbead: software
   - How is it meant to represent a qubit
 headerImage: https://spinwearables.com/images/banners/sensor_controller_actuator.png
 description: Introduction to the qbead toy
@@ -18,11 +20,50 @@ nextLesson: _internal/reference # specifically used by lessons to add a "next le
   import Callout from '$lib/components/Callout/Callout.svelte'
 </script>
 
-## This is a section title
+## What is the Qbead
 
-This is some body text. You can use **bold text** to draw the eye to important information. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut semper, justo eget vehicula vestibulum, enim enim suscipit lectus, et sagittis nibh risus vel metus. Quisque eu ornare ante, et gravida mauris. Vivamus massa justo, sagittis non viverra sed, sodales non nisi. Nunc semper, massa a aliquet dictum, enim nisi malesuada orci, et elementum lectus turpis et velit.
+The Qbead is a simulator that allows you to interact with a qubit with your hands
+- Operations done via movement
+- Fully programmable via USB and bluetooth
+- Website-guided lecure materials
+- Open source (and cheap!) hardware and software
 
-### And Here is a Subsection
+<div class="flex flex-col items-center">
+
+![^Figure 1: One of our Qbead prototypes]("https://github.com/qbead/qbead-website/blob/main/static/qbeadmedia/qbead_pic_round_nobck.png")
+
+</div>
+
+### Inside the Qbead: hardware
+
+- The brains: Seeed XIAO nRF52840 Sense
+  - Processor
+  - USB port
+  - Bluetooth chip
+  - Inertial measurement unit
+- The power: LiPo battery CLY502020 3.7V +140mAh 0.52Wh
+- The colors: custom-made LED flexPCB
+  - Flex PCB
+  - 62 LEDs
+- The frame: custom-made 3D printed cages
+  - Inner cage holding the board and battery
+  - Outer cage protecting the Qbead
+
+<div class="flex flex-col items-center">
+
+![^Figure 2: The components inside your Qbead]("https://github.com/qbead/qbead-website/blob/main/static/qbeadmedia/qbead_components.png")
+
+</div>
+
+<div class="flex flex-col items-center">
+
+![^Figure 3: Blowup of the Qbead frame]("https://github.com/qbead/qbead-website/blob/main/static/qbeadmedia/qbead_onshape_explode_crop.mp4")
+
+</div>
+
+### Inside the Qbead: software
+
+## Qbead vs. qubit 
 
 <Callout title="Lesson Note">
 
