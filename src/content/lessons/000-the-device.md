@@ -23,7 +23,8 @@ nextLesson: _internal/reference # specifically used by lessons to add a "next le
 ## What is the Qbead
 
 The Qbead is a simulator that allows you to interact with a qubit with your hands
-- Operations done via movement
+Features:
+- All operations done via movement
 - Website-guided lecure materials
 - Fully programmable through USB and bluetooth
 - Open source (and cheap!) hardware and software
@@ -42,12 +43,12 @@ The Qbead is a simulator that allows you to interact with a qubit with your hand
   - Bluetooth chip
   - Inertial measurement unit
 - The power: LiPo battery CLY502020 3.7V +140mAh 0.52Wh
-- The colors: custom-made LED flexPCB
+- The color: custom-made LED flexPCB
   - Flex PCB
   - 62 LEDs
-- The frame: custom-made 3D printed cages
-  - Inner cage holding the board and battery
-  - Outer cage protecting the Qbead
+- The frame: custom-made 3D printed shells
+  - Inner shell holding the board and battery
+  - Outer shell protecting the Qbead
 
 <div class="flex flex-col items-center">
 
@@ -63,7 +64,12 @@ The Qbead is a simulator that allows you to interact with a qubit with your hand
 
 ### Inside the Qbead: software
 
+- Firmware Qbead.h
+- Sketches for each experiment
+
 ## Qbead vs. qubit 
+
+- Block sphere vs qbead widgets?
 
 <Callout title="Lesson Note">
 
