@@ -1,5 +1,5 @@
 ---
-title: The Device
+title: What is a qubit
 layout: lesson
 # topics can be keywords for SEO
 keywords: example, lesson, learning
