@@ -11,7 +11,7 @@ objectives:
   - Inside the Qbead - hardware
   - Inside the Qbead - software
   - How is it meant to represent a qubit
-headerImage: "../../static/qbeadmedia/qbead_pic_round_nobck.png"
+headerImage: "../../../static/qbeadmedia/qbead_pic_round_nobck.png"
 description: Introduction to the qbead toy
 nextLesson: _internal/reference # specifically used by lessons to add a "next lesson" below
 ---
@@ -30,7 +30,7 @@ The Qbead is a simulator that allows you to interact with a qubit with your hand
 
 <div class="flex flex-col items-center">
 
-![^Figure 1: One of our Qbead prototypes]("../../static/qbeadmedia/qbead_pic_round_nobck.png")
+![^Figure 1: One of our Qbead prototypes]("../../../static/qbeadmedia/qbead_pic_round_nobck.png")
 
 </div>
 
@@ -51,13 +51,13 @@ The Qbead is a simulator that allows you to interact with a qubit with your hand
 
 <div class="flex flex-col items-center">
 
-![^Figure 2: The components inside your Qbead]("../../static/qbeadmedia/qbead_components.png")
+![^Figure 2: The components inside your Qbead]("../../../static/qbeadmedia/qbead_components.png")
 
 </div>
 
 <div class="flex flex-col items-center">
 
-![^Figure 3: Blowup of the Qbead frame]("../../static/qbeadmedia/qbead_onshape_explode_crop.mp4")
+![^Figure 3: Blowup of the Qbead frame]("../../../static/qbeadmedia/qbead_onshape_explode_crop.mp4")
 
 </div>
 
