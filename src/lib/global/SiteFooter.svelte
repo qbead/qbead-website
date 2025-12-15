@@ -81,7 +81,9 @@
 
       <div class="flex flex-col">
         <h3 class="h4 text-on-surface-variant-900 mb-5 font-semibold">Sponsored by</h3>
-        <a href="https://quantumdelta.nl/" target="_blank" rel="noopener noreferrer"><img src="/sponsor/QDNL-logo-L-neg-RGB.png" width="80"></a>
+        <a href="https://quantumdelta.nl/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center md:justify-start">
+          <img src="/sponsor/QDNL-logo-L-neg-RGB.png" width="80">
+        </a>
       </div>
     </nav>
     <div class="text-on-surface-variant-900 border-surface-200-800 mt-16 border-t pt-10">
