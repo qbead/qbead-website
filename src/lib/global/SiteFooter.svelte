@@ -58,9 +58,9 @@
       <div class="flex flex-col">
         <h3 class="h4 text-on-surface-variant-900 mb-5 font-semibold">Resources</h3>
         <ul class="flex flex-col gap-3 text-xl">
-          <li><a href="/" class="hover:underline">Lessons</a></li>
-          <li><a href="/" class="hover:underline">Guide</a></li>
-          <li><a href="/" class="hover:underline">Code Documentation</a></li>
+          <li><a href="/lessons" class="hover:underline">Lessons</a></li>
+          <li><a href="/codedoc" class="hover:underline">Code Documentation</a></li>
+          <li><a href="/team" class="hover:underline">Team</a></li>
         </ul>
       </div>
 
