@@ -150,6 +150,10 @@ body.scrolling .scroll-block::after {
   margin-bottom: unset;
 }
 
+.prose :where(code)::before, .prose :where(code)::after {
+  content: '';
+}
+
 @layer base {
   .typography a {
     @apply anchor;
