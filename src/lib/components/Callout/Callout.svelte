@@ -66,7 +66,7 @@
 
 <aside class="bg-surface-100-900 text-surface-700-300 mb-8 flex flex-col gap-8 rounded-lg p-8">
   {#if title}
-    <div class="h4 flex items-center gap-6 {IconChoice.color}">
+    <div class="h4 flex items-center gap-6 {IconChoice?.color}">
       {@render iconBlock(IconChoice)}
       <span>{title}</span>
     </div>
