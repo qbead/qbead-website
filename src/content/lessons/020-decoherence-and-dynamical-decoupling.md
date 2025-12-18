@@ -19,7 +19,7 @@ nextLesson: lessons/example-lesson-1
 Welcome to the first interactive lecture on the QBead! In this lecture, we will observe the problem of Decoherence and apply an error correction technique to restore coherence in our quantum state.
 
 ## Quantum Decoherence and Dynamical Decoupling
-Quantum decoherence is the loss of quantum coherence, where a loss of information of a system to its environment occurs due to noise. Quantum computing relies on quantum coherence. In order to suppress decoherence, a method, called Dynamic Decoupling (DD), can be applied. In this lesson you will use an electronic device, called the QBead, to explore decoherence and see how Dynamical Decoupling can help us solve it. By experimenting with the QBead, you will get a hands-on sense of how quantum infromation can be preserved!
+Quantum decoherence is the loss of quantum coherence, where a loss of information of a system to its environment occurs due to noise. Quantum computing relies on quantum coherence. In order to suppress decoherence, a method, called Dynamic Decoupling (DD), can be applied. In this lesson you will use the QBead to explore decoherence and see how Dynamical Decoupling can help us solve it. By experimenting with the QBead, you will get a hands-on sense of how quantum information can be preserved!
 
 ## Topics
 - Problem : Decoherence
