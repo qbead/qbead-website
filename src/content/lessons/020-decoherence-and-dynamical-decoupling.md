@@ -1,22 +1,34 @@
 ---
-title: The Problem of Decoherence
+title: Discover a quantum algorithm: dynamical decoupling
 layout: lesson
 # topics can be keywords for SEO
-keywords: quantum decoherence
+keywords: quantum decoherence, qubit errors, quantum gates
 # below is metadata for lessons
 topics: quantum decoherence
 difficulty: Advanced
 objectives:
-  - Find out the problem with decoherence
-  - Learn about Perfect Dynamical Decoupling
-  - Understand Imperfect Dynamical Decoupling
+  - Interact with the Qbead to play a game
+  - Learn about the quantum protocol you just dicovered - dynamical decoupling
+  - Understand the realistic limitations of dynamical decoupling
 headerImage: https://lipsum.app/random/800x450?_CHANGE_ME
-description: Observe the problem of Decoherence and apply an error correction technique to restore coherence in our quantum state.
+description: Play with the Qbead and rediscover a quantum protocol ann by yourself! Observe the problem of decoherence and apply an error correction technique to restore coherence in our quantum state.
 nextLesson: lessons/example-lesson-1
 ---
 
+## The game
+Goal: Get **only one LED** to light up, with as small of a light spot as possible
+
+The only rule: You can only rotate the Qbead
+
+Tips
+- Try rotating and see what happens!
+- It may not be enough with rotating it once
+- If things get too confusing you can re-start the game by shaking the Qbead
+
+What do you see? Can you find a way to keep the Qbead lights indifinitely small? How about small at a known period of time?
+
 ## Introduction
-Welcome to the first interactive lecture on the QBead! In this lecture, we will observe the problem of Decoherence and apply an error correction technique to restore coherence in our quantum state.
+Welcome to another lecture on the QBead! In this lecture, we will observe the problem of Decoherence and apply an error correction technique to restore coherence in our quantum state.
 
 ## Quantum Decoherence and Dynamical Decoupling
 Quantum decoherence is the loss of quantum coherence, where a loss of information of a system to its environment occurs due to noise. Quantum computing relies on quantum coherence. In order to suppress decoherence, a method, called Dynamic Decoupling (DD), can be applied. In this lesson you will use the QBead to explore decoherence and see how Dynamical Decoupling can help us solve it. By experimenting with the QBead, you will get a hands-on sense of how quantum information can be preserved!
@@ -40,7 +52,7 @@ This process is called decoherence, and it destroys the interference effects tha
 In real spin systems such as the one we simulate with our QBead, small variations in the magnetic field or random interactions with the environment cause different spins in an ensemble to precess at slightly different rates.
 Over time, these small differences accumulate, causing the spins to fan out around the precession axis. This spreading represents a loss of phase coherence between individual spins, that is the manifestation of *decoherence*.
 
-## Dynamic Decoupling
+## Dynamical Decoupling
 The goal of this experiment is to demonstrate Dynamical Decoupling (DD), which is a quantum control procedure that can be used to reverse the decoherence of the ensemble. DD involves applying a rapid series of control pulses that invert the phase differences that accumulate between the states.
 By carefully applying these pulses, we can reverse or suppress decoherence, keeping the spins more coherent for longer.
 
