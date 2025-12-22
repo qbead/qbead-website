@@ -32,7 +32,7 @@ Features:
 
 <div class="flex flex-col items-center">
 
-![^Figure 1: One of our Qbead prototypes]("../../../static/qbeadmedia/qbead_pic_round_nobck.png")
+![^Figure 1: One of our Qbead prototypes]("../../../../static/qbeadmedia/qbead_pic_round_nobck.png")
 
 </div>
 
