@@ -32,7 +32,7 @@ Features:
 
 <div class="flex flex-col items-center">
 
-![^Figure 1: One of our Qbead prototypes]("../../../../../static/qbeadmedia/qbead_pic_round_nobck.png")
+![^Figure 1: One of our Qbead prototypes](../../../../../static/qbeadmedia/qbead_pic_round_nobck.png)
 
 </div>
 
@@ -53,13 +53,13 @@ Features:
 
 <div class="flex flex-col items-center">
 
-![^Figure 2: The components inside your Qbead]("../../../static/qbeadmedia/qbead_components.png")
+![^Figure 2: The components inside your Qbead](../../../static/qbeadmedia/qbead_components.png)
 
 </div>
 
 <div class="flex flex-col items-center">
 
-![^Figure 3: Blowup of the Qbead frame]("../../../static/qbeadmedia/qbead_onshape_explode_crop.mp4")
+![^Figure 3: Blowup of the Qbead frame](../../../static/qbeadmedia/qbead_onshape_explode_crop.mp4)
 
 </div>
 
