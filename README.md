@@ -3,8 +3,6 @@
 The following is internal documentation for how to maintain the
 qbead website.
 
-This is a work in progress.
-
 ## Repo Structure
 
 - `/src/`
@@ -33,6 +31,11 @@ Development builds are automatically published as:
 The `main` branch is a development branch. So to view what's on the `main` branch:
 
 [https://main.qbead-website.pages.dev/](https://main.qbead-website.pages.dev/)
+
+### Check Build Status
+
+1. Go to [Cloudflare Dashboard](https://dash.cloudflare.com/)
+2. Click on "Compute & AI -> Workers & Pages -> qbead-website
 
 ## Production build
 
@@ -64,6 +67,23 @@ To customize what repos are pulled in, you should edit `package.json`:
 
 All content will be rendered inside the `src/content/codedoc/` directory,
 and if specified with `OUT_DIR`, it will be nested in further subdirectories.
+
+## Content Management
+
+This website's content is managed through markdown files in the `src/content/` directory.
+
+See the [Content Documentation](src/content/_internal/overview.md) for guides on:
+- Creating and editing pages and lessons
+- Working with images and media
+- Using components and interactive elements
+
+**Note:** You can also view it on the website! [https://www.qbead.org/_internal/overview](https://www.qbead.org/_internal/overview). Those pages specify that they are not to be indexed by search engines.
+
+**Quick links:**
+- [Getting Started Guide](src/content/_internal/getting-started.md) - Start here
+- [Creating Lessons](src/content/_internal/workflows/creating-lessons.md)
+- [Frontmatter Reference](src/content/_internal/workflows/frontmatter-guide.md)
+- [Troubleshooting](src/content/_internal/troubleshooting.md)
 
 ## Developing locally
 

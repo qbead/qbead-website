@@ -137,11 +137,21 @@ body.scrolling .scroll-block::after {
     @apply text-primary-500;
     font-weight: bold;
   }
+
+  table {
+    tr, thead, tfoot {
+      border-color: var(--color-surface-800);
+    }
+  }
 }
 
 .prose p:has(img:only-child) > img {
   margin-top: unset;
   margin-bottom: unset;
+}
+
+.prose :where(code)::before, .prose :where(code)::after {
+  content: '';
 }
 
 @layer base {
