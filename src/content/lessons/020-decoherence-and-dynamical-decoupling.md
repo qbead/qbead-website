@@ -16,16 +16,31 @@ nextLesson: lessons/example-lesson-1
 ---
 
 ## The game
-Goal: Get **only one LED** to light up, with as small of a light spot as possible
+Goal: Get **only one LED** to light up
 
 The only rule: You can only rotate the Qbead
 
 Tips
 - Try rotating and see what happens!
 - It may not be enough with rotating it once
-- If things get too confusing you can re-start the game by shaking the Qbead
+- If things get too confusing you can re-start the game by repeatedly shaking the Qbead
 
-What do you see? Can you find a way to keep the Qbead lights indifinitely small? How about small at a known period of time?
+What do you see? 
+Can you find a way to keep the Qbead light spot only in a single LED? 
+How about achieving this at a known period of time?
+
+## What have you done in this game?
+- You discovered a quantum protocol!
+    - Well maybe re-invented, as we know about it since 1998 [Viola, Lloyd]
+    - This is a crucial protocol for today's quantum computers: dynamical decoupling!
+- Your Qbead represents a qubit - want to know more? check FIXME link to device description and FIXME link to qubit
+    - The LEDs represent a quantum state
+    - The whole sphere represents all possible quantum states
+- Spreading LEDs is the way we represent decoherence, the most common error of today's real qubits!
+    - Think of it as your quantum state drifting away from where it should be by itself, but you not knowing
+    - This can be caused in real life by for example magnetic fields when your qubit is a spin
+- By rotating the Qbead you were performing one-qubit gates
+    - Timing them to the decoherence timescales allowed you to compensate for this drift
 
 ## Introduction
 Welcome to another lecture on the QBead! In this lecture, we will observe the problem of Decoherence and apply an error correction technique to restore coherence in our quantum state.
