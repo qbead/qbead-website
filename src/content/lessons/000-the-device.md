@@ -24,13 +24,18 @@ nextLesson: _internal/reference # specifically used by lessons to add a "next le
 
 The Qbead is a simulator that allows you to interact with a qubit with your hands.
 
-The light in the Qbead represents the quantum state of a qubit. Want to know more what this means? Check our qubit lesson! @Stefan link here
+The light in the Qbead represents the quantum state of a qubit. 
+Think of it as the light spot being the tip of the state vector in a Bloch sphere.
+You do not know what this means yet? No worries, we got you covered! Check our qubit lesson @Stefan link here
 
 ![^Figure 4: The Qbead represents a qubit by showing the qubit vector as a lighted-up LED](../../../static/qbeadmedia/qbead_pic_round_nobck.png)
 @Stefan can we add here a side by side comparison of the Qbead (just the picture above) and the bloch sphere widget?
 
-- Rotation movements in any direction - qubit gates!
-- Gently tapping - quantum measurement in the tapping direction!
+But with the Qbead we do not only see quantum states: we change them!
+- By rotating your Qbead in any direction you perform qubit gates! This means, the vector of the qubit rotates around the Bloch sphere. 
+- By gently tapping the Qbead you perform quantum measurement, with its axis in the tapping direction!
+
+ With these tools, we can now do a lot of fun quantum experiments while learning very important concepts in quantum physics and engineering.
 
 Features:
 - All operations done via movement: rotate it! shake it! tap it!
