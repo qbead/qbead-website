@@ -19,9 +19,11 @@ nextLesson: lessons/example-lesson-1
 Goal: Get **only one LED** to light up
 
 *Fig here of a Qbead with a single LED on* Caption: Get your Qbead to look like this permanently!
+FIXME @Stefan also a figure with the qbead or the widget decohering
 
 Tips
 - Try rotating the Qbead with your hands and see what happens! To achieve the goal you only need to rotate it!
+    - FIXME @Stefan widget or video of a person rotating a Qbead/Bloch sphere
 - It may not be enough with rotating it once
 - If things get too confusing you can re-start the game by repeatedly shaking the Qbead
 
@@ -34,12 +36,15 @@ How about achieving this not permanently, but regularly?
     - ... or re-invented, as we know about it since 1998 [Viola, Lloyd]. But it probably took you less time than it took them!
     - This is a crucial protocol for today's quantum computers: dynamical decoupling!
     - All modalities of qubits today use it
+        FIXME @Carlos add a picture of a pulse sequence to show how we look at this in the field
 - Your Qbead represents a qubit - want to know more? check FIXME link to device description and FIXME link to qubit
-    - The LEDs represent a quantum state
-    - The whole sphere represents all possible quantum states
+    - The LEDs represent a quantum state in a qubit
+    - The whole sphere represents all possible quantum states for a single qubit
+        - @FIXME Stefan the same figure as in the What is the Qbead with two sides: a Qbead with a single LED on and the widget bloch sphere
 - Spreading LEDs is the way we represent decoherence, the most common error of today's real qubits!
     - Think of it as your quantum state drifting away from where it should be by itself, but you actually don't know where it goes!
     - This can be caused in real life by for example magnetic fields when your qubit is a single spin
+        - FIXME @Stefan can you
 - By rotating the Qbead you were performing one-qubit gates
     - Timing them to the decoherence timescales allowed you to compensate for this drift
     - If you do it well, you can see that at regular intervals, your Qbead goes back to a single LED
