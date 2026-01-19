@@ -24,11 +24,19 @@ nextLesson: _internal/reference # specifically used by lessons to add a "next le
 
 The Qbead is a simulator that allows you to interact with a qubit with your hands.
 
+The light in the Qbead represents the quantum state of a qubit. Want to know more what this means? Check our qubit lesson! @Stefan link here
+
+![^Figure 4: The Qbead represents a qubit by showing the qubit vector as a lighted-up LED](../../../static/qbeadmedia/qbead_pic_round_nobck.png)
+@Stefan can we add here a side by side comparison of the Qbead (just the picture above) and the bloch sphere widget?
+
+- Rotation movements in any direction - qubit gates!
+- Gently tapping - quantum measurement in the tapping direction!
+
 Features:
-- All operations done via movement
-- Website-guided lecure materials
+- All operations done via movement: rotate it! shake it! tap it!
 - Fully programmable through USB and bluetooth
-- Open source (and cheap!) hardware and software - request yours at FIXME
+- Website-guided interactive lecture materials
+- Open source (and cheap!) hardware and software - soon you will be able to request yours!
 
 <div class="flex flex-col items-center">
 
@@ -38,18 +46,18 @@ Features:
 
 ### Inside the Qbead: hardware
 
-- The brains: Seeed XIAO nRF52840 Sense
-  - Processor
-  - USB port
-  - Bluetooth chip
-  - Inertial measurement unit
+- The brains: Seeed XIAO nRF52840 Sense, containing
+  - Microprocessor to run the code
+  - USB port for charging, loading code, and reading variables
+  - Bluetooth for wireless communication
+  - Inertial measurement unit to read out the Qbead movements
 - The power: LiPo battery CLY502020 3.7V +140mAh 0.52Wh
 - The color: custom-made LED flexPCB
   - Flex PCB
-  - 62 LEDs
+  - 62 smart LEDs in series
 - The frame: custom-made 3D printed shells
   - Inner shell holding the board and battery
-  - Outer shell protecting the Qbead
+  - Outer transparent shell protecting the Qbead
 
 <div class="flex flex-col items-center">
 
@@ -65,17 +73,16 @@ Features:
 
 ### Inside the Qbead: software
 
-- Firmware Qbead.h
-- Sketches for each experiment
+- Firmware Qbead.h that lays out the library of functions
+- Sketches for each experiment that use several functions and put them into loops
 
-## Qbead vs. qubit 
+## Limitations of our Qbead vs. an ideal qubit 
 
-- Block sphere vs qbead widgets?
-- Limitations of our hardware
-  - Discreteness - we only have a set number of LEDs
-  - Representing mixed-state density matrices
-  - Accuracy of visualization - our LEDs are larger than infinitely small points
-  - Accuracy of gates when done via analog gestures - workaround: fix gates in software
+- Discreteness - we only have a set number of LEDs
+- Representing mixed-state density matrices
+- Accuracy of visualization - our LEDs are larger than infinitely small points
+- Accuracy of gates when done via analog gestures - workaround: fix gates in software
+
 
 <Callout title="Lesson Note">
 
