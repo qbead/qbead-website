@@ -21,11 +21,14 @@ Goal: Get **only one LED** to light up
 *Fig here of a Qbead with a single LED on* Caption: Get your Qbead to look like this permanently!
 FIXME @Stefan also a figure with the qbead or the widget decohering
 
-Tips
+<Callout title="Tips!">
+
 - Try rotating the Qbead with your hands and see what happens! To achieve the goal you only need to rotate it!
     - FIXME @Stefan widget or video of a person rotating a Qbead/Bloch sphere
 - It may not be enough with rotating it once
 - If things get too confusing you can re-start the game by repeatedly shaking the Qbead
+
+</Callout>
 
 What do you see? 
 Can you find a way to keep the Qbead light only in a single LED? 
