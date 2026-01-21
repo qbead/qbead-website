@@ -1,5 +1,5 @@
 ---
-title: Discover a quantum algorithm: dynamical decoupling
+title: Discover a quantum algorithm - dynamical decoupling
 layout: lesson
 # topics can be keywords for SEO
 keywords: quantum decoherence, qubit errors, quantum gates
