@@ -32,37 +32,45 @@ Can you find a way to keep the Qbead light only in a single LED?
 How about achieving this not permanently, but regularly?
 
 ## What have you done in this game?
-- You discovered a quantum protocol!
-    - ... or re-invented, as we know about it since 1998 [Viola, Lloyd]. But it probably took you less time than it took them!
-    - This is a crucial protocol for today's quantum computers: dynamical decoupling!
-    - All modalities of qubits today use it
-        FIXME @Carlos add a picture of a pulse sequence to show how we look at this in the field
-- Your Qbead represents a qubit - want to know more? check FIXME link to device description and FIXME link to qubit
-    - The LEDs represent a quantum state in a qubit
-    - The whole sphere represents all possible quantum states for a single qubit
-        - @FIXME Stefan the same figure as in the What is the Qbead with two sides: a Qbead with a single LED on and the widget bloch sphere
-- Spreading LEDs is the way we represent decoherence, the most common error of today's real qubits!
-    - Think of it as your quantum state drifting away from where it should be by itself, but you actually don't know where it goes!
-    - This can be caused in real life by for example magnetic fields when your qubit is a single spin
-        - FIXME @Stefan can you
-- By rotating the Qbead you were performing one-qubit gates
-    - Timing them to the decoherence timescales allowed you to compensate for this drift
-    - If you do it well, you can see that at regular intervals, your Qbead goes back to a single LED
-        - You (or the scientists in real life) can then apply your computational gates in between your dynamical decoupling rotations
-    - This means you are fighting the decoherence and winning! So you don't lose your quantum information
+You discovered a quantum protocol!
+- Or re-invented, as we know about it since 1998 [Viola, Lloyd]. But it probably took you less time than it took them!
+- This is a crucial protocol for today's quantum computers: dynamical decoupling!
+- All modalities of qubits today use it
+    FIXME @Carlos add a picture of a pulse sequence to show how we look at this in the field
 
-## Reality check: is it that easy?
+Your Qbead represents a qubit - want to know more? check FIXME link to device description and FIXME link to qubit
+- The LEDs represent a quantum state in a qubit
+- The whole sphere represents all possible quantum states for a single qubit
+    - @FIXME Stefan the same figure as in the What is the Qbead with two sides: a Qbead with a single LED on and the widget bloch sphere
+
+Spreading LEDs is the way we represent decoherence, the most common error of today's real qubits!
+- Think of it as your quantum state drifting away from where it should be by itself, but you actually don't know where it goes!
+- This can be caused in real life by for example magnetic fields when your qubit is a single spin
+    - FIXME @Stefan decoherence figure
+
+By rotating the Qbead you were performing one-qubit gates
+- Timing them to the decoherence timescales allowed you to compensate for this drift
+- If you do it well, you can see that at regular intervals, your Qbead goes back to a single LED
+    - You (or the scientists in real life) can then apply your computational gates in between your dynamical decoupling rotations
+- This means you are fighting the decoherence and winning! So you don't lose your quantum information
+
+## Reality check: is it really that easy?
 In real quantum experiments, things are more complex
-- You cannot see the state as it decoheres
+- You cannot see the state as it decoheres - check the FIXME link tap to measure example!
 - Decoherence happens in an arbitrary axis
 - Your rotation gates also introduce errors
 - There may be other sources of decoherence and errors with faster timescales
 
-## Why is it called decoherence? WIP to explain coherence simply
-- Why decoherence when it is just unknown qubit rotation?
-- We call a system coherent when its components are in-tune with each other
-    - Think about a music band playing well coordinated at the same time
-    - Many qubits in a quantum computing or communication system are like a band: you want them to
+## Decoherence in other words: an analogy
+- As you just saw by yourself, we call decoherence to an uncontrolled drift in your quantum state
+- An analogy:
+  - Imagine that you have a ball in a flat plane, the ball being your qubit state
+  - However, it turns out that this plane is slightly tilted, so if you don't do anything, the ball falls to one side
+  - Your goal is to keep the ball in the center of your plane, because only there you can act on it (= do your quantum computation without errors, in our case!)
+  - But the plane cannot be made horizontal, you can only either tilt it to one side or the other
+  - How would you keep the ball in the center?
+  - You got it! Just tilt the plane from one side to the other! Then the ball oscillates and it passes the center regularly!
+  - That is exactly what you did! 
 
 # Dynamical decoupling: the science behind
 
@@ -82,7 +90,7 @@ This process is called decoherence, and it destroys the interference effects tha
 For this example, let's assume our quantum system is a spin-1/2 particle, and our environmental noise is an external constant magnetic field. Like in any other qubit, the quantum state of the spin can be visualized as a vector pointing somewhere on a sphere, the *Bloch Sphere*. This is the single LED in your Qbead!
 When the external field is not aligned with the qubit state, it induces a torque on the system's magnetic moment that causes the system to `wobble' around the magnetic field axis. This wobbling is known as *precession*.
 
-% Widget of precessing vector!
+FIXME fig Widget of precessing vector!
 
 ## Decoherence in Spin Systems
 In real spin systems such as the one we simulate with our QBead, small variations in the magnetic field or random interactions with the environment cause different spins in an ensemble to precess at slightly different rates.
@@ -99,7 +107,7 @@ This lesson is comprised of three QBead experiments, which will increase in comp
 
 ## Decoherence Visualisation
 
-% Decoherence Widget
+FIXME fig Decoherence Widget
 
 We can model the loss of coherence on the QBead as a 'spreading-out' of a known state vector (representing a coherent ensemble) into a collection of vectors representing individual states that progressively lose coherence with each other. This is exactly what the first experiment shows; the initial coherent state is represented by an (unmoving) white LED, but as time passes, the decohering states begin to appear as red LEDs that slowly spread away from the white one. Watch how quickly the coherent phase of the system spreads out into a big collection of individual states!
 
@@ -107,7 +115,7 @@ This is a very big problem for quantum computers, as quantum systems are only us
 
 ## Simple Dynamical Decoupling
 
-% Dynamical Decoupling Widget
+FIXME fig Dynamical Decoupling Widget
 
 This experiment gives you the opportunity to observe phase decoherence in a system on the QBead, and to implement the Dynamical Decoupling protocol yourself!
 
@@ -115,19 +123,19 @@ The quantum ensemble is modeled by a white light on the QBead that immediately b
 
 After some time, these points will have spread out from one another, and now the Dynamical Decoupling procedure is required to bring them back together so that the system is once again coherent. This procedure is surprisingly straightforward; all you have to do is flip the QBead upside down!
 
-% figure/demonstration of how to flip the QBead
+FIXME fig figure/demonstration of how to flip the QBead
 
 Once you have inverted the QBead, watch as the vectors begin to overlap with one another again; the blue vector is now  "behind" the others and rushes to "catch up", while the red vector (now at the front) "slows" down. This means that the quantum noise is now undoing its previous decoherence!
 
 In this Simple version of the experiment, the the green LED is restricted in the orientations it can be. This means that it is locked to the closest 90-degree increment of the sphere to the top, so that the green point doesn't move around too much. This is done to stabilise the rotation of the blue, white, and red points, as in reality, shaky hands can disrupt the Dynamical Decoupling procedure! This is the problem that this simplified experiment is trying to fix; by restricting the possible orientations green point, the "flip" is easier to execute.
 
-% another figure
+FIXME fig another figure
 
 Please note that this experiment is equipped with a reset sequence which will engage periodically. This means you don't have to worry if you make a mistake with flipping the QBead, as the reset will bring you back to the start. The sequence is shown when the green LED begins to "blink" for a short period and all other vectors disappear.
 
 ## Challenge: Realistic Dynamical Decoupling
 
-% video of realistic dynamical decoupling applied
+FIXME fig video of realistic dynamical decoupling applied
 
 In this advanced version of the Dynamical Decoupling procedure, the magnetic field axis is no longer restricted to 90-degree increments, meaning the green LED always points *truly* vertical. This means that moving or rotating the QBead even a small amount can shift the blue, white, and red points out of plane with one another, making it almost impossible to successfully implement the Dynamical Decoupling procedure! This also means that when you do apply the procedure, the flip must be both (a) instantaneous and (b) perfectly 180 degrees, as otherwise the planes of precession can again become misaligned. It is difficult to get right, but the experiment is otherwise identical to the simple version. This experiment demonstrates how careful we need to be with these quantum systems in the real world, and how perfectly we need to apply quantum control protocols.
 
