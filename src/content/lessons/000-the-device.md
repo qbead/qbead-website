@@ -86,4 +86,4 @@ Our Qbead is of course not exactly a qubit (otherwise it wouldn't so hard to bui
 - Discreteness - we only have a set number of LEDs, while qubit states can rotate continuously in the Bloch sphere
 - Representing mixed-state density matrices - 
 - Accuracy of visualization - an ideal qubit state is a vector pointing to an infinitely small point in the sphere, while our LEDs are larger than infinitely small points
-- Accuracy of gates when done via analog gestures - hand gestures are of course not as accurate as the pulse gates used to rotate qubits. For the Qbead, we choose to options depending on the educational goal of the experiment: 1) let the error be to showcase the real problems with errors in qubits, or 2) lock gates in software so that your gates are always perfect.
+- Accuracy of gates when done via analog gestures - hand gestures are of course not as accurate as the pulse gates used to rotate qubits. For the Qbead, we choose to options depending on the educational goal of the experiment: 1 let the error be to showcase the real problems with errors in qubits, or 2 lock gates in software so that your gates are always perfect.
