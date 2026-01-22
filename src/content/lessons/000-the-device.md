@@ -68,7 +68,13 @@ Features:
 
 <div class="flex flex-col items-center">
 
-![^Figure 3: Blowup of the Qbead frame](../../../static/qbeadmedia/qbead_onshape_explode_crop.mp4)
+<figure>
+<video controls class="w-full max-w-3xl mx-auto my-8">
+  <source src="/qbeadmedia/demo.mp4" type="video/mp4">
+  Your browser doesn't support video playback.
+</video>
+<label>Figure 3: Blowup of the Qbead frame</label>
+</figure>
 
 </div>
 
