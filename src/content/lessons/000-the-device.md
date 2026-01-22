@@ -70,7 +70,7 @@ Features:
 
 <figure>
 <video controls class="w-full max-w-3xl mx-auto my-8">
-  <source src="/qbeadmedia/qbead_onshape_explode_crop.mp4" type="video/mp4">
+  <source src="/qbeadmedia/qbead_onshape_explode_crop.mp4" type="video/mp4" />
   Your browser doesn't support video playback.
 </video>
 <label>Figure 3: Blowup of the Qbead frame</label>
