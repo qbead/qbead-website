@@ -9,9 +9,8 @@ objectives:
   - What is a random bit?
   - What is a qubit?
   - How is the qbead toy meant to represent a qubit?
-headerImage: https://spinwearables.com/images/banners/sensor_controller_actuator.png
+headerImage: /lessons/bit-randbit-qubit.png
 description: Introduction to bits and qubits
-nextLesson: _internal/reference
 ---
 
 <script>

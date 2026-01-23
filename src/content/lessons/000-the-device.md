@@ -10,15 +10,34 @@ objectives:
   - What is the Qbead
   - Inside the Qbead - hardware and software
   - Qbead vs qubit - how is the Qbead meant to represent a qubit
-headerImage: "../../../static/qbeadmedia/qbead_pic_round_nobck.png"
+headerImage: "/qbeadmedia/qbead_pic_round_nobck.png"
 description: Introduction to the Qbead
-nextLesson: _internal/reference # specifically used by lessons to add a "next lesson" below
+nextLesson: lessons/001-what-is-a-qubit
 ---
 
 <script>
+  import * as THREE from 'three'
   import Callout from '$lib/components/Callout/Callout.svelte'
   import BlochSphereElement from '$lib/components/BlochSphereElement/BlochSphereElement.svelte'
   import { QubitDisplay, BlochVector, OperatorDisplay, gates, animate } from '@qbead/bloch-sphere'
+
+  function addTipDot(qubit, radius = 0.08) {
+    const ah = qubit.arrow.arrowHelper
+    const geo = new THREE.SphereGeometry(radius, 16, 16)
+    const mat = new THREE.MeshBasicMaterial({ color: 0xffffff })
+    const dot = new THREE.Mesh(geo, mat)
+    dot.position.set(0, 1, 0)
+    ah.add(dot)
+  }
+
+  function setQubitOpacity(qubit, opacity) {
+    qubit.traverse((child) => {
+      if (child.material) {
+        child.material.transparent = true
+        child.material.opacity = opacity
+      }
+    })
+  }
 </script>
 
 ## What is the Qbead
@@ -27,57 +46,105 @@ The Qbead is a simulator that lets you interact with a qubit with your hands.
 
 The light in the Qbead represents the quantum state of a qubit.
 Think of the light spot in the Qbead as the tip of the state vector in a Bloch sphere.
-You do not know what this means yet? No worries, we got you covered! Check out our qubit lesson FIXME @Stefan link here
-
-![^Figure 1: The Qbead represents a qubit by showing the qubit vector as a lighted-up LED](/qbeadmedia/qbead_pic_round_nobck.png)
-FIXME @Stefan can we add here a side by side comparison of the Qbead (just the picture above) and the bloch sphere widget?
-
-But with the Qbead we do not only see quantum states: we change them!
-- By rotating your Qbead in any direction you perform qubit gates! This means, the vector of the qubit rotates around the Bloch sphere.
-- By gently tapping the Qbead you perform a quantum measurement, with its axis along the tapping direction!
-
-FIXME @Stefan maybe some widget or videos of qubit rotations and measurements would be good!
-
-
-<BlochSphereElement options={{
-  fontSize: 1,
-  showGrid: true,
-}} created={(blochSphere) => {
-  let state = BlochVector.random()
-  const qubitArrow = new QubitDisplay(state)
-  blochSphere.add(qubitArrow)
-}} />
-
+You do not know what this means yet? No worries, we got you covered! Check out our [qubit lesson](/lessons/001-what-is-a-qubit).
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
 
-  <div>
-  Here is some content that can be anything. The
-  layout will collapse to single column on small screens.
-  </div>
+<figure>
+<img src="/qbeadmedia/qbead_pic_round_nobck.png" alt="The Qbead device" />
+<figcaption class="text-sm text-gray-500 text-center mt-2">Figure 1: The Qbead represents a qubit by showing the qubit vector as a lighted-up LED</figcaption>
+</figure>
 
-  <figure>
-    <BlochSphereElement options={{
-      fontSize: .8,
-      showGrid: false,
-    }} created={(blochSphere) => {
-      let state = BlochVector.random()
-      const qubitArrow = new QubitDisplay(state)
-      // hide the labels
-      qubitArrow.angleIndicators.visible = false
-      qubitArrow.arrow.label.visible = false
-      blochSphere.add(qubitArrow)
-      animate((progress) => {
-        qubitArrow.set(BlochVector.fromAngles(state.theta, state.phi + progress * Math.PI * 2))
-      }, 3000, 'linear', true)
-    }} />
-    <figcaption class="text-sm text-gray-500">
-      Figure 1. A bloch sphere without grid
-    </figcaption>
-  </figure>
+<figure>
+<BlochSphereElement options={{
+  fontSize: 0.8,
+  showGrid: true,
+}} created={(blochSphere) => {
+  const qubit = new QubitDisplay(BlochVector.fromAngles(Math.PI/2, Math.PI/2))
+  qubit.angleIndicators.visible = false
+  qubit.arrow.label.visible = false
+  addTipDot(qubit)
+  blochSphere.add(qubit)
+}} />
+<figcaption class="text-sm text-gray-500 text-center mt-2">The same state shown on the Bloch sphere</figcaption>
+</figure>
+
 </div>
 
- With these tools, we can now do a lot of fun quantum experiments while learning very important concepts in quantum physics and engineering.
+But with the Qbead we do not only see quantum states: we change them!
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+
+<div>
+
+By rotating your Qbead in any direction you perform qubit gates! This means, the vector of the qubit rotates around the Bloch sphere.
+
+</div>
+
+<div>
+
+<BlochSphereElement options={{
+  fontSize: 0.8,
+  showGrid: true,
+}} created={(blochSphere) => {
+  const startTheta = Math.random() * Math.PI
+  const startPhi = Math.random() * Math.PI * 2
+  const qubit = new QubitDisplay(BlochVector.fromAngles(startTheta, startPhi))
+  qubit.angleIndicators.visible = false
+  qubit.arrow.label.visible = false
+  addTipDot(qubit)
+  blochSphere.add(qubit)
+  animate((progress) => {
+    const swing = Math.sin(progress * Math.PI * 2) * 0.8
+    qubit.set(BlochVector.fromAngles(startTheta, startPhi + swing))
+  }, 4000, 'linear', true)
+}} />
+
+</div>
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+
+<div>
+
+By gently tapping the Qbead you perform a quantum measurement, with its axis along the tapping direction!
+
+</div>
+
+<div>
+
+<BlochSphereElement options={{
+  fontSize: 0.8,
+  showGrid: true,
+}} created={(blochSphere) => {
+  const startTheta = Math.random() * Math.PI
+  const startPhi = Math.random() * Math.PI * 2
+  const randomQubit = new QubitDisplay(BlochVector.fromAngles(startTheta, startPhi))
+  const zeroQubit = new QubitDisplay(BlochVector.ZERO)
+  const oneQubit = new QubitDisplay(BlochVector.ONE)
+  for (const q of [randomQubit, zeroQubit, oneQubit]) {
+    q.angleIndicators.visible = false
+    q.arrow.label.visible = false
+    addTipDot(q)
+    blochSphere.add(q)
+  }
+  setQubitOpacity(zeroQubit, 0)
+  setQubitOpacity(oneQubit, 0)
+  setQubitOpacity(randomQubit,  0)
+  const target = Math.random() < Math.cos(startTheta / 2) ** 2 ? zeroQubit : oneQubit
+  animate((progress) => {
+    setQubitOpacity(randomQubit, progress < 0.2 ? 1 : 0)
+    setQubitOpacity(target, progress)
+  }, 2000, 'linear', true)
+}} />
+
+</div>
+
+</div>
+
+
+With these tools, we can now do a lot of fun quantum experiments while learning very important concepts in quantum physics and engineering.
 
 Features:
 - All operations done via movement: rotate it! shake it! tap it!
@@ -107,23 +174,27 @@ Features:
 
 </div>
 
-<div class="flex flex-col items-center">
+<div class="w-full md:w-1/2 mx-auto">
 
 <figure>
-<video controls class="w-full max-w-3xl mx-auto my-8">
+<video
+autoplay
+loop
+muted
+playsinline
+on:loadedmetadata={e => { e.target.playbackRate = 2; }}>
   <source src="/qbeadmedia/qbead_onshape_explode_crop.mp4" type="video/mp4" />
   Your browser doesn't support video playback.
 </video>
-<label>Figure 3: Blowup of the Qbead frame</label>
+<figcaption>Figure 3: Blowup of the Qbead frame</figcaption>
 </figure>
 
 </div>
 
 ### Inside the Qbead: software
 
-- Firmware Qbead.h that lays out the library of functions
-- Sketches for each experiment that use several functions and put them into loops
-FIXME @Stefan links to Qbead.h and example lessons?
+- Firmware [Qbead.h](/codedoc/Qbead.h) that lays out the library of functions
+- [Sketches](/codedoc/Tap_to_Measure.ino) for each experiment that use several functions and put them into loops
 
 ## Limitations of our Qbead vs. an ideal qubit
 
