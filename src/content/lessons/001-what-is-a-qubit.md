@@ -15,9 +15,19 @@ nextLesson: _internal/reference
 ---
 
 <script>
+  import * as THREE from 'three'
   import Callout from '$lib/components/Callout/Callout.svelte'
   import BlochSphereElement from '$lib/components/BlochSphereElement/BlochSphereElement.svelte'
   import { QubitDisplay, BlochVector, OperatorDisplay, gates, animate } from '@qbead/bloch-sphere'
+
+  function addTipDot(qubit, radius = 0.08) {
+    const ah = qubit.arrow.arrowHelper
+    const geo = new THREE.SphereGeometry(radius, 16, 16)
+    const mat = new THREE.MeshBasicMaterial({ color: 0xffffff })
+    const dot = new THREE.Mesh(geo, mat)
+    dot.position.set(0, 1, 0)
+    ah.add(dot)
+  }
 </script>
 
 ## What is a bit?
@@ -94,6 +104,9 @@ When measured, this qubit gives 0 with 100% certainty.
   showGrid: true,
 }} created={(blochSphere) => {
   const qubit = new QubitDisplay(BlochVector.ZERO)
+  qubit.angleIndicators.visible = false
+  qubit.arrow.label.visible = false
+  addTipDot(qubit)
   blochSphere.add(qubit)
 }} />
 
@@ -124,6 +137,9 @@ When measured, this qubit gives 1 with 100% certainty.
   showGrid: true,
 }} created={(blochSphere) => {
   const qubit = new QubitDisplay(BlochVector.ONE)
+  qubit.angleIndicators.visible = false
+  qubit.arrow.label.visible = false
+  addTipDot(qubit)
   blochSphere.add(qubit)
 }} />
 
@@ -154,6 +170,9 @@ Both amplitudes are positive.
   showGrid: true,
 }} created={(blochSphere) => {
   const qubit = new QubitDisplay(BlochVector.PLUS)
+  qubit.angleIndicators.visible = false
+  qubit.arrow.label.visible = false
+  addTipDot(qubit)
   blochSphere.add(qubit)
 }} />
 
@@ -184,6 +203,9 @@ The second amplitude is now **negative**. This is a different **phase**.
   showGrid: true,
 }} created={(blochSphere) => {
   const qubit = new QubitDisplay(BlochVector.MINUS)
+  qubit.angleIndicators.visible = false
+  qubit.arrow.label.visible = false
+  addTipDot(qubit)
   blochSphere.add(qubit)
 }} />
 
