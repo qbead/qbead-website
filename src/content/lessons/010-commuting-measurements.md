@@ -9,6 +9,7 @@ objectives:
   - Discover that quantum measurements along different axes do not commute
   - Explore non-commuting measurements hands-on with the qbead
 description: Learn how quantum measurements differ from classical ones by exploring non-commuting measurements with the qbead toy.
+nextLesson: lessons/020-decoherence-and-dynamical-decoupling
 ---
 
 <script>
