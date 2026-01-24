@@ -35,7 +35,7 @@
       <a href="/" aria-label="Qbead Home">
         <img
           width="160"
-          src="/Qbead-Logo-Variant-B-Dark-Mode-Full-Color-Rgb.svg"
+          src="/alllogos/Logo Dark Mode/Full Color/Web/Qbead-Logo-Dark-Mode-Full-Color-Rgb.svg"
           alt="Qbead Logo"
         />
       </a>

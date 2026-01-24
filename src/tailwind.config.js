@@ -15,7 +15,7 @@ module.exports = {
             code: { color: 'inherit' },
             blockquote: { color: 'inherit' },
             figcaption: { color: 'inherit' },
-            thead: { color: 'inherit' },
+            thead: { color: 'inherit', th: { color: 'inherit' } },
             'ol > li::marker': { color: 'inherit' },
             'ul > li::marker': { color: 'inherit' },
             maxWidth: '-1',

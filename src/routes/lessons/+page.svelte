@@ -112,7 +112,7 @@
 <div class="lesson-list-layout m-auto my-32 max-w-7xl px-10">
   <div class="head-area">
     <FancyHeading
-      title="The Learning Guide"
+      title="The Learning Guide (unfinished draft)"
       highlightText="Learning Guide"
       altText="Play"
       class="lg:mb-20"

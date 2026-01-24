@@ -5,6 +5,8 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeToc from '@jsdevtools/rehype-toc'
 import { sveltex } from '@nvl/sveltex'
 import rehypeImageToolkit from 'rehype-image-toolkit'
+import remarkGfm from 'remark-gfm'
+import rehypeStripExtensions from './plugins/rehype-strip-extension.js'
 // import { resolve } from 'path'
 // import { mdsvex } from 'mdsvex'
 // import remarkMath from 'remark-math'
@@ -47,7 +49,9 @@ const config = {
               importPath: '$lib/components/BackLink/BackLink.svelte',
             },
           ],
-          remarkPlugins: [],
+          remarkPlugins: [
+            remarkGfm,
+          ],
           retextPlugins: [],
           rehypePlugins: [
             rehypeImageToolkit,
@@ -67,6 +71,7 @@ const config = {
                 },
               },
             ],
+            [rehypeStripExtensions, { extensions: ['md', 'svelte', 'sveltex'] }],
           ],
         },
       }
