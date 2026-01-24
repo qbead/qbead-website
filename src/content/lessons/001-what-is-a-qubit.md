@@ -11,6 +11,7 @@ objectives:
   - How is the qbead toy meant to represent a qubit?
 headerImage: /lessons/bit-randbit-qubit.png
 description: Introduction to bits and qubits
+nextLesson: lessons/010-commuting-measurements
 ---
 
 <script>
