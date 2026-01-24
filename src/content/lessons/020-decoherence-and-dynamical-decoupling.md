@@ -287,8 +287,6 @@ This lesson is comprised of three QBead experiments, which will increase in comp
 
 ## Decoherence Visualisation
 
-TODO visualization
-
 We can model the loss of coherence on the QBead as a "spreading-out" of a known state vector (representing a coherent ensemble) into a collection of vectors representing individual states that progressively lose coherence with each other. This is exactly what the first experiment shows; the initial coherent state is represented by an (unmoving) white LED, but as time passes, the decohering states begin to appear as red LEDs that slowly spread away from the white one. Watch how quickly the coherent phase of the system spreads out into a big collection of individual states!
 
 This is a very big problem for quantum computers, as quantum systems are only useful for computation as long as they remain coherent. However, it is very challenging to eliminate quantum noise entirely, which is why quantum control protocols such as Dynamical Decoupling are required to maintain coherence.
@@ -311,19 +309,38 @@ This is a very big problem for quantum computers, as quantum systems are only us
     blochSphere.add(q)
     return { qubit: q, speed }
   })
+  const spreadRate = Math.PI * 2
   animate((progress) => {
-    let t = progress * 2
-    let flipped = false
-    if (t > 1) {
-      t = t - 1
-      flipped = true
+    const flipStart = 0.46
+    const flipEnd = 0.5
+    const refocusEnd = 0.9
+    if (progress < flipStart) {
+      // Spreading: vectors fan out
+      const t = progress / flipStart
+      qubits.forEach(({ qubit, speed }) => {
+        const phi = t * spreadRate * speed
+        qubit.set(BlochVector.fromAngles(theta, phi))
+      })
+    } else if (progress < flipEnd) {
+      // Flip: theta moves straight down, phi stays fixed
+      const f = (progress - flipStart) / (flipEnd - flipStart)
+      const currentTheta = theta + (Math.PI - 2 * theta) * f
+      qubits.forEach(({ qubit, speed }) => {
+        qubit.set(BlochVector.fromAngles(currentTheta, spreadRate * speed))
+      })
+    } else if (progress < refocusEnd) {
+      // Refocusing: vectors converge back together
+      const t = (progress - flipEnd) / (refocusEnd - flipEnd)
+      qubits.forEach(({ qubit, speed }) => {
+        const phi = spreadRate * speed * (1 - t)
+        qubit.set(BlochVector.fromAngles(Math.PI - theta, phi))
+      })
+    } else {
+      // Pause at refocused state
+      qubits.forEach(({ qubit }) => {
+        qubit.set(BlochVector.fromAngles(Math.PI - theta, 0))
+      })
     }
-    qubits.forEach(({ qubit, speed }) => {
-      const effectiveSpeed = flipped ? -speed : speed
-      const phi = t * Math.PI * 2 * effectiveSpeed
-      const displayTheta = flipped ? Math.PI - theta : theta
-      qubit.set(BlochVector.fromAngles(displayTheta, phi))
-    })
   }, 6000, 'linear', true)
 }} />
 
@@ -350,16 +367,23 @@ After some time, these points will have spread out from one another, and now the
   showGrid: true,
 }} created={(blochSphere) => {
   const theta = Math.PI / 3
+  const spreadRate = Math.PI * 2
   const speeds = [0.8, 1.0, 1.2]
   const colors = [0x4488ff, 0xffffff, 0xff4444]
   const qubits = speeds.map((speed, i) => {
-    const q = new QubitDisplay(BlochVector.fromAngles(theta, i * 0.4))
+    const q = new QubitDisplay(BlochVector.fromAngles(theta, 0))
     q.angleIndicators.visible = false
     q.arrow.label.visible = false
     addTipDot(q, 0.07, colors[i])
     blochSphere.add(q)
-    return q
+    return { qubit: q, speed }
   })
+  animate((progress) => {
+    qubits.forEach(({ qubit, speed }) => {
+      const phi = progress * spreadRate * speed
+      qubit.set(BlochVector.fromAngles(theta, phi))
+    })
+  }, 4000, 'linear', true)
 }} />
 
 </div>
@@ -381,16 +405,23 @@ After some time, these points will have spread out from one another, and now the
   showGrid: true,
 }} created={(blochSphere) => {
   const theta = Math.PI - Math.PI / 3
+  const spreadRate = Math.PI * 2
   const speeds = [0.8, 1.0, 1.2]
   const colors = [0x4488ff, 0xffffff, 0xff4444]
   const qubits = speeds.map((speed, i) => {
-    const q = new QubitDisplay(BlochVector.fromAngles(theta, (2 - i) * 0.4))
+    const q = new QubitDisplay(BlochVector.fromAngles(theta, spreadRate * speed))
     q.angleIndicators.visible = false
     q.arrow.label.visible = false
     addTipDot(q, 0.07, colors[i])
     blochSphere.add(q)
-    return q
+    return { qubit: q, speed }
   })
+  animate((progress) => {
+    qubits.forEach(({ qubit, speed }) => {
+      const phi = spreadRate * speed * (1 - progress)
+      qubit.set(BlochVector.fromAngles(theta, phi))
+    })
+  }, 4000, 'linear', true)
 }} />
 
 </div>
@@ -409,28 +440,49 @@ Please note that this experiment is equipped with a reset sequence which will en
   fontSize: 0.8,
   showGrid: true,
 }} created={(blochSphere) => {
-  const n = 3
-  const speeds = [0.75, 1.0, 1.25]
+  const theta = Math.PI / 3
+  const spreadRate = Math.PI * 2
+  const speeds = [0.8, 1.0, 1.2]
   const colors = [0x4488ff, 0xffffff, 0xff4444]
+  const thetaErrors = [-0.15, 0, 0.12]
   const qubits = speeds.map((speed, i) => {
-    const q = new QubitDisplay(BlochVector.fromAngles(Math.PI / 3, 0))
+    const q = new QubitDisplay(BlochVector.fromAngles(theta, 0))
     q.angleIndicators.visible = false
     q.arrow.label.visible = false
     addTipDot(q, 0.07, colors[i])
     blochSphere.add(q)
-    return { qubit: q, speed }
+    return { qubit: q, speed, thetaErr: thetaErrors[i] }
   })
   animate((progress) => {
-    const cycle = progress * 4
-    const phase = cycle % 2
-    const flipped = Math.floor(cycle) % 2 === 1
-    qubits.forEach(({ qubit, speed }) => {
-      const effectiveSpeed = flipped ? -speed : speed
-      const phi = phase * Math.PI * speed
-      const theta = flipped ? Math.PI - Math.PI/3 + (speed - 1) * 0.15 : Math.PI/3 + (speed - 1) * 0.15
-      qubit.set(BlochVector.fromAngles(theta, phi))
-    })
-  }, 8000, 'linear', true)
+    const flipStart = 0.46
+    const flipEnd = 0.5
+    const refocusEnd = 0.9
+    if (progress < flipStart) {
+      const t = progress / flipStart
+      qubits.forEach(({ qubit, speed }) => {
+        const phi = t * spreadRate * speed
+        qubit.set(BlochVector.fromAngles(theta, phi))
+      })
+    } else if (progress < flipEnd) {
+      const f = (progress - flipStart) / (flipEnd - flipStart)
+      qubits.forEach(({ qubit, speed, thetaErr }) => {
+        const targetTheta = Math.PI - theta + thetaErr
+        const currentTheta = theta + (targetTheta - theta) * f
+        qubit.set(BlochVector.fromAngles(currentTheta, spreadRate * speed))
+      })
+    } else if (progress < refocusEnd) {
+      const t = (progress - flipEnd) / (refocusEnd - flipEnd)
+      qubits.forEach(({ qubit, speed, thetaErr }) => {
+        const flippedTheta = Math.PI - theta + thetaErr
+        const phi = spreadRate * speed * (1 - t)
+        qubit.set(BlochVector.fromAngles(flippedTheta, phi))
+      })
+    } else {
+      qubits.forEach(({ qubit, thetaErr }) => {
+        qubit.set(BlochVector.fromAngles(Math.PI - theta + thetaErr, 0))
+      })
+    }
+  }, 6000, 'linear', true)
 }} />
 
 <figcaption class="text-sm text-gray-500 text-center mt-2">In realistic DD, imperfect flips cause vectors to drift out of plane -- the refocusing is never perfect</figcaption>
