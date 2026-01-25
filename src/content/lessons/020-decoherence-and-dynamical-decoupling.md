@@ -103,27 +103,27 @@ Goal: Get **only one LED** to light up
 
 <Callout type="info" title="Tips!">
 
-Try rotating the Qbead with your hands and see what happens! To achieve the goal you only need to rotate it! -- it may not be enough with rotating it once
+Try **rotating** the Qbead with your hands and see what happens! To achieve the goal you only need to rotate it! -- but it may not be enough with rotating it once!
 
-Tapping the Qbead once turns it off, and tapping again restarts the game: use this if things get too confusing!
+Gently **tapping** the Qbead once turns it off, and tapping again restarts the game: use this if things get too confusing!
 
 </Callout>
 
-**What do you see?**
-Can you find a way to keep the Qbead light only in a single LED?
+<Callout type="question" title="What did you notice?">
+
+Can you find a way to keep the Qbead light only in a **single LED**?
 How about achieving this not permanently, but **regularly**?
+
+</Callout>
+
 
 ## What have you done in this game?
 
-You discovered a quantum protocol!
-- Or re-invented, as we know about it since 1998 [Viola, Lloyd]. But it probably took you less time than it took them!
-- This is a crucial protocol for today's quantum computers: dynamical decoupling!
-- All modalities of qubits today use it
+You **discovered a quantum protocol**!
+Or re-invented, as we know about it since 1998. But it probably took you less time than it took them! 
+This is a crucial protocol used in all modalities of qubits in today's quantum computers: dynamical decoupling!
 
 Your Qbead represents a qubit -- want to know more? Check the [device description](/lessons/000-the-device) and the [qubit lesson](/lessons/001-what-is-a-qubit).
-
-- The LEDs represent a quantum state in a qubit
-- The whole sphere represents all possible quantum states for a single qubit
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
 
@@ -151,8 +151,8 @@ A single LED on the Qbead corresponds to a single vector on the Bloch sphere -- 
 </div>
 
 Spreading LEDs is the way we represent **decoherence**, the most common error of today's real qubits!
-- Think of it as your quantum state drifting away from where it should be by itself, but you actually don't know where it goes!
-- This can be caused in real life by for example magnetic fields when your qubit is a single spin
+Think of it as your quantum state drifting away from where it should be by itself, but you actually don't know where it goes!
+This can be caused in real life by for example a constant magnetic field when your qubit is a single spin
 
 <BlochSphereElement options={{
   fontSize: 0.8,
@@ -180,10 +180,11 @@ Spreading LEDs is the way we represent **decoherence**, the most common error of
 <figcaption class="text-sm text-gray-500 text-center mt-2">Decoherence: the state vectors spread apart over time</figcaption>
 
 By rotating the Qbead you were performing **quantum gates** with your qubit.
-- Timing them to the decoherence timescales allowed you to compensate for this drift
-- If you do it well, you can see that at regular intervals, your Qbead goes back to a single LED
-    - You (or the scientists in real life) can then apply your computational quantum gates in between your dynamical decoupling rotations
-- This means **you are fighting the decoherence and winning!** So you don't lose your quantum information
+Timing them to the decoherence timescales allowed you to compensate for this drift
+
+If you do it well, you can see that at regular intervals, your Qbead goes back to a single LED. You (or the scientists in real life) can then apply your computational quantum gates in between your dynamical decoupling rotations.
+
+This means **you are fighting the decoherence and winning!** So you don't lose your quantum information
 
 
 ## Reality check: is it really that easy?
@@ -192,11 +193,11 @@ In real quantum physics experiments, things are more complex.
 
 For example, in our experiment we are seeing the quantum state as it decoheres. But in real life you cannot **observe a quantum state** without affecting it. To observe it you need to **measure** it, and you know what happens when we measure a quantum state in quantum mechanics, do you? No? Then check the [measurement lesson](/lessons/010-commuting-measurements).
 
-In real systems, decoherence happens in an **arbitrary axis**, not only vertical as in our experiment, so scientists have to apply pairs of gates to compensate for it!
+In real systems, decoherence happens in an **arbitrary axis**, not only vertical as in our experiment, so scientists have to apply more quantum gates to compensate for it!
 
 Our quantum gates are **not perfect**. This means that we introduce errors that slightly change the qubit state. Doing fewer gates is then better than doing many!
 
-There are many **other sources of decoherence** and errors with different timescales. We have focused on slow drifts, but faster drifts also occur, and we scientists have to come up with smart ideas to fix those, either on the hardware - making qubits better, or on the qubit control side!
+There are many **other sources of decoherence** and errors with different timescales. We have focused on slow drifts, but faster drifts also occur, and we scientists have to come up with smart ideas to fix those, either by improving the physical qubits themselves, or on the qubit control side! And for the unavoidable residual errors, we have quantum error correction!
 
 ## Decoherence in other words: an analogy
 
