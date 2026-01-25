@@ -14,8 +14,8 @@ highlight: Team
 
 <Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/carlos_s.jpg" name="Carlos" />
 
-Carlos loves science, crafts, and art, and sometimes combines them into a beautiful gadget
-like the Qbead. On top of that, he enjoys mentoring and contributing to diversity in science
+Carlos loves science, crafts, and art, and sometimes combines them into a gadget
+like the Qbead. He also enjoys mentoring and contributing to diversity in science
 and engineering. Examples are organizing science-art workshops with asylum seekers in Sweden
 and the quantum hackathon iQuHACK at MIT. Now at Delft University of Technology and QuTech,
 Carlos is a professor exploring quantum photonics while he continues to lead outreach
