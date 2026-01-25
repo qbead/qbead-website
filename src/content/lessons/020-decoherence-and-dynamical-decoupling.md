@@ -103,15 +103,15 @@ Goal: Get **only one LED** to light up
 
 <Callout type="info" title="Tips!">
 
-- Try rotating the Qbead with your hands and see what happens! To achieve the goal you only need to rotate it!
-- It may not be enough with rotating it once
-- If things get too confusing you can re-start the game by repeatedly shaking the Qbead
+Try rotating the Qbead with your hands and see what happens! To achieve the goal you only need to rotate it! -- it may not be enough with rotating it once
+
+Tapping the Qbead once turns it off, and tapping again restarts the game: use this if things get too confusing!
 
 </Callout>
 
-What do you see?
+**What do you see?**
 Can you find a way to keep the Qbead light only in a single LED?
-How about achieving this not permanently, but regularly?
+How about achieving this not permanently, but **regularly**?
 
 ## What have you done in this game?
 
@@ -150,7 +150,7 @@ A single LED on the Qbead corresponds to a single vector on the Bloch sphere -- 
 
 </div>
 
-Spreading LEDs is the way we represent decoherence, the most common error of today's real qubits!
+Spreading LEDs is the way we represent **decoherence**, the most common error of today's real qubits!
 - Think of it as your quantum state drifting away from where it should be by itself, but you actually don't know where it goes!
 - This can be caused in real life by for example magnetic fields when your qubit is a single spin
 
@@ -179,30 +179,34 @@ Spreading LEDs is the way we represent decoherence, the most common error of tod
 
 <figcaption class="text-sm text-gray-500 text-center mt-2">Decoherence: the state vectors spread apart over time</figcaption>
 
-By rotating the Qbead you were performing one-qubit gates.
+By rotating the Qbead you were performing **quantum gates** with your qubit.
 - Timing them to the decoherence timescales allowed you to compensate for this drift
 - If you do it well, you can see that at regular intervals, your Qbead goes back to a single LED
-    - You (or the scientists in real life) can then apply your computational gates in between your dynamical decoupling rotations
-- This means you are fighting the decoherence and winning! So you don't lose your quantum information
+    - You (or the scientists in real life) can then apply your computational quantum gates in between your dynamical decoupling rotations
+- This means **you are fighting the decoherence and winning!** So you don't lose your quantum information
+
 
 ## Reality check: is it really that easy?
 
-In real quantum experiments, things are more complex:
-- You cannot see the state as it decoheres -- check the [measurement lesson](/lessons/010-commuting-measurements)!
-- Decoherence happens in an arbitrary axis
-- Your rotation gates also introduce errors
-- There may be other sources of decoherence and errors with faster timescales
+In real quantum physics experiments, things are more complex.
+
+For example, in our experiment we are seeing the quantum state as it decoheres. But in real life you cannot **observe a quantum state** without affecting it. To observe it you need to **measure** it, and you know what happens when we measure a quantum state in quantum mechanics, do you? No? Then check the [measurement lesson](/lessons/010-commuting-measurements).
+
+In real systems, decoherence happens in an **arbitrary axis**, not only vertical as in our experiment, so scientists have to apply pairs of gates to compensate for it!
+
+Our quantum gates are **not perfect**. This means that we introduce errors that slightly change the qubit state. Doing fewer gates is then better than doing many!
+
+There are many **other sources of decoherence** and errors with different timescales. We have focused on slow drifts, but faster drifts also occur, and we scientists have to come up with smart ideas to fix those, either on the hardware - making qubits better, or on the qubit control side!
 
 ## Decoherence in other words: an analogy
 
-As you just saw by yourself, we call decoherence an uncontrolled drift in your quantum state. An analogy:
-- Imagine that you have a ball in a flat plane, the ball being your qubit state
-- However, it turns out that this plane is slightly tilted, so if you don't do anything, the ball falls to one side
-- Your goal is to keep the ball in the center of your plane, because only there you can act on it (= do your quantum computation without errors, in our case!)
-- But the plane cannot be made horizontal, you can only either tilt it to one side or the other
-- How would you keep the ball in the center?
-- You got it! Just tilt the plane from one side to the other! Then the ball oscillates and it passes the center regularly!
-- That is exactly what you did!
+As you just saw by yourself, we call decoherence an **uncontrolled drift** in your quantum state. Let's see if we can explain what it is using an analogy with a classical system.
+
+Imagine that you have a ball in a flat plane, the ball being your qubit state. It turns out that this plane is slightly tilted, so if you don't do anything, the ball falls to one side.
+Your goal is to keep the ball in the center of your plane, because only there you can act on it (= do your quantum computation without errors, in our case!). But the plane cannot be made horizontal, you can only either tilt it to one side or the other
+
+How would you keep the ball in the center?
+You got it! Just tilt the plane from one side to the other! Then the ball oscillates and it passes the center regularly! That is exactly what you did!
 
 # Dynamical decoupling: the science behind
 
