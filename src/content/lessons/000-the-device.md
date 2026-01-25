@@ -42,9 +42,13 @@ nextLesson: lessons/001-what-is-a-qubit
 
 ## What is the Qbead
 
-The Qbead is a simulator that lets you interact with a qubit with your hands.
+The Qbead is a **simulator** that lets you interact with a qubit with your hands.
 
-The light in the Qbead represents the quantum state of a qubit.
+With it we want you to explore the **strange laws of quantum mechanics**, all by yourself! No math or physics background required!
+Try rotating it, tapping it, shaking it and see what happens!
+
+But wait, how is this a qubit?
+The **light** in the Qbead represents the **quantum state** of a qubit.
 Think of the light spot in the Qbead as the tip of the state vector in a Bloch sphere.
 You do not know what this means yet? No worries, we got you covered! Check out our [qubit lesson](/lessons/001-what-is-a-qubit).
 
@@ -71,13 +75,13 @@ You do not know what this means yet? No worries, we got you covered! Check out o
 
 </div>
 
-But with the Qbead we do not only see quantum states: we change them!
+But with the Qbead we do not only see quantum states: **we change them**.
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
 
 <div>
 
-By rotating your Qbead in any direction you perform qubit gates! This means, the vector of the qubit rotates around the Bloch sphere.
+By **rotating** your Qbead in any direction you can perform **qubit gates**. This means, the state vector of the qubit rotates to another position in the Bloch sphere.
 
 </div>
 
@@ -108,7 +112,7 @@ By rotating your Qbead in any direction you perform qubit gates! This means, the
 
 <div>
 
-By gently tapping the Qbead you perform a quantum measurement, with its axis along the tapping direction!
+By gently **tapping** the Qbead you perform a **quantum measurement**, with its axis along the tapping direction!
 
 </div>
 
@@ -146,27 +150,32 @@ By gently tapping the Qbead you perform a quantum measurement, with its axis alo
 
 With these tools, we can now do a lot of fun quantum experiments while learning very important concepts in quantum physics and engineering.
 
-Features:
-- All operations done via movement: rotate it! shake it! tap it!
-- Fully programmable through USB and bluetooth
-- Website-guided interactive lecture materials
-- Open source (and cheap!) hardware and software - soon you will be able to request yours!
+In short, the Qbead features:
+- **Interactivity**, as all operations are done via movement: rotate it! shake it! tap it!
+- **Fully programmable** through USB and bluetooth
+- **Website-guided** interactive lecture materials
+- **Open source** (and cheap!) hardware and software - soon you will be able to request yours!
 
 
 ### Inside the Qbead: hardware
 
-- The brains: Seeed XIAO nRF52840 Sense, containing
-  - Microprocessor to run the code
-  - USB port for charging, loading code, and reading variables
-  - Bluetooth for wireless communication
-  - Inertial measurement unit to read out the Qbead movements
-- The power: Lithium polymer battery CLY502020 3.7V +140mAh 0.52Wh
-- The color: custom-made LED flexPCB
-  - Flex PCB
-  - 62 smart LEDs in series
-- The frame: custom-made 3D printed shells
-  - Inner shell holding the board and battery
-  - Outer transparent shell protecting the Qbead
+The **brains** 
+Seeed XIAO nRF52840 Sense arduino board, containing
+- A microprocessor to run the code
+- A USB port for charging, loading code, and reading sensors or other variables
+- Bluetooth for wireless communication
+- An inertial measurement unit to read out the Qbead movement
+
+The **power**
+Lithium polymer battery CLY502020 3.7V +140mAh 0.52Wh
+
+The**light**
+Custom-made LED flexible printed circuit board with 62 smart LEDs
+
+The **frame**
+Custom-made 3D printed shells including:
+- Inner shell holding the board and battery
+- Outer transparent shell protecting the Qbead
 
 <div class="flex flex-col items-center">
 
@@ -193,13 +202,22 @@ on:loadedmetadata={e => { e.target.playbackRate = 2; }}>
 
 ### Inside the Qbead: software
 
-- Firmware [Qbead.h](/codedoc/Qbead.h) that lays out the library of functions
-- [Sketches](/codedoc/Tap_to_Measure.ino) for each experiment that use several functions and put them into loops
+We have built a **library of functions** to code the Qbead [Qbead.h](/codedoc/Qbead.h). Think of these as the parts of your experiment. One example is a function that reads the inertial measurement unit sensors and outputs its measurements. Another example is a function that lights up a LED representing a specific quantum vector in a specific color.
+
+Using this library, we put together one sketch for each experiment, each of them containing several of these functions into a loop [Sketches](/codedoc/Tap_to_Measure.ino). For example, the following loop is used for the Tap to measure experiment:
+1. Read the inertial measurement unit
+2. Calculate if the measurement is a tap
+3. Calculate in which direction
+4. Turn LED red or blue in that axis
+5. Slowly turn LED white
+6. Start again from 1.
+
+These are our experiments, but you can edit, change, and code whatever you like!
 
 ## Limitations of our Qbead vs. an ideal qubit
 
-Our Qbead is of course not exactly a qubit (otherwise it wouldn't so hard to build those!). Some of the important differences are:
-- This is an electronic gadget, and so all the quantum mechanical effects are simulated - coded into our scripts
+Our Qbead is of course **not a real qubit** (otherwise it wouldn't so hard to build those!). Some of the important differences are:
+- This is an electronic gadget, and so all the quantum mechanical effects are simulated - coded into our sketches
 - Observing states without measuring - in real qubits, observing a state means measuring it. In the Qbead we chose to let you see the state and choose when to measure it because we think this has more educational value (ok, it also looks cooler!)
 - Discreteness - we only have a set number of LEDs, while qubit states can rotate continuously in the Bloch sphere
 - Representing mixed-state density matrices -
