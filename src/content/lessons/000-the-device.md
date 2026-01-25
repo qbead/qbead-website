@@ -75,13 +75,13 @@ You do not know what this means yet? No worries, we got you covered! Check out o
 
 </div>
 
-But with the Qbead we do not only see quantum states: **we change them**.
+But with the Qbead we do not only see quantum states, **we change them**
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
 
 <div>
 
-By **rotating** your Qbead in any direction you can perform **qubit gates**. This means, the state vector of the qubit rotates to another position in the Bloch sphere.
+By **rotating** your Qbead in any direction you can perform **qubit gates**. This means, the state vector of the qubit rotates to another position in the Bloch sphere
 
 </div>
 
@@ -151,31 +151,21 @@ By gently **tapping** the Qbead you perform a **quantum measurement**, with its 
 With these tools, we can now do a lot of fun quantum experiments while learning very important concepts in quantum physics and engineering.
 
 In short, the Qbead features:
-- **Interactivity**, as all operations are done via movement: rotate it! shake it! tap it!
-- **Fully programmable** through USB and bluetooth
+- **Interactivity**, as all operations are done via movement -- rotate it! shake it! tap it!
+- **Full programmability** through USB and bluetooth
 - **Website-guided** interactive lecture materials
-- **Open source** (and cheap!) hardware and software - soon you will be able to request yours!
+- **Open source** (and cheap!) hardware and software -- soon you will be able to request yours!
 
 
 ### Inside the Qbead: hardware
 
-The **brains** 
-Seeed XIAO nRF52840 Sense arduino board, containing
-- A microprocessor to run the code
-- A USB port for charging, loading code, and reading sensors or other variables
-- Bluetooth for wireless communication
-- An inertial measurement unit to read out the Qbead movement
+The **brains** -- Seeed XIAO nRF52840 Sense arduino board, containing a microprocessor to run the code; a USB port for charging, loading code, and reading sensors or other variables; Bluetooth for wireless communication; and an inertial measurement unit to read out the Qbead movement
 
-The **power**
-Lithium polymer battery CLY502020 3.7V +140mAh 0.52Wh
+The **power** -- Lithium polymer battery CLY502020 3.7V +140mAh 0.52Wh
 
-The**light**
-Custom-made LED flexible printed circuit board with 62 smart LEDs
+The**light** -- Custom-made LED flexible printed circuit board with 62 smart LEDs
 
-The **frame**
-Custom-made 3D printed shells including:
-- Inner shell holding the board and battery
-- Outer transparent shell protecting the Qbead
+The **frame** -- Custom-made 3D printed shells including and inner shell holding the board and battery, and an outer transparent shell protecting the Qbead
 
 <div class="flex flex-col items-center">
 
@@ -214,7 +204,7 @@ Using this library, we put together one sketch for each experiment, each of them
 
 These are our experiments, but you can edit, change, and code whatever you like!
 
-## Limitations of our Qbead vs. an ideal qubit
+## The Qbead vs. an ideal qubit
 
 Our Qbead is of course **not a real qubit** (otherwise it wouldn't so hard to build those!). Some of the important differences are:
 - This is an electronic gadget, and so all the quantum mechanical effects are simulated - coded into our sketches
