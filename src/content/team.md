@@ -40,6 +40,25 @@ Science.
 
 <div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
 
+<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/benjamin_s.jpg" name="Benjamin" />
+
+Benjamin has always been fascinated by the way the abstract world can meet the real world. 
+That is why he is now pursuing a PhD in experimental physics, using quantum mechanics for real-world applications such as quantum computing. 
+He also has a passion for teaching, and finding ways of explaining abstract concepts in a way that is understandable for anyone. 
+That is also why he is helping with developing the qbead. He is currently a graduate student at Delft University of Technology in the Netherlands.
+
+</div>
+
+<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
+
+<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/tobi_s.jpg" name="Tobi" />
+
+TBD
+
+</div>
+
+<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
+
 <Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/hugo_s.jpg" name="Hugo" />
 
 Hugo appreciates taking part in various efforts promoting higher education in STEM to
@@ -49,7 +68,6 @@ school students about being a grad student. He is currently a doctoral student i
 engineering at MIT.
 
 </div>
-
 
 <div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
 
