@@ -59,6 +59,16 @@ TBD
 
 <div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
 
+<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/federico_s.jpg" name="Federico" />
+
+Federico started as a Computer Science and Engineering student at TU Delft before transitioning to Applied Physics, a direction he plans to continue in graduate school. 
+Alongside his studies, he does research on color centers and integrated photonics at QuTech.
+He is also passionate about hands-on technologies and scientific outreach, and contributes to the development of the QBead with the goal of making quantum information science accessible to everyone.
+
+</div>
+
+<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
+
 <Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/hugo_s.jpg" name="Hugo" />
 
 Hugo appreciates taking part in various efforts promoting higher education in STEM to
