@@ -17,7 +17,7 @@ highlight: Team
 Carlos enjoys science, crafts, and art, and sometimes combines them into a gadget
 like the Qbead. He also likes mentoring and contributing to diversity in science
 and engineering, for example through organizing science-art workshops with asylum seekers in Sweden
-and the quantum hackathon iQuHACK at MIT. Now at Delft University of Technology and QuTech,
+and the quantum hackathon iQuHACK at MIT. Now at QuTech in Delft University of Technology,
 Carlos is a professor exploring quantum photonics while he continues to lead outreach
 projects to democratize science and technology.
 
