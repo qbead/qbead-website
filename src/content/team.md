@@ -14,10 +14,10 @@ highlight: Team
 
 <Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/carlos_s.jpg" name="Carlos" />
 
-Carlos loves science, crafts, and art, and sometimes combines them into a beautiful gadget
-like the Qbead. On top of that, he enjoys mentoring and contributing to diversity in science
-and engineering. Examples are organizing science-art workshops with asylum seekers in Sweden
-and the quantum hackathon iQuHACK at MIT. Now at Delft University of Technology and QuTech,
+Carlos enjoys science, crafts, and art, and sometimes combines them into a gadget
+like the Qbead. He also likes mentoring and contributing to diversity in science
+and engineering, for example through organizing science-art workshops with asylum seekers in Sweden
+and the quantum hackathon iQuHACK at MIT. Now at QuTech in Delft University of Technology,
 Carlos is a professor exploring quantum photonics while he continues to lead outreach
 projects to democratize science and technology.
 
@@ -30,11 +30,43 @@ projects to democratize science and technology.
 Since high school Stefan has enjoyed sharing the wonders of science with others, organizing
 extraculicular courses and summer break Physics events. While a graduate student at Yale's
 Quantum Institute he felt most at home in Yale's makerspace, preparing contraptions to be
-used in middle- and high-school outreach events. He continued his reasearch work on photonic
+used in middle- and high-school outreach events. He continued his research work on photonic
 quantum computers jointly at MIT and Harvard, but spends much of his free time designing
 hands-on outreach materials, including the SpinWheel. Now, as a professor at UMass Amherst,
 he is designing the Qbead as a way to bring the maker ethos to teaching Quantum Information
 Science.
+
+</div>
+
+<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
+
+<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/benjamin_s.jpg" name="Benjamin" />
+
+Benjamin has always been fascinated by the way the abstract world can meet the real world. 
+That is why he is now pursuing a PhD in experimental physics, using quantum mechanics for real-world applications such as quantum computing. 
+He also has a passion for teaching, and finding ways of explaining abstract concepts in a way that is understandable for anyone. 
+That is also why he is helping with developing the qbead. He is currently a graduate student at Delft University of Technology in the Netherlands.
+
+</div>
+
+<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
+
+<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/tobi_s.jpg" name="Tobi" />
+
+Tobi believes that science and art bring people together. Through this Qbead project, 
+he hopes to familiarize society with quantum technologies. He is currently a PhD candidate at QuTech 
+in Delft University of Technology in the Taminiau lab, where he is researching color centers in silicon 
+carbide as a quantum information processing platform.
+
+</div>
+
+<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
+
+<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/federico_s.jpg" name="Federico" />
+
+Federico started as a Computer Science and Engineering student at TU Delft before transitioning to Applied Physics, a direction he plans to continue in graduate school. 
+Alongside his studies, he does research on color centers and integrated photonics at QuTech.
+He is also passionate about hands-on technologies and scientific outreach, and contributes to the development of the Qbead with the goal of making quantum information science accessible to everyone.
 
 </div>
 
@@ -45,11 +77,10 @@ Science.
 Hugo appreciates taking part in various efforts promoting higher education in STEM to
 various communities. Since his undergraduate studies at the University of Ottawa, these have
 included participation in the university's mini-courses program and engaging with elementary
-school students about being a grad student. He is currently a doctoral student in electrical
-engineering at MIT.
+school students about being a grad student. He graduated his PhD from MIT and is currently a postdoctoral 
+researcher at EPFL.
 
 </div>
-
 
 <div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
 
