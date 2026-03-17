@@ -98,7 +98,7 @@ through the Qbead and inspire the next generation of quantum scientists and engi
 
 <div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
 
-<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/saumil_s.jpg" name="Saumil" />
+<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/saumil_s.jpg" name="Saumil or not" />
 
 Saumil has always held a fascination for building things. As a graduate student at MIT,
 Saumil worked on silicon photonics, where he spent a great deal of time hacking together
