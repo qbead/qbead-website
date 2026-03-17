@@ -103,7 +103,7 @@ through the Qbead and inspire the next generation of quantum scientists and engi
 Many more people have contributed to the Qbead in various ways, through coding experiments in hackathons, 
 building Qbeads (sometimes in exchange of pizza), 3D printing parts, reporting bugs, placing orders, or giving ideas.
 This includes PhD, Bachelors', and Masters' students from TU Delft, engineers, and many other people.  
-An incomplete list of people includes: Nicolas Demetriou, Laurens Feije, Pablo Cova Farina, Elena Volkova, Jan Riegelmeyer, etc.
+An incomplete list of people includes: Nicolas Demetriou, Laurens Feije, Pablo Cova Fariña, Elena Volkova, Jan Riegelmeyer, etc.
 
 </div>
 
