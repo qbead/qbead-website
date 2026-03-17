@@ -112,6 +112,5 @@ An incomplete list of people includes: Nicolas Demetriou, Laurens Feije, Pablo C
 <Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/saumil_s.jpg" name="You can be here!" />
 
 Do you like the Qbead and want to contribute? We are searching for contributors! 
-You can do that directly by contributing on [our github page](https://github.com/qbead). If you plan on regularly contributing, please write us an [email](mailto:info@qbead.org) and we will set up a meeting. 
 
 </div>
