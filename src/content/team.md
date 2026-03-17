@@ -96,4 +96,17 @@ through the Qbead and inspire the next generation of quantum scientists and engi
 
 </div>
 
+<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
+
+<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/saumil_s.jpg" name="Saumil" />
+
+Saumil has always held a fascination for building things. As a graduate student at MIT,
+Saumil worked on silicon photonics, where he spent a great deal of time hacking together
+electronics and microcontrollers to run his experiments. He also enjoys teaching and has
+helped develop several courses and hands-on labs to introduce students to photonic hardware.
+Saumil is now a postdoc jointly at MIT and NTT Research, where he has continued his research
+at the intersection of optics and computing. He hopes to share his love of building hardware
+through the Qbead and inspire the next generation of quantum scientists and engineers.
+
+</div>
 
