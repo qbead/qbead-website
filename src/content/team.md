@@ -96,21 +96,4 @@ through the Qbead and inspire the next generation of quantum scientists and engi
 
 </div>
 
-<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
 
-<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/saumil_s.jpg" name="Many more people!" />
-
-Many more people have contributed to the Qbead in various ways, through coding experiments in hackathons, 
-building Qbeads (sometimes in exchange of pizza), 3D printing parts, reporting bugs, placing orders, or giving ideas.
-This includes PhD, Bachelors', and Masters' students from TU Delft, engineers, and many other people.  
-An incomplete list of people includes: Nicolas Demetriou, Laurens Feije, Pablo Cova Fariña, Elena Volkova, Jan Riegelmeyer, etc.
-
-</div>
-
-<div class="grid grid-cols-1 justify-items-center md:justify-items-start md:grid-cols-[1fr_auto] md:gap-8">
-
-<Avatar size="size-38" classes="border-1 border-surface-600 mb-0" src="/team/saumil_s.jpg" name="You can be here!" />
-
-Do you like the Qbead and want to contribute? We are searching for contributors! 
-
-</div>
