@@ -28,7 +28,7 @@
     <div id="hero" class="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-36">
       <img
         src="/qbeadmedia/qbead_in_hand_LeidenWorkshop.jpg"
-        alt="Demo of Qbead in motion"
+        alt="Demo of Qbead in hands"
         class="rounded-xl md:order-last"
       />
       <div>
