@@ -26,16 +26,11 @@
       </span>
     </div>
     <div id="hero" class="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-36">
-      <video
-        src="/qbeadmedia/qbead_onshape_explode_crop.mp4"
-        alt="Demo of Qbead in motion"
+      <img
+        src="/qbeadmedia/qbead_in_hand_LeidenWorkshop.jpg"
+        alt="Demo of Qbead in hand"
         class="rounded-xl md:order-last"
-        autoplay
-        loop
-        muted
-        playsinline
-        on:loadedmetadata={e => { e.target.playbackRate = 2; }}
-      ></video>
+      />
       <div>
         <h1 class="h1 mb-8 text-6xl">
           Put Your Hands on a <span class="text-primary-500">Qubit!</span>
