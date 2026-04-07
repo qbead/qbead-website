@@ -27,7 +27,7 @@
     </div>
     <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-36">
       <img
-        src="/qbeadmedia/qbead_in_hand_LeidenWorkshop.jpg"
+        src="/qbeadmedia/qbead_frontpage_43format.JPG"
         alt="Demo of Qbead in hands"
         class="rounded-xl md:order-last"
       />
@@ -87,7 +87,7 @@
           <span>Learn More</span><IconArrowRight size={16} />
         </a>
       </div>
-      <img class="rounded-xl" src="/qbeadmedia/qbead_kicad_pcb.png" alt="Qbead PCB" />
+      <img class="rounded-xl" src="/qbeadmedia/qbead_TLCevent_interacting.JPG" alt="Interacting with the Qbead" />
     </div>
     <div class="items-fill grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
       <div class="bg-surface-100-900 rounded-xl p-8">
