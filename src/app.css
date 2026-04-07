@@ -274,19 +274,3 @@ code {
     }
   }
 }
-
-@keyframes hoverFloat {
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-  25% {
-    transform: translateY(-6px) scale(1.02);
-  }
-  50% {
-    transform: translateY(0) scale(0.99);
-  }
-  75% {
-    transform: translateY(5px) scale(1.01);
-  }
-}

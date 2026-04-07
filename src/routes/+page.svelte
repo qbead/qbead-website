@@ -25,7 +25,7 @@
         For Your Hands-On Discovery of Quantum Phenomena
       </span>
     </div>
-    <div id="hero" class="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-36">
+    <div class="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-36">
       <img
         src="/qbeadmedia/qbead_in_hand_LeidenWorkshop.jpg"
         alt="Demo of Qbead in hands"
@@ -41,31 +41,6 @@
           experiments. Perfect for curious minds from middle school through college.
         </p>
       </div>
-      <svg
-        viewBox="0 0 600 600"
-        width="600"
-        height="600"
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
-        class="circles-background"
-      >
-        <title id="svgTitle">Three scattered circles</title>
-        <desc id="svgDesc"
-          >Three circles of varying sizes positioned around the viewbox for decorative use.</desc
-        >
-
-        <!-- optional subtle shadow -->
-        <defs>
-          <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
-            <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.12" />
-          </filter>
-        </defs>
-
-        <!-- circles (classed for styling) -->
-        <circle class="dot large" cx="110" cy="500" r="23" fill="#531716" />
-        <circle class="dot medium" cx="440" cy="550" r="20" fill="#396D7C" />
-        <circle class="dot small" cx="440" cy="40" r="13" fill="#885418" />
-      </svg>
     </div>
     <div class="flex flex-col gap-10">
       <div class="flex flex-wrap gap-4">
@@ -308,41 +283,3 @@
     </div>
   </section>
 </div>
-
-<style lang="postcss">
-  #hero {
-    position: relative;
-
-    &:hover .circles-background {
-      transform: scale(1.1);
-    }
-
-    .circles-background {
-      position: absolute;
-      top: -20%;
-      right: 0;
-      z-index: -1;
-      width: 50%;
-      transition: transform ease 0.5s;
-
-      .dot {
-        transform-origin: center;
-        animation: hoverFloat 6s ease-in-out infinite;
-        opacity: 0.3;
-      }
-
-      .dot.large {
-        animation-duration: 7s;
-        animation-delay: 0s;
-      }
-      .dot.medium {
-        animation-duration: 5.5s;
-        animation-delay: 1s;
-      }
-      .dot.small {
-        animation-duration: 4.5s;
-        animation-delay: 2s;
-      }
-    }
-  }
-</style>
