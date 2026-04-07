@@ -8,6 +8,7 @@ objectives:
   - Understand how measuring a classical system works
   - Discover that quantum measurements along different axes do not commute
   - Explore non-commuting measurements hands-on with the qbead
+headerImage: "/lessons/classical_and_quantum_measurement.png"
 description: Learn how quantum measurements differ from classical ones by exploring non-commuting measurements with the Qbead.
 nextLesson: lessons/020-decoherence-and-dynamical-decoupling
 ---
