@@ -5,12 +5,12 @@ keywords: qubit, bit, quantum, superposition, bloch sphere
 topics: quantum mechanics, basics, theory
 difficulty: Beginner
 objectives:
-  - What is a bit?
-  - What is a random bit?
-  - What is a qubit?
-  - How is the qbead toy meant to represent a qubit?
+  - Learn what bits and random bits are.
+  - Learn what the quantum bit, a qubit is.
+  - See how the qbead is meant to represent a qubit.
+  - Have fun!
 headerImage: /lessons/bit-randbit-qubit.png
-description: Introduction to bits and qubits
+description: This lesson serves as an introduction to qubits. We start with the classical bit, which we are more familiar with in our everyday life. We then introduce the random bit, followed by a quantum bit, the qubit. One must not mistaken the two with each other, as they are not the same as you will see in this lesson. Finally, we will show how the qbead is meant to represent a qubit.
 nextLesson: lessons/010-commuting-measurements
 ---
 
@@ -48,7 +48,7 @@ $$
 \begin{pmatrix} \text{probability of 0} \\ \text{probability of 1} \end{pmatrix}
 $$
 
-For a fair coin, that would be $\begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix}$. The two entries always add up to 1, because the bit has to end up as *something*.
+For a fair coin, that would be $\begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix}$. The two probability entries always add up to 1, because the bit has to end up as *something* (in this case either 0 or 1).
 
 A bit of a known value is just a special case of a random bit where one of the probabilities is 100% and the other one is 0%.
 
@@ -77,7 +77,7 @@ Because amplitudes can be negative, they can **cancel each other out** (destruct
 ## Graphical representation of bit, random bit, and qubit
 
 
-![^A bit, a random bit, and a qubit](/lessons/bit-randbit-qubit.png)
+![^From the left, a graphical representation of a bit, a random bit, and a qubit.](/lessons/bit-randbit-qubit.png)
 
 A regular bit is just one of two points: 0 or 1. A random bit lives somewhere on a line segment between them (described by a single probability). But a qubit lives on the surface of a **sphere** -- the **Bloch sphere**. The extra freedom of the sphere (compared to a line) is what makes qubits more powerful.
 
@@ -182,7 +182,7 @@ Both amplitudes are positive.
 
 ### The "-" state -- same probabilities, different phase
 
-This qubit also gives 50/50 measurement results, but it points in the opposite direction on the equator.
+Similar to the previous "+" superposition state, this qubit also gives 50/50 measurement results. But now it points in the opposite direction on the equator of the Bloch sphere.
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
 
