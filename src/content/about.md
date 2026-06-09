@@ -48,8 +48,6 @@ You do not know what this means yet? No worries, we got you covered! Check out o
 <figcaption class="text-sm text-gray-500 text-center mt-2">Figure 1: The Qbead represents a qubit by showing the qubit vector as a lighted-up LED</figcaption>
 </figure>
 
-</div>
-
 <figure>
 <BlochSphereElement options={{
   fontSize: 0.8,
