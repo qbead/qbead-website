@@ -5,6 +5,28 @@ keywords: qbead
 ---
 <script>
   import FancyHeader from '$lib/components/FancyHeading/FancyHeading.svelte'
+  import * as THREE from 'three'
+  import Callout from '$lib/components/Callout/Callout.svelte'
+  import BlochSphereElement from '$lib/components/BlochSphereElement/BlochSphereElement.svelte'
+  import { QubitDisplay, BlochVector, OperatorDisplay, gates, animate } from '@qbead/bloch-sphere'
+
+  function addTipDot(qubit, radius = 0.08) {
+    const ah = qubit.arrow.arrowHelper
+    const geo = new THREE.SphereGeometry(radius, 16, 16)
+    const mat = new THREE.MeshBasicMaterial({ color: 0xffffff })
+    const dot = new THREE.Mesh(geo, mat)
+    dot.position.set(0, 1, 0)
+    ah.add(dot)
+  }
+
+  function setQubitOpacity(qubit, opacity) {
+    qubit.traverse((child) => {
+      if (child.material) {
+        child.material.transparent = true
+        child.material.opacity = opacity
+      }
+    })
+  }
 </script>
 
 <FancyHeader title={title} highlightText={highlight} altText="About"/>
