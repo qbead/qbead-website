@@ -3,7 +3,8 @@ title: Explore the Qbead
 highlight: Qbead
 keywords: qbead
 layout: lesson
-hideTitle: true
+description: Here we introduce the Qbead: what it is in hardware and software. 
+
 ---
 <script>
   import * as THREE from 'three'
@@ -197,9 +198,9 @@ These are our experiments, but you can edit, change, and code whatever you like!
 ## The Qbead vs. an ideal qubit
 
 Our Qbead is of course **not a real qubit** (otherwise it wouldn't so hard to build those!). Some of the important differences are:
-- This is an electronic gadget, and so all the quantum mechanical effects are simulated - coded into our sketches
-- Observing states without measuring - in real qubits, observing a state means measuring it. In the Qbead we chose to let you see the state and choose when to measure it because we think this has more educational value (ok, it also looks cooler!)
-- Discreteness - we only have a set number of LEDs, while qubit states can rotate continuously in the Bloch sphere
-- Representing mixed-state density matrices -
-- Accuracy of visualization - an ideal qubit state is a vector pointing to an infinitely small point in the sphere, while our LEDs are larger than infinitely small points
-- Accuracy of gates when done via analog gestures - hand gestures are of course not as accurate as the pulse gates used to rotate qubits. For the Qbead, we choose to options depending on the educational goal of the experiment: 1 let the error be to showcase the real problems with errors in qubits, or 2 lock gates in software so that your gates are always perfect.
+- This is an electronic gadget, and so all the quantum mechanical effects are simulated - coded into our sketches.
+- Observing states without measuring - in real qubits, observing a state means measuring it. In the Qbead we chose to let you see the state and choose when to measure it because we think this has more educational value (ok, it also looks cooler!).
+- Discreteness - we only have a set number of LEDs, while qubit states can rotate continuously in the Bloch sphere.
+- Representing mixed-state density matrices - currently we do not have a way to visualize those.
+- Accuracy of visualization - an ideal qubit state is a vector pointing to an infinitely small point in the sphere, while our LEDs are larger than infinitely small points.
+- Accuracy of gates when done via analog gestures - hand gestures are of course not as accurate as the pulse gates used to rotate qubits. For the Qbead, we choose two options depending on the educational goal of the experiment: 1) let the error be to showcase the real problems with errors in qubits, or 2) lock gates in software so that your gates are always perfect.
