@@ -2,6 +2,7 @@
 title: Learn About the Qbead
 highlight: Qbead
 keywords: qbead
+layout: lesson
 ---
 <script>
   import FancyHeader from '$lib/components/FancyHeading/FancyHeading.svelte'
