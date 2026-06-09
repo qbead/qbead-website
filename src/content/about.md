@@ -3,10 +3,8 @@ title: Explore the Qbead
 highlight: Qbead
 keywords: qbead
 layout: lesson
-objectives:
-  - Discover the Qbead
-  - Learn what is inside the Qbead - hardware and software
-  - Understand the differences between the Qbead and a qubit - how is the Qbead meant to represent a qubit?
+headerImage: "/qbeadmedia/qbead_purple_darkbck.JPG"
+description: Discover the Qbead and what is inside of it
 ---
 <script>
   import * as THREE from 'three'
