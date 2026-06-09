@@ -4,9 +4,9 @@ highlight: Qbead
 keywords: qbead
 layout: lesson
 objectives:
-  - What is the Qbead
-  - Inside the Qbead - hardware and software
-  - Qbead vs qubit - how is the Qbead meant to represent a qubit
+  - Discover the Qbead
+  - Learn what is inside the Qbead - hardware and software
+  - Understand the differences between the Qbead and a qubit - how is the Qbead meant to represent a qubit?
 ---
 <script>
   import * as THREE from 'three'
