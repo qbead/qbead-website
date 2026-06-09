@@ -3,7 +3,7 @@ title: Explore the Qbead
 highlight: Qbead
 keywords: qbead
 layout: lesson
-description: Here we introduce the Qbead: what it is in hardware and software. 
+objectives: Here we introduce the Qbead: what it is in hardware and software. 
 
 ---
 <script>
