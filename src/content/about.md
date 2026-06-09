@@ -3,7 +3,6 @@ title: Explore the Qbead
 highlight: Qbead
 keywords: qbead
 layout: lesson
-objectives: Here we introduce the Qbead: what it is in hardware and software. 
 ---
 <script>
   import * as THREE from 'three'
