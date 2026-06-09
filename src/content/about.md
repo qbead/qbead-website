@@ -5,7 +5,6 @@ keywords: qbead
 layout: lesson
 ---
 <script>
-  import FancyHeader from '$lib/components/FancyHeading/FancyHeading.svelte'
   import * as THREE from 'three'
   import Callout from '$lib/components/Callout/Callout.svelte'
   import BlochSphereElement from '$lib/components/BlochSphereElement/BlochSphereElement.svelte'
@@ -30,7 +29,6 @@ layout: lesson
   }
 </script>
 
-<FancyHeader title={title} highlightText={highlight} altText="About"/>
 ## What is the Qbead
 
 The Qbead is a **simulator** that lets you interact with a qubit with your hands.
