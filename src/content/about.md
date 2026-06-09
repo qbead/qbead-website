@@ -3,6 +3,7 @@ title: Explore the Qbead
 highlight: Qbead
 keywords: qbead
 layout: lesson
+hideTitle: true
 ---
 <script>
   import * as THREE from 'three'
