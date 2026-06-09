@@ -9,7 +9,7 @@ objectives:
   - Learn what the quantum bit, a qubit is.
   - See how the qbead is meant to represent a qubit.
   - Have fun!
-headerImage: /lessons/bit-randbit-qubit.png
+headerImage: /lessons/bit-randbit-qubit2.png
 description: This lesson serves as an introduction to qubits. We start with the classical bit, which we are more familiar with in our everyday life. We then introduce the random bit, followed by a quantum bit, the qubit. One must not mistaken the two with each other, as they are not the same as you will see in this lesson. Finally, we will show how the qbead is meant to represent a qubit.
 nextLesson: lessons/010-commuting-measurements
 ---
@@ -77,7 +77,7 @@ Because amplitudes can be negative, they can **cancel each other out** (destruct
 ## Graphical representation of bit, random bit, and qubit
 
 
-![^From the left, a graphical representation of a bit, a random bit, and a qubit.](/lessons/bit-randbit-qubit.png)
+![^From the left, a graphical representation of a bit, a random bit, and a qubit.](/lessons/bit-randbit-qubit2.png)
 
 A regular bit is just one of two points: 0 or 1. A random bit lives somewhere on a line segment between them (described by a single probability). But a qubit lives on the surface of a **sphere** -- the **Bloch sphere**. The extra freedom of the sphere (compared to a line) is what makes qubits more powerful.
 
