@@ -1,4 +1,5 @@
 ---
+title: Explore the Qbead
 highlight: Qbead
 keywords: qbead
 layout: lesson
