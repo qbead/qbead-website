@@ -3,6 +3,10 @@ title: Get a Qbead
 highlight: Contribute
 ---
 
+<script>
+  import FancyHeader from '$lib/components/FancyHeading/FancyHeading.svelte'
+</script>
+
 <FancyHeader title={title} highlightText={highlight} altText="Contribute"/>
 
 <div class="flex flex-col items-center">
