@@ -15,7 +15,7 @@ highlight: Contribute
 
 Do you want to get one or multiple Qbeads?
 
-You can contribute to the Qbead community in two ways:
+You can contribute to the Qbead community in three ways:
 
 - **Student:** stay updated for online or in-person workshops!
 - **Developer:** submit a pull request that is accepted in our GitHub, then email us at info@qbead.com to set up a short meeting.
