@@ -7,7 +7,7 @@ highlight: Contribute
 
 <div class="flex flex-col items-center">
 
-![^The components inside your Qbead](/qbeadmedia/Unboxing_cropped.png)
+![^Get your own!](/qbeadmedia/Unboxing_cropped.png)
 
 </div>
 
