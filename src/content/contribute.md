@@ -9,18 +9,30 @@ highlight: Contribute
 
 <FancyHeader title={title} highlightText={highlight} altText="Contribute"/>
 
-<div class="flex flex-col items-center">
+<div class="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-16">
 
-![^Get your own!](/qbeadmedia/Unboxing_cropped.png)
-
-</div>
+<div>
 
 Do you want to get one or multiple Qbeads?
 
 You can contribute to the Qbead community in two ways:
-- Student: stay updated for online or in person workshops!
-- Developer: submit a pull request that is accepted in our github, then email us at info@qbead.com to set up a short meeting
-- Educator: submit a lecture or workshop plan, then email us at info@qbead.com to set up a short meeting
+
+- **Student:** stay updated for online or in-person workshops!
+- **Developer:** submit a pull request that is accepted in our GitHub, then email us at info@qbead.com to set up a short meeting.
+- **Educator:** submit a lecture or workshop plan, then email us at info@qbead.com to set up a short meeting.
 
 Have fun!
 
+</div>
+
+<figure>
+
+<img
+  src="/qbeadmedia/Unboxing_cropped.png"
+  alt="Qbead unboxing"
+  class="rounded-xl"
+/>
+
+</figure>
+
+</div>
