@@ -7,6 +7,7 @@
     /*{ href: '/codedoc', label: 'Code Docs', section: 'codedoc' },*/
     { href: '/team', label: 'Team', section: 'team' },
     { href: '/about', label: 'About', section: 'about' },
+    { href: '/contribute', label: 'Get a Qbead', section: 'contribute' }
   ]
 
   const getCurrentRoute = (): string => {
