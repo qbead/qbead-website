@@ -5,6 +5,12 @@ highlight: Contribute
 
 <FancyHeader title={title} highlightText={highlight} altText="Contribute"/>
 
+<div class="flex flex-col items-center">
+
+![^The components inside your Qbead](/qbeadmedia/Unboxing_cropped.png)
+
+</div>
+
 Do you want to get one or multiple Qbeads?
 
 You can contribute to the Qbead community in two ways:
