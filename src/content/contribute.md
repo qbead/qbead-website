@@ -19,7 +19,7 @@ You can contribute to the Qbead community in three ways:
 
 - **Student:** stay updated for online or in-person workshops!
 - **Developer:** submit a pull request that is accepted in our GitHub, then email us to set up a short meeting
-- **Educator:** submit a lecture or workshop plan, then email us to set up a short meeting
+- **Educator:** submit a lecture or workshop plan, then email us to set up a short meeting 
 
 Have fun!
 
