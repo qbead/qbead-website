@@ -2,7 +2,6 @@
 title: Explore the Qbead
 highlight: Qbead
 keywords: qbead
-layout: lesson
 headerImage: "/qbeadmedia/qbead_purple_darkbck.JPG"
 description: Discover the Qbead and what is inside of it
 ---
