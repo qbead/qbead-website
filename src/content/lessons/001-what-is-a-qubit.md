@@ -2,7 +2,7 @@
 title: What is a qubit?
 layout: lesson
 keywords: qubit, bit, quantum, superposition, bloch sphere
-topics: quantum mechanics, basics, theory
+topics: theory, basics, quantum mechanics, classical physics
 difficulty: Beginner
 objectives:
   - Learn what bits and random bits are.
