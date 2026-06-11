@@ -21,7 +21,8 @@ description: Discover the Qbead and what is inside of it
     dot.position.set(0, 1, 0)
     ah.add(dot)
   }
-
+  
+  
   function setQubitOpacity(qubit, opacity) {
     qubit.traverse((child) => {
       if (child.material) {
@@ -32,7 +33,18 @@ description: Discover the Qbead and what is inside of it
   }
 </script>
 
+<style>
+  :global(.layout-lesson article > div:first-child) {
+    display: none;
+  }
+  :global(.toc > *:last-child) {
+    display: none;
+  }
+</style>
+
 <FancyHeader title={title} highlightText={highlight} altText="About"/>
+
+<h2 id="Explore the Qbead" class="sr-only">What is the Qbead</h2>
 
 The Qbead is a **simulator** that lets you interact with a qubit with your hands.
 
@@ -149,7 +161,7 @@ In short, the Qbead features:
 - **Open source** (and cheap!) hardware and software - soon you will be able to request yours!
 
 
-# Inside the Qbead: hardware
+## Inside the Qbead: hardware
 
 The **brains** - Seeed XIAO nRF52840 Sense arduino board, containing a microprocessor to run the code; a USB port for charging, loading code, and reading sensors or other variables; Bluetooth for wireless communication; and an inertial measurement unit to read out the Qbead movement
 
@@ -182,7 +194,7 @@ on:loadedmetadata={e => { e.target.playbackRate = 2; }}>
 
 </div>
 
-# Inside the Qbead: software
+## Inside the Qbead: software
 
 We have built a **library of functions** to code the Qbead [Qbead.h](/codedoc/Qbead.h). Think of these as the parts of your experiment. One example is a function that reads the inertial measurement unit sensors and outputs its measurements. Another example is a function that lights up a LED representing a specific quantum vector in a specific color.
 
@@ -196,7 +208,7 @@ Using this library, we put together one sketch for each experiment, each of them
 
 These are our experiments, but you can edit, change, and code whatever you like!
 
-# The Qbead vs. an ideal qubit
+## The Qbead vs. an ideal qubit
 
 Our Qbead is of course **not a real qubit** (otherwise it wouldn't so hard to build those!). Some of the important differences are:
 - This is an electronic gadget, and so all the quantum mechanical effects are simulated - coded into our sketches.
