@@ -2,6 +2,7 @@
 title: Explore the Qbead
 keywords: qbead
 highlight: About
+layout: lesson
 headerImage: "/qbeadmedia/qbead_purple_darkbck.JPG"
 description: Discover the Qbead and what is inside of it
 ---
@@ -50,8 +51,7 @@ You do not know what this means yet? No worries, we got you covered! Check out o
 <figcaption class="text-sm text-gray-500 text-center mt-2">The Qbead represents a qubit by showing the qubit vector as a lighted-up LED</figcaption>
 </figure>
 
-<figure class="flex flex-col items-center">
-<div class="w-full max-w-xs">
+<figure>
 <BlochSphereElement options={{
   fontSize: 0.8,
   showGrid: true,
@@ -62,7 +62,6 @@ You do not know what this means yet? No worries, we got you covered! Check out o
   addTipDot(qubit)
   blochSphere.add(qubit)
 }} />
-</div>
 <figcaption class="text-sm text-gray-500 text-center mt-2">The same state shown on the Bloch sphere</figcaption>
 </figure>
 
