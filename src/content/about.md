@@ -41,7 +41,7 @@ description: Discover the Qbead and what is inside of it
 
 <FancyHeader title={title} highlightText={highlight} altText="About"/>
 
-## What is the Qbead
+<h2 id="Explore the Qbead" class="sr-only">What is the Qbead</h2>
 
 The Qbead is a **simulator** that lets you interact with a qubit with your hands.
 
