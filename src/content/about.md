@@ -24,7 +24,7 @@ description: Discover the Qbead and what is inside of it
 
 <style>
   :global(.layout-lesson article > div:first-child) {
-    display: none;
+    display: none; 
   }
 </style>
 
