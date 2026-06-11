@@ -2,6 +2,7 @@
 title: Explore the Qbead
 highlight: Qbead
 keywords: qbead
+highlight: About
 headerImage: "/qbeadmedia/qbead_purple_darkbck.JPG"
 description: Discover the Qbead and what is inside of it
 ---
@@ -29,6 +30,8 @@ description: Discover the Qbead and what is inside of it
     })
   }
 </script>
+
+<div class="centered-layout gap-16 my-32">
 
 ## What is the Qbead
 
@@ -203,3 +206,5 @@ Our Qbead is of course **not a real qubit** (otherwise it wouldn't so hard to bu
 - Representing mixed-state density matrices - currently we do not have a way to visualize those.
 - Accuracy of visualization - an ideal qubit state is a vector pointing to an infinitely small point in the sphere, while our LEDs are larger than infinitely small points.
 - Accuracy of gates when done via analog gestures - hand gestures are of course not as accurate as the pulse gates used to rotate qubits. For the Qbead, we choose two options depending on the educational goal of the experiment: 1) let the error be to showcase the real problems with errors in qubits, or 2) lock gates in software so that your gates are always perfect.
+
+</div>
