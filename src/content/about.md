@@ -37,6 +37,9 @@ description: Discover the Qbead and what is inside of it
   :global(.layout-lesson article > div:first-child) {
     display: none;
   }
+  :global(.toc > *:last-child) {
+    display: none;
+  }
 </style>
 
 <FancyHeader title={title} highlightText={highlight} altText="About"/>
