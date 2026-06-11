@@ -150,13 +150,13 @@ In short, the Qbead features:
 
 ### Inside the Qbead: hardware
 
-The **brains** -- Seeed XIAO nRF52840 Sense arduino board, containing a microprocessor to run the code; a USB port for charging, loading code, and reading sensors or other variables; Bluetooth for wireless communication; and an inertial measurement unit to read out the Qbead movement
+The **brains** - Seeed XIAO nRF52840 Sense arduino board, containing a microprocessor to run the code; a USB port for charging, loading code, and reading sensors or other variables; Bluetooth for wireless communication; and an inertial measurement unit to read out the Qbead movement
 
-The **power** -- Lithium polymer battery CLY502020 3.7V +140mAh 0.52Wh
+The **power** - Lithium polymer battery CLY502020 3.7V +140mAh 0.52Wh
 
-The**light** -- Custom-made LED flexible printed circuit board with 62 smart LEDs
+The **light** - Custom-made LED flexible printed circuit board with 62 smart LEDs
 
-The **frame** -- Custom-made 3D printed shells including and inner shell holding the board and battery, and an outer transparent shell protecting the Qbead
+The **frame** - Custom-made 3D printed shells including and inner shell holding the board and battery, and an outer transparent shell protecting the Qbead
 
 <div class="flex flex-col items-center">
 
@@ -199,7 +199,7 @@ These are our experiments, but you can edit, change, and code whatever you like!
 
 Our Qbead is of course **not a real qubit** (otherwise it wouldn't so hard to build those!). Some of the important differences are:
 - This is an electronic gadget, and so all the quantum mechanical effects are simulated - coded into our sketches.
-- Observing states without measuring - in real qubits, observing a state means measuring it. In the Qbead we chose to let you see the state and choose when to measure it because we think this has more educational value (ok, it also looks cooler!).
+- Observing states without measuring - in real qubits, observing a state means measuring it. In the Qbead we let you see the state and choose when to measure it because we think this has more educational value (it also looks cooler!).
 - Discreteness - we only have a set number of LEDs, while qubit states can rotate continuously in the Bloch sphere.
 - Representing mixed-state density matrices - currently we do not have a way to visualize those.
 - Accuracy of visualization - an ideal qubit state is a vector pointing to an infinitely small point in the sphere, while our LEDs are larger than infinitely small points.
