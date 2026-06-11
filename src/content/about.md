@@ -22,6 +22,12 @@ description: Discover the Qbead and what is inside of it
     ah.add(dot)
   }
 
+<style>
+  :global(.layout-lesson article > div:first-child) {
+    display: none;
+  }
+</style>
+
   function setQubitOpacity(qubit, opacity) {
     qubit.traverse((child) => {
       if (child.material) {
@@ -33,6 +39,8 @@ description: Discover the Qbead and what is inside of it
 </script>
 
 <FancyHeader title={title} highlightText={highlight} altText="About"/>
+
+# Explore the Qbead
 
 The Qbead is a **simulator** that lets you interact with a qubit with your hands.
 
