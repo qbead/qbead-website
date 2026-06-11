@@ -1,6 +1,5 @@
 ---
 title: Explore the Qbead
-highlight: Qbead
 keywords: qbead
 highlight: About
 headerImage: "/qbeadmedia/qbead_purple_darkbck.JPG"
