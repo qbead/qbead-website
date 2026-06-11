@@ -2,7 +2,7 @@
 title: Measuring a Quantum System
 layout: lesson
 keywords: measurement, quantum, commuting, non-commuting, qbead
-topics: quantum mechanics, measurement, qbead
+topics: quantum mechanics, classical physics, measurement, experiment
 difficulty: Beginner
 objectives:
   - Understand how measuring a classical system works
