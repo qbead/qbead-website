@@ -1,12 +1,13 @@
 ---
 title: Explore the Qbead
-highlight: Qbead
 keywords: qbead
+highlight: About
 layout: lesson
 headerImage: "/qbeadmedia/qbead_purple_darkbck.JPG"
 description: Discover the Qbead and what is inside of it
 ---
 <script>
+  import FancyHeader from '$lib/components/FancyHeading/FancyHeading.svelte'
   import * as THREE from 'three'
   import Callout from '$lib/components/Callout/Callout.svelte'
   import BlochSphereElement from '$lib/components/BlochSphereElement/BlochSphereElement.svelte'
@@ -31,7 +32,7 @@ description: Discover the Qbead and what is inside of it
   }
 </script>
 
-## What is the Qbead
+<FancyHeader title={title} highlightText={highlight} altText="About"/>
 
 The Qbead is a **simulator** that lets you interact with a qubit with your hands.
 
@@ -47,7 +48,7 @@ You do not know what this means yet? No worries, we got you covered! Check out o
 
 <figure>
 <img src="/qbeadmedia/qbead_pic_round_nobck.png" alt="The Qbead device" />
-<figcaption class="text-sm text-gray-500 text-center mt-2">Figure 1: The Qbead represents a qubit by showing the qubit vector as a lighted-up LED</figcaption>
+<figcaption class="text-sm text-gray-500 text-center mt-2">The Qbead represents a qubit by showing the qubit vector as a lighted-up LED</figcaption>
 </figure>
 
 <figure>
@@ -142,25 +143,25 @@ By gently **tapping** the Qbead you perform a **quantum measurement**, with its 
 With these tools, we can now do a lot of fun quantum experiments while learning very important concepts in quantum physics and engineering.
 
 In short, the Qbead features:
-- **Interactivity**, as all operations are done via movement -- rotate it! shake it! tap it!
+- **Interactivity**, as all operations are done via movement - rotate it! shake it! tap it!
 - **Full programmability** through USB and bluetooth
 - **Website-guided** interactive lecture materials
-- **Open source** (and cheap!) hardware and software -- soon you will be able to request yours!
+- **Open source** (and cheap!) hardware and software - soon you will be able to request yours!
 
 
-### Inside the Qbead: hardware
+# Inside the Qbead: hardware
 
-The **brains** -- Seeed XIAO nRF52840 Sense arduino board, containing a microprocessor to run the code; a USB port for charging, loading code, and reading sensors or other variables; Bluetooth for wireless communication; and an inertial measurement unit to read out the Qbead movement
+The **brains** - Seeed XIAO nRF52840 Sense arduino board, containing a microprocessor to run the code; a USB port for charging, loading code, and reading sensors or other variables; Bluetooth for wireless communication; and an inertial measurement unit to read out the Qbead movement
 
-The **power** -- Lithium polymer battery CLY502020 3.7V +140mAh 0.52Wh
+The **power** - Lithium polymer battery CLY502020 3.7V +140mAh 0.52Wh
 
-The**light** -- Custom-made LED flexible printed circuit board with 62 smart LEDs
+The **light** - Custom-made LED flexible printed circuit board with 62 smart LEDs
 
-The **frame** -- Custom-made 3D printed shells including and inner shell holding the board and battery, and an outer transparent shell protecting the Qbead
+The **frame** - Custom-made 3D printed shells including and inner shell holding the board and battery, and an outer transparent shell protecting the Qbead
 
 <div class="flex flex-col items-center">
 
-![^Figure 2: The components inside your Qbead](/qbeadmedia/qbead_components.png)
+![^The components inside your Qbead](/qbeadmedia/qbead_components.png)
 
 </div>
 
@@ -176,12 +177,12 @@ on:loadedmetadata={e => { e.target.playbackRate = 2; }}>
   <source src="/qbeadmedia/qbead_onshape_explode_crop.mp4" type="video/mp4" />
   Your browser doesn't support video playback.
 </video>
-<figcaption>Figure 3: Blowup of the Qbead frame</figcaption>
+<figcaption>Blowup of the Qbead frame</figcaption>
 </figure>
 
 </div>
 
-### Inside the Qbead: software
+# Inside the Qbead: software
 
 We have built a **library of functions** to code the Qbead [Qbead.h](/codedoc/Qbead.h). Think of these as the parts of your experiment. One example is a function that reads the inertial measurement unit sensors and outputs its measurements. Another example is a function that lights up a LED representing a specific quantum vector in a specific color.
 
@@ -195,7 +196,7 @@ Using this library, we put together one sketch for each experiment, each of them
 
 These are our experiments, but you can edit, change, and code whatever you like!
 
-## The Qbead vs. an ideal qubit
+# The Qbead vs. an ideal qubit
 
 Our Qbead is of course **not a real qubit** (otherwise it wouldn't so hard to build those!). Some of the important differences are:
 - This is an electronic gadget, and so all the quantum mechanical effects are simulated - coded into our sketches.
