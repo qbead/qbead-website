@@ -2,7 +2,7 @@
 title: Discover a quantum algorithm - dynamical decoupling
 layout: lesson
 keywords: quantum decoherence, qubit errors, quantum gates, dynamical decoupling
-topics: quantum decoherence, dynamical decoupling
+topics: experiment, quantum decoherence, dynamical decoupling
 difficulty: Advanced
 objectives:
   - Interact with the Qbead to play a game
