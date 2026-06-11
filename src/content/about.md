@@ -21,7 +21,8 @@ description: Discover the Qbead and what is inside of it
     dot.position.set(0, 1, 0)
     ah.add(dot)
   }
-
+  
+  
   function setQubitOpacity(qubit, opacity) {
     qubit.traverse((child) => {
       if (child.material) {
@@ -31,6 +32,12 @@ description: Discover the Qbead and what is inside of it
     })
   }
 </script>
+
+<style>
+  :global(.layout-lesson article > div:first-child) {
+    display: none;
+  }
+</style>
 
 <FancyHeader title={title} highlightText={highlight} altText="About"/>
 
