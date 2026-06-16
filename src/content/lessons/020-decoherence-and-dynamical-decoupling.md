@@ -2,7 +2,7 @@
 title: Discover a quantum algorithm - dynamical decoupling
 layout: lesson
 keywords: quantum decoherence, qubit errors, quantum gates, dynamical decoupling
-topics: quantum decoherence, dynamical decoupling
+topics: experiment, quantum decoherence, dynamical decoupling
 difficulty: Advanced
 objectives:
   - Interact with the Qbead to play a game
@@ -118,7 +118,7 @@ How about achieving this not permanently, but **regularly**?
 </Callout>
 
 
-## What have you done in this game?
+### What have you done in this game?
 
 You **discovered a quantum protocol**!
 Or re-invented, as we know about it since 1998. But it probably took you less time than it took them! 
@@ -188,7 +188,7 @@ If you do it well, you can see that at regular intervals, your Qbead goes back t
 This means **you are fighting the decoherence and winning!** So you don't lose your quantum information
 
 
-## Reality check: is it really that easy?
+### Reality check: is it really that easy?
 
 In real quantum physics experiments, things are more complex.
 
@@ -215,12 +215,6 @@ You got it! Just tilt the plane from one side to the other! Then the ball oscill
 ## Quantum Decoherence and Dynamical Decoupling
 
 Quantum decoherence is the loss of quantum coherence, where a loss of information of a system to its environment occurs due to noise. Quantum computing relies on quantum coherence. In order to suppress decoherence, a method, called Dynamic Decoupling (DD), can be applied. In this lesson you will use the QBead to explore decoherence and see how Dynamical Decoupling can help us solve it. By experimenting with the QBead, you will get a hands-on sense of how quantum information can be preserved!
-
-## Topics
-
-- Problem: Decoherence
-- Solution: Perfect Dynamical Decoupling
-- Challenge: Imperfect Dynamical Decoupling
 
 ## Decoherence
 
@@ -287,17 +281,17 @@ The goal of this experiment is to demonstrate Dynamical Decoupling (DD), which i
 By carefully applying these pulses, we can reverse or suppress decoherence, keeping the spins more coherent for longer.
 
 
-# Experiments
+### Experiments
 
 This lesson is comprised of three QBead experiments, which will increase in complexity to help you understand the basic principles of Decoherence and Dynamical Decoupling. The first experiment is a basic, non-interactive demonstration of the principle of decoherence, while the following two experiments are opportunities for you to try implementing the Dynamical Decoupling procedure yourself.
 
-## Decoherence Visualisation
+### Decoherence Visualisation
 
 We can model the loss of coherence on the QBead as a "spreading-out" of a known state vector (representing a coherent ensemble) into a collection of vectors representing individual states that progressively lose coherence with each other. This is exactly what the first experiment shows; the initial coherent state is represented by an (unmoving) white LED, but as time passes, the decohering states begin to appear as red LEDs that slowly spread away from the white one. Watch how quickly the coherent phase of the system spreads out into a big collection of individual states!
 
 This is a very big problem for quantum computers, as quantum systems are only useful for computation as long as they remain coherent. However, it is very challenging to eliminate quantum noise entirely, which is why quantum control protocols such as Dynamical Decoupling are required to maintain coherence.
 
-## Simple Dynamical Decoupling
+### Simple Dynamical Decoupling
 
 <BlochSphereElement options={{
   fontSize: 0.8,
@@ -440,7 +434,7 @@ In this Simple version of the experiment, the green LED is restricted in the ori
 
 Please note that this experiment is equipped with a reset sequence which will engage periodically. This means you don't have to worry if you make a mistake with flipping the QBead, as the reset will bring you back to the start. The sequence is shown when the green LED begins to "blink" for a short period and all other vectors disappear.
 
-## Challenge: Realistic Dynamical Decoupling
+### Challenge: Realistic Dynamical Decoupling
 
 <BlochSphereElement options={{
   fontSize: 0.8,
@@ -496,9 +490,9 @@ Please note that this experiment is equipped with a reset sequence which will en
 In this advanced version of the Dynamical Decoupling procedure, the magnetic field axis is no longer restricted to 90-degree increments, meaning the green LED always points *truly* vertical. This means that moving or rotating the QBead even a small amount can shift the blue, white, and red points out of plane with one another, making it almost impossible to successfully implement the Dynamical Decoupling procedure! This also means that when you do apply the procedure, the flip must be both (a) instantaneous and (b) perfectly 180 degrees, as otherwise the planes of precession can again become misaligned. It is difficult to get right, but the experiment is otherwise identical to the simple version. This experiment demonstrates how careful we need to be with these quantum systems in the real world, and how perfectly we need to apply quantum control protocols.
 
 
-# Learn More
+## Learn More
 
-## More on the Dynamical Decoupling Experiment
+### More on the Dynamical Decoupling Experiment
 
 *What is exactly happening when applying Dynamical Decoupling on the QBead?*
 
@@ -517,6 +511,6 @@ Notice that after you let the ensemble decohere for time $\tau$, applying the dy
 
 If the ensemble has decohered, each state in the system is precessing on *different* planes while the QBead is being flipped, since each of their planes are no longer aligned while their orientation relative to the magnetic field changes. Once the system has been flipped fully, then the planes of precession of every state in the ensemble are re-aligned, but in the moment of the flip they can become disaligned if the flip is not quick enough.
 
-## Frequency Of The Pulses
+### Frequency Of The Pulses
 
 The timing/frequency of the pulses determines how well the decoherence can be reversed. Each pulse ("flip") inverts the phase errors that have built up over a time period, denoted by $\tau$ in the experiment. If the system is allowed to decohere for too long before a pulse is applied, the states will spread out too far and cannot be perfectly re-aligned. If the pulses are applied frequently enough, the system remains mostly coherent. Thus, the frequency of the pulses must be chosen so that each flip happens just as the phase errors begin to accumulate, continually refocusing the quantum ensemble and maintaining coherence over time.

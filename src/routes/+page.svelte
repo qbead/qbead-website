@@ -174,7 +174,7 @@
         imgSrc="/team/carlos_s.jpg"
       >
         <p class="mb-6">
-          Carlos loves science, crafts, and art, and sometimes combines them into a beautiful gadget
+          Carlos loves science, crafts, and art, and sometimes combines them into a gadget
           like the Qbead...
         </p>
         <a
