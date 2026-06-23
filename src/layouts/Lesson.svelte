@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import { page } from '$app/state'
   import IconBook from '@lucide/svelte/icons/book'
   import IconTarget from '@lucide/svelte/icons/target'
@@ -28,6 +29,35 @@
     return {
       href: resolve('/[...path]', { path: doc.slug }),
       title: doc.metadata.title,
+    }
+  })
+
+  // Keep the floating TOC from overlapping the site footer when scrolled far down.
+  onMount(() => {
+    const toc = document.querySelector<HTMLElement>('.toc')
+    const footers = document.querySelectorAll('footer')
+    const footer = footers[footers.length - 1]
+    if (!toc || !footer) return
+
+    const mq = matchMedia('(min-width: 80rem)')
+    let baseTop = 0
+    const update = () => {
+      if (!mq.matches) {
+        toc.style.top = ''
+        baseTop = 0
+        return
+      }
+      if (!baseTop) baseTop = parseFloat(getComputedStyle(toc).top)
+      const maxTop = footer.getBoundingClientRect().top - toc.offsetHeight - 24
+      toc.style.top = `${Math.min(baseTop, maxTop)}px`
+    }
+
+    update()
+    addEventListener('scroll', update, { passive: true })
+    addEventListener('resize', update)
+    return () => {
+      removeEventListener('scroll', update)
+      removeEventListener('resize', update)
     }
   })
 </script>
