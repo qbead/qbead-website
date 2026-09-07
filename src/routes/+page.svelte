@@ -22,30 +22,36 @@
     <div>
       <span class="badge preset-filled-surface-200-800 text-surface-950-5 text-sm">
         <IconZap size="12" />
-        For Your Hands-On Discovery of Quantum Phenomena
+        For your hands-on discovery of quantum phenomena
       </span>
     </div>
-    <div id="hero" class="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-36">
-      <img
-        src="/qbeadmedia/qbead_in_hand_LeidenWorkshop.jpg"
-        alt="Demo of Qbead in hands"
-        class="rounded-xl md:order-last"
-      />
+    <div id="hero" class="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_1.5fr] lg:gap-12">
+      <div
+        class="relative w-full min-w-0 overflow-hidden rounded-xl lg:order-last"
+        style="padding-bottom: 56.25%;"
+      >
+        <iframe
+          class="absolute inset-0 h-full w-full border-0"
+          src="https://www.youtube-nocookie.com/embed/q3SMW-LmK6s"
+          title="Qbead demonstration video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
       <div>
         <h1 class="h1 mb-8 text-6xl">
-          Put Your Hands on a <span class="text-primary-500">Qubit!</span>
+          A <span class="text-primary-500">Qubit</span> in your hands!
         </h1>
         <p class="text-xl">
-          We built a custom interactive toy that uses LED lights to show quantum states in
-          real-time. Play with qubits, learn about spin and superposition, and code your own quantum
-          experiments. Perfect for curious minds from middle school through college.
+          The Qbead's LED lights and sensors represent quantum states and allow you to interact with them. 
+          Learn about superposition and entanglement, and code your own quantum experiments!
         </p>
       </div>
     </div>
     <div class="flex flex-col gap-10">
       <div class="flex flex-wrap gap-4">
-        <a href="/about" class="btn btn-lg preset-filled-primary-500"> Discover Qbead </a>
-        <a href="/lessons" class="btn btn-lg preset-filled-surface-100-900"> Explore Lessons </a>
+        <a href="/about" class="btn btn-lg preset-filled-primary-500"> Discover the Qbead </a>
+        <a href="/lessons" class="btn btn-lg preset-filled-surface-100-900"> Explore our Lessons </a>
       </div>
       <ul class="flex flex-wrap gap-4">
         <li class="flex items-center">
@@ -74,14 +80,13 @@
       <div class="prose prose-lg">
         <h3 class="h3">How It Works</h3>
         <p class="text-xl">
-          Our Qbead uses LED lights to visualize the current quantum state a qubit is in. Students
-          can see and manipulate concepts like spin, superposition, and other fundamental aspects of
+          Our Qbead uses LED lights to visualize the quantum state a qubit is in. Students
+          can see and manipulate concepts like spin, superposition, entanglement, and other fundamental aspects of
           quantum physics that are usually impossible to observe.
         </p>
         <p class="text-xl">
           Users can play with the Qbead, use it to teach classes, or even program it themselves. We
-          designed it as a learning tool that's available by request, perfect for curious students
-          from middle school through college.
+          designed it as a learning tool that's available by request. Perfect for curious minds from middle school through college.
         </p>
         <a href="/about" class="btn preset-outlined-secondary-500 text-secondary-500">
           <span>Learn More</span><IconArrowRight size={16} />
