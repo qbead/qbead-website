@@ -43,9 +43,9 @@
           Put your hands on a <span class="text-primary-500">Qubit!</span>
         </h1>
         <p class="text-xl">
-          We built a gadget that uses LED lights and sensors to show quantum states in
+          The Qbead's LED lights and sensors show quantum states in
           real-time. Interact with qubits, learn about superposition and entanglement, and code your own quantum
-          experiments. Perfect for curious minds from middle school through college.
+          experiments!
         </p>
       </div>
     </div>
@@ -87,7 +87,7 @@
         </p>
         <p class="text-xl">
           Users can play with the Qbead, use it to teach classes, or even program it themselves. We
-          designed it as a learning tool that's available by request.
+          designed it as a learning tool that's available by request. Perfect for curious minds from middle school through college.
         </p>
         <a href="/about" class="btn preset-outlined-secondary-500 text-secondary-500">
           <span>Learn More</span><IconArrowRight size={16} />
