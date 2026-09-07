@@ -51,7 +51,7 @@
     </div>
     <div class="flex flex-col gap-10">
       <div class="flex flex-wrap gap-4">
-        <a href="/about" class="btn btn-lg preset-filled-primary-500"> Discover Qbead </a>
+        <a href="/about" class="btn btn-lg preset-filled-primary-500"> Discover the Qbead </a>
         <a href="/lessons" class="btn btn-lg preset-filled-surface-100-900"> Explore Lessons </a>
       </div>
       <ul class="flex flex-wrap gap-4">
