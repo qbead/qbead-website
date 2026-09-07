@@ -40,7 +40,7 @@
       </div>
       <div>
         <h1 class="h1 mb-8 text-6xl">
-          Put your hands on a <span class="text-primary-500">Qubit!</span>
+          A <span class="text-primary-500">Qubit</span> in your hands!
         </h1>
         <p class="text-xl">
           The Qbead's LED lights and sensors represent quantum states and allow you to interact with them. 
