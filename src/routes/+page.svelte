@@ -22,7 +22,7 @@
     <div>
       <span class="badge preset-filled-surface-200-800 text-surface-950-5 text-sm">
         <IconZap size="12" />
-        For Your Hands-On Discovery of Quantum Phenomena
+        For your hands-on discovery of quantum phenomena
       </span>
     </div>
     <div id="hero" class="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_1.5fr] lg:gap-12">
@@ -43,7 +43,7 @@
           Put your hands on a <span class="text-primary-500">Qubit!</span>
         </h1>
         <p class="text-xl">
-          The Qbead is a gadget that uses LED lights and sensors to show quantum states in
+          We built a gadget that uses LED lights and sensors to show quantum states in
           real-time. Interact with qubits, learn about superposition and entanglement, and code your own quantum
           experiments. Perfect for curious minds from middle school through college.
         </p>
@@ -81,14 +81,13 @@
       <div class="prose prose-lg">
         <h3 class="h3">How It Works</h3>
         <p class="text-xl">
-          Our Qbead uses LED lights to visualize the current quantum state a qubit is in. Students
-          can see and manipulate concepts like spin, superposition, and other fundamental aspects of
+          Our Qbead uses LED lights to visualize the quantum state a qubit is in. Students
+          can see and manipulate concepts like spin, superposition, entanglement, and other fundamental aspects of
           quantum physics that are usually impossible to observe.
         </p>
         <p class="text-xl">
           Users can play with the Qbead, use it to teach classes, or even program it themselves. We
-          designed it as a learning tool that's available by request, perfect for curious students
-          from middle school through college.
+          designed it as a learning tool that's available by request.
         </p>
         <a href="/about" class="btn preset-outlined-secondary-500 text-secondary-500">
           <span>Learn More</span><IconArrowRight size={16} />
