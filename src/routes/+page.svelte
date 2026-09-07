@@ -26,11 +26,15 @@
       </span>
     </div>
     <div id="hero" class="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-36">
-      <img
-        src="/qbeadmedia/qbead_in_hand_LeidenWorkshop.jpg"
-        alt="Demo of Qbead in hands"
-        class="rounded-xl md:order-last"
-      />
+      <div class="aspect-video w-full overflow-hidden rounded-xl md:order-last">
+        <iframe
+          class="h-full w-full"
+          src="https://www.youtube-nocookie.com/embed/q3SMW-LmK6s"
+          title="Qbead demonstration video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
       <div>
         <h1 class="h1 mb-8 text-6xl">
           Put Your Hands on a <span class="text-primary-500">Qubit!</span>
