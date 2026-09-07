@@ -25,10 +25,13 @@
         For Your Hands-On Discovery of Quantum Phenomena
       </span>
     </div>
-    <div id="hero" class="grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_1fr] md:gap-36">
-      <div class="aspect-video w-full overflow-hidden rounded-xl md:order-last">
+    <div id="hero" class="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_1.5fr] lg:gap-12">
+      <div
+        class="relative w-full min-w-0 overflow-hidden rounded-xl lg:order-last"
+        style="padding-bottom: 56.25%;"
+      >
         <iframe
-          class="h-full w-full"
+          class="absolute inset-0 h-full w-full border-0"
           src="https://www.youtube-nocookie.com/embed/q3SMW-LmK6s"
           title="Qbead demonstration video"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
