@@ -40,11 +40,11 @@
       </div>
       <div>
         <h1 class="h1 mb-8 text-6xl">
-          Put Your Hands on a <span class="text-primary-500">Qubit!</span>
+          Put your hands on a <span class="text-primary-500">Qubit!</span>
         </h1>
         <p class="text-xl">
-          We built a custom interactive toy that uses LED lights to show quantum states in
-          real-time. Play with qubits, learn about spin and superposition, and code your own quantum
+          The Qbead is a gadget that uses LED lights and sensors to show quantum states in
+          real-time. Interact with qubits, learn about superposition and entanglement, and code your own quantum
           experiments. Perfect for curious minds from middle school through college.
         </p>
       </div>
