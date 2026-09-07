@@ -240,6 +240,8 @@ code {
     position: fixed;
     top: 13.3rem;
     left: calc(50% - 36rem);
+    max-height: calc(100vh - 15.3rem);
+    overflow-y: auto;
   }
 }
 
