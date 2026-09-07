@@ -43,7 +43,7 @@
           Put your hands on a <span class="text-primary-500">Qubit!</span>
         </h1>
         <p class="text-xl">
-          The Qbead's LED lights and sensors show quantum states in
+          The Qbead's LED lights and sensors represent quantum states in
           real-time. Interact with qubits, learn about superposition and entanglement, and code your own quantum
           experiments!
         </p>
