@@ -375,7 +375,7 @@ Please note that this experiment is equipped with a reset sequence which will en
 </Callout>
 
 
-## Experiment 3 - Realistic dynamical decoupling
+### Experiment 3 - Realistic dynamical decoupling
 
 In this advanced version of the Dynamical Decoupling procedure, the magnetic field axis is no longer restricted to 90-degree increments, meaning the green LED always points truly vertical. This means that moving or rotating the QBead even a small amount can shift the blue, white, and red points out of plane with one another, making it almost impossible to successfully implement the dynamical decoupling procedure! This also means that when applying the procedure, the flip must be both (a) instantaneous and (b) perfectly 180 degrees, as otherwise the planes of precession can again become misaligned. It is difficult to get accurately, but the experiment is otherwise identical to the simple version. This experiment demonstrates how careful we need to be with these quantum systems in the real world, and how precise we need to apply quantum control protocols.
 
