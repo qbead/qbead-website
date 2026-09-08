@@ -37,7 +37,7 @@ description: Play with the Qbead and rediscover a quantum protocol by yourself! 
   }
 </script>
 
-# Explore the Qbead yourself
+## Explore the Qbead yourself
 
 The goal of this game is to maintain the state of 1 LED lit up.
 
@@ -133,7 +133,7 @@ This is a technique called dynamical decoupling. It is commonly used in most of 
 But what does this actually mean??
 
 
-# What is decoherence?
+## What is decoherence?
 
 Quantum systems are fragile. When a system interacts with its environment (through thermal fluctuations, electromagnetic fields or other sources of noise), it gradually loses its ability to maintain coherent superpositions. This process is called decoherence, and it destroys the interference effects that quantum computers rely on. Without coherence, operations on a quantum computer become unreliable.
 
@@ -173,7 +173,7 @@ How would you keep the ball in the center? You got it! Just tilt the plane from 
 </Callout>
 
 
-## Reality check: is it really that easy?
+### Reality check: is it really that easy?
 
 In real quantum physics experiments, things are more complex.
 
@@ -186,7 +186,7 @@ Additionally, the quantum gates we apply are imperfect. This means that we intro
 There are many **other sources of decoherence** and errors with different timescales. We have focused on slow drifts, but faster drifts also occur, and we scientists have to come up with smart ideas to fix those, either by improving the physical qubits themselves, or on the qubit control side! And for the unavoidable residual errors, we have quantum error correction!
 
 
-## Real example: Spin precession
+### Real example: Spin precession
 
 Now let's look at a real example and assume our quantum system is a spin-1/2 particle, and our environmental noise is an external constant magnetic field. Like in any other qubit, the quantum state of the spin can be visualized as a vector pointing somewhere on a sphere, the Bloch Sphere. This would be the single LED on your Qbead. When the external field is not aligned with the qubit state, it induces a torque on the system's magnetic moment that causes the system to "wobble" around the magnetic field axis. This wobbling is known as **precession**.
 
@@ -212,7 +212,7 @@ In real spin systems, small variations in the magnetic field or random interacti
 
 
 
-# Dynamical decoupling
+## Dynamical decoupling
 
 In the previous section, we have breifly introduced dynamical decoupling as a method to suppress decoherence. We can model the loss of coherence on the QBead as a "spreading-out" of a known state vector (representing a coherent ensemble) into a collection of vectors representing individual states that progressively lose coherence with each other. This is exactly what the first experiment shows; the initial coherent state is represented by an (unmoving) white LED, but as time passes, the decohering states begin to appear as red LEDs that slowly spread away from the white one. Watch how quickly the coherent phase of the system spreads out into a big collection of individual states!
 
@@ -274,11 +274,11 @@ In this section we will guide you through three experiments with your Qbead that
 The first experiment is a basic, non-interactive demonstration of the principle of decoherence, while the following two experiments are opportunities for you to try implementing the dynamical decoupling procedure yourself.
 
 
-## Experiment 1 - Visualizing decoherence
+### Experiment 1 - Visualizing decoherence
 
 We can model the loss of coherence on the QBead as a known state vector (representing a coherent ensemble) "spreading-out" into a collection of vectors representing individual states that progressively lose coherence with each other. This is exactly what the first experiment shows; the initial coherent state is represented by a (resting) white LED, but as time passes, the decohering states begin to appear as red LEDs slowly spread away from the white one. Watch how quickly the coherent phase of the system spreads out into a big collection of individual states!
 
-## Experient 2 - Simple dynamical decoupling
+### Experient 2 - Simple dynamical decoupling
 
 This experiment let's us observe phase decoherence in a system on the QBead and implement the dynamical decoupling protocol ourselves!
 
