@@ -162,8 +162,6 @@ Quantum systems are fragile. When a system interacts with its environment (throu
 
 <figcaption class="text-sm text-gray-500 text-center mt-2">Decoherence: the state vectors spread apart over time</figcaption>
 
-</div>
-
 <Callout type="tip" title="Analogy">
 
 As you just saw by yourself, we call decoherence an uncontrolled drift in your quantum state. Let's see if we can explain what it is using an analogy with a classical system. 
@@ -276,13 +274,13 @@ In this section we will guide you through three experiments with your Qbead that
 The first experiment is a basic, non-interactive demonstration of the principle of decoherence, while the following two experiments are opportunities for you to try implementing the dynamical decoupling procedure yourself.
 
 
-## Experiment 1: Visualizing decoherence
+## Experiment 1 - Visualizing decoherence
 
 We can model the loss of coherence on the QBead as a known state vector (representing a coherent ensemble) "spreading-out" into a collection of vectors representing individual states that progressively lose coherence with each other. This is exactly what the first experiment shows; the initial coherent state is represented by a (resting) white LED, but as time passes, the decohering states begin to appear as red LEDs slowly spread away from the white one. Watch how quickly the coherent phase of the system spreads out into a big collection of individual states!
 
-## Experient 2: Simple dynamical decoupling
+## Experient 2 - Simple dynamical decoupling
 
-This experiment let’s us observe phase decoherence in a system on the QBead, and implement the dynamical decoupling protocol ourselves!
+This experiment let’s us observe phase decoherence in a system on the QBead and implement the dynamical decoupling protocol ourselves!
 
 The quantum ensemble (white light on the QBead) immediately begins to rotate around the green point at the top. This rotating behaviour is precession. As time progresses, notice how two other lights (a blue and a red one) begin to emerge from around the white one... these represent states in our quantum system that have decohered from the system itself, due to what is called quantum noise.
 
@@ -375,7 +373,7 @@ Please note that this experiment is equipped with a reset sequence which will en
 </Callout>
 
 
-## Experiment 3: Realistic dynamical decoupling
+## Experiment 3 - Realistic dynamical decoupling
 
 In this advanced version of the Dynamical Decoupling procedure, the magnetic field axis is no longer restricted to 90-degree increments, meaning the green LED always points truly vertical. This means that moving or rotating the QBead even a small amount can shift the blue, white, and red points out of plane with one another, making it almost impossible to successfully implement the dynamical decoupling procedure! This also means that when applying the procedure, the flip must be both (a) instantaneous and (b) perfectly 180 degrees, as otherwise the planes of precession can again become misaligned. It is difficult to get accurately, but the experiment is otherwise identical to the simple version. This experiment demonstrates how careful we need to be with these quantum systems in the real world, and how precise we need to apply quantum control protocols.
 
