@@ -37,6 +37,8 @@ description: Play with the Qbead and rediscover a quantum protocol by yourself! 
   }
 </script>
 
+# Introduction to Dynamical decoupling
+
 ## Explore the Qbead yourself
 
 The goal of this game is to maintain the state of 1 LED lit up.
