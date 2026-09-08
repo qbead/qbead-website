@@ -43,7 +43,7 @@ The goal of this game is to maintain the state of 1 LED lit up.
 
 The aim of this game you will first play is to **maintain a coherent state** on your Qbead. This means to keeping one LED to stay on! (Hint: try doing this by continuously applying an action on the Qbead!)
 
-If you leave the Qbead alone, the LEDs start to spread out. This is a **decohered state**, and we don’t want this. You will understand later in this lesson what this means.
+If you leave the Qbead alone, the LEDs start to spread out. This is a **decohered state**, and we don't want this. You will understand later in this lesson what this means.
 
 Go try it out!
 
@@ -126,9 +126,9 @@ How about achieving this not permanently, but **regularly**?
 
 ### What have you done in this game?
 
-Did you manage to keep one LED on? Well, then you’ve discovered **a quantum protocol**! Or, re-invented, let’s say, since it’s been around since 1998.
+Did you manage to keep one LED on? Well, then you've discovered **a quantum protocol**! Or, re-invented, let's say, since it's been around since 1998.
 
-This is a technique called dynamical decoupling. It is commonly used in most of the existing physical qubits of today’s quantum computers to tackle against decoherence. By experimenting with the QBead, you got a hands-on sense of how quantum information can be preserved!
+This is a technique called dynamical decoupling. It is commonly used in most of the existing physical qubits of today's quantum computers to tackle against decoherence. By experimenting with the QBead, you got a hands-on sense of how quantum information can be preserved!
 
 But what does this actually mean??
 
@@ -181,14 +181,14 @@ For example, in our experiment we are seeing the quantum state as it decoheres. 
 
 In real systems, decoherence happens on an **arbitrary axis**, not only vertical as in our experiment we did with the Qbead, so scientists have to apply more quantum gates to compensate for it!
 
-Additionally, the quantum gates we apply are imperfect. This means that we introduce errors that slightly change the qubit state that also accumulate. That’s why doing fewer gates is then better than doing many!
+Additionally, the quantum gates we apply are imperfect. This means that we introduce errors that slightly change the qubit state that also accumulate. That's why doing fewer gates is then better than doing many!
 
 There are many **other sources of decoherence** and errors with different timescales. We have focused on slow drifts, but faster drifts also occur, and we scientists have to come up with smart ideas to fix those, either by improving the physical qubits themselves, or on the qubit control side! And for the unavoidable residual errors, we have quantum error correction!
 
 
 ## Real example: Spin precession
 
-Now let’s look at a real example and assume our quantum system is a spin-1/2 particle, and our environmental noise is an external constant magnetic field. Like in any other qubit, the quantum state of the spin can be visualized as a vector pointing somewhere on a sphere, the Bloch Sphere. This would be the single LED on your Qbead. When the external field is not aligned with the qubit state, it induces a torque on the system's magnetic moment that causes the system to "wobble" around the magnetic field axis. This wobbling is known as **precession**.
+Now let's look at a real example and assume our quantum system is a spin-1/2 particle, and our environmental noise is an external constant magnetic field. Like in any other qubit, the quantum state of the spin can be visualized as a vector pointing somewhere on a sphere, the Bloch Sphere. This would be the single LED on your Qbead. When the external field is not aligned with the qubit state, it induces a torque on the system's magnetic moment that causes the system to "wobble" around the magnetic field axis. This wobbling is known as **precession**.
 
 <BlochSphereElement options={{
   fontSize: 0.8,
@@ -280,7 +280,7 @@ We can model the loss of coherence on the QBead as a known state vector (represe
 
 ## Experient 2 - Simple dynamical decoupling
 
-This experiment let’s us observe phase decoherence in a system on the QBead and implement the dynamical decoupling protocol ourselves!
+This experiment let's us observe phase decoherence in a system on the QBead and implement the dynamical decoupling protocol ourselves!
 
 The quantum ensemble (white light on the QBead) immediately begins to rotate around the green point at the top. This rotating behaviour is precession. As time progresses, notice how two other lights (a blue and a red one) begin to emerge from around the white one... these represent states in our quantum system that have decohered from the system itself, due to what is called quantum noise.
 
@@ -428,4 +428,3 @@ In this advanced version of the Dynamical Decoupling procedure, the magnetic fie
 }} />
 
 <figcaption class="text-sm text-gray-500 text-center mt-2">In realistic DD, imperfect flips cause vectors to drift out of plane -- the refocusing is never perfect</figcaption>
-
