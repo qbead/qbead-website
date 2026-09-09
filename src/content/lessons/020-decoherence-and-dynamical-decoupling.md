@@ -37,9 +37,9 @@ description: Play with the Qbead and rediscover a quantum protocol by yourself! 
   }
 </script>
 
-# Introduction to Dynamical decoupling
+# Fixing errors in real qubits: dynamical decoupling
 
-## Explore the Qbead yourself
+## Experiment with the Qbead!
 
 The goal of this game is to maintain the state of 1 LED lit up.
 
@@ -47,7 +47,7 @@ The aim of this game you will first play is to **maintain a coherent state** on 
 
 If you leave the Qbead alone, the LEDs start to spread out. This is a **decohered state**, and we don't want this. You will understand later in this lesson what this means.
 
-Go try it out!
+Try it out!
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
 
@@ -78,7 +78,7 @@ Go try it out!
 
 <div>
 
-**Decohered state:** The LEDs spread out -- this is what happens when you leave the Qbead alone!
+**Decohered state:** The LEDs spread out -- this is what happens when you leave the Qbead alone, and it is bad for our qubit!
 
 </div>
 
@@ -112,7 +112,7 @@ Go try it out!
 
 <Callout type="info" title="Tips!">
 
-Try **rotating** the Qbead with your hands and see what happens! To achieve the goal you only need to rotate it! -- but it may not be enough with rotating it once!
+Try **rotating** the Qbead with your hands and see what happens! To achieve the goal you only need to rotate it -- but it may not be enough with rotating it once!
 
 Gently **tapping** the Qbead once turns it off, and tapping again restarts the game: use this if things get too confusing!
 
