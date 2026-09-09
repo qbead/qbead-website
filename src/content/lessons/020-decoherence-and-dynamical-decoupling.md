@@ -130,13 +130,16 @@ How about achieving this not permanently, but **regularly**?
 
 Did you manage to keep one LED on? Well, then you've discovered **a quantum protocol**! Or, re-invented, let's say, since it's been around since 1998.
 
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
+
 This is a technique called dynamical decoupling. It is commonly used in most of the existing physical qubits of today's quantum computers to tackle against decoherence. By experimenting with the QBead, you got a hands-on sense of how quantum information can be preserved!
+
 
 But what does this actually mean??
 
 
 ## What is decoherence?
-
+</div>
 Quantum systems are fragile. When a system interacts with its environment (through thermal fluctuations, electromagnetic fields or other sources of noise), it gradually loses its ability to maintain coherent superpositions. This process is called decoherence, and it destroys the interference effects that quantum computers rely on. Without coherence, operations on a quantum computer become unreliable.
 
 <BlochSphereElement options={{
