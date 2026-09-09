@@ -126,8 +126,6 @@ How about achieving this not permanently, but **regularly**?
 </Callout>
 
 
-### What have you done in this game?
-
 Did you manage to keep one LED on? Well, then you've discovered **a quantum protocol**! Or, re-invented, let's say, since it's been around since 1998.
 
 This is a technique called dynamical decoupling. It is commonly used in most of the existing physical qubits of today's quantum computers to tackle against decoherence. By experimenting with the QBead, you got a hands-on sense of how quantum information can be preserved!
@@ -214,7 +212,7 @@ In real spin systems, small variations in the magnetic field or random interacti
 
 
 
-## Dynamical decoupling
+## Dynamical decoupling in depth
 
 In the previous section, we have breifly introduced dynamical decoupling as a method to suppress decoherence. We can model the loss of coherence on the QBead as a "spreading-out" of a known state vector (representing a coherent ensemble) into a collection of vectors representing individual states that progressively lose coherence with each other. This is exactly what the first experiment shows; the initial coherent state is represented by an (unmoving) white LED, but as time passes, the decohering states begin to appear as red LEDs that slowly spread away from the white one. Watch how quickly the coherent phase of the system spreads out into a big collection of individual states!
 
@@ -276,11 +274,11 @@ In this section we will guide you through three experiments with your Qbead that
 The first experiment is a basic, non-interactive demonstration of the principle of decoherence, while the following two experiments are opportunities for you to try implementing the dynamical decoupling procedure yourself.
 
 
-### Experiment 1 - Visualizing decoherence
+### Visualizing decoherence
 
 We can model the loss of coherence on the QBead as a known state vector (representing a coherent ensemble) "spreading-out" into a collection of vectors representing individual states that progressively lose coherence with each other. This is exactly what the first experiment shows; the initial coherent state is represented by a (resting) white LED, but as time passes, the decohering states begin to appear as red LEDs slowly spread away from the white one. Watch how quickly the coherent phase of the system spreads out into a big collection of individual states!
 
-### Experient 2 - Simple dynamical decoupling
+### Simple dynamical decoupling
 
 This experiment let's us observe phase decoherence in a system on the QBead and implement the dynamical decoupling protocol ourselves!
 
@@ -375,7 +373,7 @@ Please note that this experiment is equipped with a reset sequence which will en
 </Callout>
 
 
-### Experiment 3 - Realistic dynamical decoupling
+### Dynamical decoupling in reality
 
 In this advanced version of the Dynamical Decoupling procedure, the magnetic field axis is no longer restricted to 90-degree increments, meaning the green LED always points truly vertical. This means that moving or rotating the QBead even a small amount can shift the blue, white, and red points out of plane with one another, making it almost impossible to successfully implement the dynamical decoupling procedure! This also means that when applying the procedure, the flip must be both (a) instantaneous and (b) perfectly 180 degrees, as otherwise the planes of precession can again become misaligned. It is difficult to get accurately, but the experiment is otherwise identical to the simple version. This experiment demonstrates how careful we need to be with these quantum systems in the real world, and how precise we need to apply quantum control protocols.
 
