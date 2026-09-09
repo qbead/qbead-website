@@ -130,8 +130,6 @@ How about achieving this not permanently, but **regularly**?
 
 Did you manage to keep one LED on? Well, then you've discovered **a quantum protocol**! Or, re-invented, let's say, since it's been around since 1998.
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
-
 This is a technique called dynamical decoupling. It is commonly used in most of the existing physical qubits of today's quantum computers to tackle against decoherence. By experimenting with the QBead, you got a hands-on sense of how quantum information can be preserved!
 
 
@@ -139,7 +137,6 @@ But what does this actually mean??
 
 
 ## What is decoherence?
-</div>
 Quantum systems are fragile. When a system interacts with its environment (through thermal fluctuations, electromagnetic fields or other sources of noise), it gradually loses its ability to maintain coherent superpositions. This process is called decoherence, and it destroys the interference effects that quantum computers rely on. Without coherence, operations on a quantum computer become unreliable.
 
 <BlochSphereElement options={{
@@ -167,7 +164,7 @@ Quantum systems are fragile. When a system interacts with its environment (throu
 
 <figcaption class="text-sm text-gray-500 text-center mt-2">Decoherence: the state vectors spread apart over time</figcaption>
 
-<Callout type="tip" title="Analogy">
+<Callout type="info" title="Analogy">
 
 As you just saw by yourself, we call decoherence an uncontrolled drift in your quantum state. Let's see if we can explain what it is using an analogy with a classical system. 
 
@@ -371,7 +368,7 @@ Once you have inverted the QBead, watch as the vectors begin to overlap with one
 
 In this simple version of the experiment, the green LED is restricted in the orientations it can be. This means that it is locked to the closest 90-degree increment of the sphere to the top, so that the green point doesn't move around too much. This is done to stabilize the rotation of the blue, white, and red points, as in reality, shaky hands can disrupt the dynamical decoupling procedure! This is the problem that this experiment is trying to fix; by restricting the possible orientations of the green point, the "flip" is easier to execute.
 
-<Callout type="note" title="Note">
+<Callout type="info" title="Note">
 
 Please note that this experiment is equipped with a reset sequence which will engage periodically. This means you don't have to worry if you make a mistake with flipping the QBead, as the reset will bring you back to the start. The sequence is shown when the green LED begins to "blink" for a short period and all other vectors disappear.
 
