@@ -39,7 +39,7 @@ description: Play with the Qbead and rediscover a quantum protocol by yourself! 
 
 # Fixing errors in real qubits: dynamical decoupling
 
-**Experiment with the Qbead!**
+## Experiment!
 
 The goal of this game is to maintain the state of 1 LED lit up.
 
