@@ -171,6 +171,12 @@ The **light** - Custom-made LED flexible printed circuit board with 62 smart LED
 
 The **frame** - Custom-made 3D printed shells including and inner shell holding the board and battery, and an outer transparent shell protecting the Qbead
 
+<Callout type="alert" title="Warning">
+
+When not using the Qbead, keep it in a closed opaque container. After long exposure to light, the outer shell might start turning yellow and lose its transparency.
+
+</Callout>
+
 <div class="flex flex-col items-center">
 
 ![^The components inside your Qbead](/qbeadmedia/qbead_components.png)
