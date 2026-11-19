@@ -10,6 +10,7 @@ objectives:
   - Understand the realistic limitations of dynamical decoupling
 headerImage: /lessons/spheres_in_a_field.png
 description: Play with the Qbead and rediscover a quantum protocol by yourself! Observe the problem of decoherence and apply an error correction technique to restore coherence in our quantum state.
+nextLesson: lessons/030-quantum-gates
 ---
 
 <script>
