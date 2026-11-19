@@ -27,6 +27,7 @@ The documents in this directory should help you create, edit, and manage content
 - [Bloch Sphere Component](./components/bloch-sphere.md) - 3D quantum visualizations
 - [Callouts and Alerts](./components/callouts.md) - Highlighted information boxes
 - [Interactive Elements](./components/interactive.md) - Dynamic content using Svelte 5 runes
+- [Bead Pairing and Exercises](./components/bead-exercises.md) - Pair a Qbead and build interactive bead exercises
 
 ## Common Workflows
 

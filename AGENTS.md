@@ -203,6 +203,26 @@ Count: {count}
 
 Event handlers use `onclick`, `oninput` (not `on:click`). Skeleton UI components available (e.g., `Slider` from `@skeletonlabs/skeleton-svelte`).
 
+### Bead Pairing and Exercises
+
+Readers can pair a Qbead over Bluetooth; wrap a plain "Try it yourself" Callout in `BeadExercise` to give paired readers an interactive version. Exercises are plain data in `src/lib/bead/exercises/`. See `src/content/_internal/components/bead-exercises.md`.
+
+```svelte
+<script>
+  import BeadPairing from '$lib/components/Bead/BeadPairing.svelte'
+  import BeadExercise from '$lib/components/Bead/BeadExercise.svelte'
+  import { gatesXY } from '$lib/bead/exercises'
+</script>
+
+<BeadPairing />
+
+<BeadExercise exercise={gatesXY}>
+
+(fallback content, e.g. a Callout)
+
+</BeadExercise>
+```
+
 ## Known Gotchas
 
 - **Curly apostrophes** cause a 500 error ("duplicate script tag"). Always use straight quotes/apostrophes.
