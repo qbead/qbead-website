@@ -173,9 +173,9 @@ When quantum mechanics, and specifically entanglement, was first described, it w
 
 <ExtendableCallout type="book" title="More information about Bell's theorem" shortExplanation="To properly understand Bell's theorem, we need to go into the details of the assumptions that lead to the Bell Inequalities, diving into locality and hidden variables. This is a very interesting topic, but it is beyond the scope of this lesson. More information on this can be found by exploring these sources:">
 
-- Clauser, J. F.; Horne, M. A.; Shimony, A.; Holt, R. A. (1969). Proposed experiment to test local hidden-variable theories. Physical Review Letters, 23(15), 880–884. (https://doi.org/10.1103/PhysRevLett.23.880)
-- Aspect, A.; Dalibard, J.; Roger, G. (1982). Experimental test of Bell's inequalities using time-varying analyzers. Physical Review Letters, 49(25), 1804–1807. (https://doi.org/10.1103/PhysRevLett.49.1804)
-- Hensen, B. et al. (2015). Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres. Nature, 526, 682–686. (https://doi.org/10.1038/nature15759)
+- Clauser, J. F.; Horne, M. A.; Shimony, A.; Holt, R. A. (1969). Proposed experiment to test local hidden-variable theories. Physical Review Letters, 23(15), 880&ndash;884. (https://doi.org/10.1103/PhysRevLett.23.880)
+- Aspect, A.; Dalibard, J.; Roger, G. (1982). Experimental test of Bell's inequalities using time-varying analyzers. Physical Review Letters, 49(25), 1804&ndash;1807. (https://doi.org/10.1103/PhysRevLett.49.1804)
+- Hensen, B. et al. (2015). Loophole-free Bell inequality violation using electron spins separated by 1.3 kilometres. Nature, 526, 682&ndash;686. (https://doi.org/10.1038/nature15759)
 - Nielsen, Michael A.; Chuang, Isaac L. (2010). Quantum Computation and Quantum Information (2nd ed.). Cambridge: Cambridge University Press. ISBN 978-1-107-00217-3. OCLC 844974180
 - Wikipedia contributors. Bell's theorem. Wikipedia, The Free Encyclopedia. (https://en.wikipedia.org/wiki/Bell's_theorem)
 
@@ -227,7 +227,7 @@ As we can see from the table, this strategy only wins in one out of four cases. 
 
 It turns out that the maximum probability of winning the CHSH Game with any classical strategy is **75%**!
 
-Let us prove that there are no other classical strategies that make the probability higher. Take any deterministic strategy. That is, Alice’s output depends only on her input and Bob’s only on his, 
+Let us prove that there are no other classical strategies that make the probability higher. Take any deterministic strategy. That is, Alice's output depends only on her input and Bob's only on his,
 $$
 \begin{align}
 a = f(x)\\
@@ -247,7 +247,7 @@ $$
 
 Add all four equations mod 2. On the left, each of f(0), f(1), g(0) and g(1) appears exactly twice, and anything XORed with itself is 0, so the left side sums to 0. On the right, 0 + 0 + 0 + 1 = 1. That gives 0 = 1, a contradiction. So at least one row must fail for every deterministic strategy, meaning it wins at most 3 of 4 rows, at most 75%. Always-0 shows 3 of 4 is achievable, so 75% is the maximum.
 
-Alice and Bob may use shared randomness (agreeing on a random strategy beforehand) or private randomness (flipping coins). Either way, a randomized strategy is just a probabilistic mixture of deterministic strategies: first a random choice of f and g is made, then they play it. The overall win probability is the average of the win probabilities of the deterministic strategies in the mixture. An average of numbers that are each at most 3/4 can’t exceed 3/4.
+Alice and Bob may use shared randomness (agreeing on a random strategy beforehand) or private randomness (flipping coins). Either way, a randomized strategy is just a probabilistic mixture of deterministic strategies: first a random choice of f and g is made, then they play it. The overall win probability is the average of the win probabilities of the deterministic strategies in the mixture. An average of numbers that are each at most 3/4 can't exceed 3/4.
 
 </ExtendableCallout>
 
@@ -374,7 +374,7 @@ Let us prove this result.
 
 We know that Alice and Bob share the entangled pair $|\Phi^+\rangle = \frac{|00\rangle + |11\rangle}{\sqrt{2}}$. Now, suppose Alice measures along angle $\alpha$ and Bob along angle $\beta$. Define the correlation $E(\alpha,\beta) = P(\text{same result}) - P(\text{different result})$.
 
-For $|\Phi^+\rangle$, when Alice gets a result along her axis, Bob’s qubit collapses to the state pointing in the same (or exactly opposite) direction on the Bloch sphere, matching her result. So if the angle between their axes is $\theta = \alpha - \beta$, Bob’s chance of agreeing with Alice is $\cos^2(\theta/2)$, and of disagreeing is $\sin^2(\theta/2)$. Therefore
+For $|\Phi^+\rangle$, when Alice gets a result along her axis, Bob's qubit collapses to the state pointing in the same (or exactly opposite) direction on the Bloch sphere, matching her result. So if the angle between their axes is $\theta = \alpha - \beta$, Bob's chance of agreeing with Alice is $\cos^2(\theta/2)$, and of disagreeing is $\sin^2(\theta/2)$. Therefore
 
 $$E(\alpha,\beta) = \cos^2\tfrac{\theta}{2} - \sin^2\tfrac{\theta}{2} = \cos\theta = \cos(\alpha-\beta).$$
 

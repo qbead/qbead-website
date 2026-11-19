@@ -190,7 +190,7 @@ The extra factors are **phases**. A phase is a number that changes the "directio
 
 ### Seeing It on the Bloch Sphere
 
-Both gates are 180° rotations of the Bloch sphere:
+Both gates are 180&deg; rotations of the Bloch sphere:
 
 - The X gate rotates the qubit state half a turn around the X axis.
 - The Y gate rotates the qubit state half a turn around the Y axis.
@@ -304,7 +304,7 @@ So X and Y can undo themselves -- just apply the same gate again and the qubit s
 
 ## The Z, S, and T Gates
 
-The Z, S, and T gates are the phase gates. All three rotate the qubit state around the Z axis, the line running through the north and south poles. Z makes a half-turn (180°), S makes a quarter-turn (90°), and T makes an eighth-turn (45°), so we can study them together.
+The Z, S, and T gates are the phase gates. All three rotate the qubit state around the Z axis, the line running through the north and south poles. Z makes a half-turn (180&deg;), S makes a quarter-turn (90&deg;), and T makes an eighth-turn (45&deg;), so we can study them together.
 
 ### The Z Gate: A Half Turn
 
@@ -398,7 +398,7 @@ $$
 
 Applying T twice gives the same phase as one S gate, since $e^{i\pi/4}\cdot e^{i\pi/4} = e^{i\pi/2} = i$ -- two eighth-turns make one quarter-turn.
 
-That is the key difference between Z, S, and T -- how far they rotate the state. All three gates spin the qubit state around the Z axis: Z rotates it by 180°, S rotates it by 90°, and T rotates it by 45°.
+That is the key difference between Z, S, and T -- how far they rotate the state. All three gates spin the qubit state around the Z axis: Z rotates it by 180&deg;, S rotates it by 90&deg;, and T rotates it by 45&deg;.
 
 <Callout type="book" title="What does that exponent mean?">
 
@@ -412,13 +412,13 @@ $$
 
 What this means is that $e^{i\theta}$ is just the point on a circle of radius 1, at angle $\theta$, drawn in the complex plane (the plane where the horizontal axis is the real numbers and the vertical axis is the imaginary numbers). As $\theta$ grows, the point spins around the circle.
 
-For $\theta = \pi/4$ (that is, 45°), this gives
+For $\theta = \pi/4$ (that is, 45&deg;), this gives
 
 $$
 e^{i\pi/4} = \cos 45^\circ + i\sin 45^\circ = \frac{\sqrt{2}}{2} + i\frac{\sqrt{2}}{2}.
 $$
 
-Since this point always sits on a circle of radius 1, multiplying by $e^{i\theta}$ never changes the size of a number, only its angle. That is exactly why multiplying $|1\rangle$'s amplitude by $e^{i\pi/4}$ does not change the measurement probability, but does rotate the state by 45° around the Z axis of the Bloch sphere.
+Since this point always sits on a circle of radius 1, multiplying by $e^{i\theta}$ never changes the size of a number, only its angle. That is exactly why multiplying $|1\rangle$'s amplitude by $e^{i\pi/4}$ does not change the measurement probability, but does rotate the state by 45&deg; around the Z axis of the Bloch sphere.
 
 </Callout>
 
